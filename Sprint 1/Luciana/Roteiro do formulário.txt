@@ -1,0 +1,87 @@
+1 - Qual o seu curso? 
+
+2 - Qual a sua faixa de idade? 
+
+- 17 a 20 
+- 21 a 30
+- 31 a 40
+- 41 a mais 
+
+3 - Qual o seu período atualmente? 
+- 1° ao 2°
+- 3° ao 4°
+- 5° ao 6°
+- 7° em diante 
+
+4 - Você costuma procurar materiais feitos por outros alunos? 
+- sempre
+- frequentemente 
+- as vezes
+- raramente
+- nunca
+
+5 - Onde você procura esse material?
+- biblioteca
+- com colegas 
+- google drive
+- outro (qual?)
+
+6 - Quando você precisa de materiais de estudo de uma disciplina, onde costuma procurá-los? (Pode marcar mais de uma opção)
+- colegas da própria turma 
+- alunos de períodos anteriores
+- monitores
+- google drive 
+- outro (qual?)
+
+7 - Quais tipos de materiais você mais procura para estudar? (Pode marcar mais de uma opção)
+- anotações de outros alunos 
+- resumos disponíveis na internet
+- provas anteriores 
+- listas de exercícios
+- slides/material do professor
+- outro (qual?)
+
+8 - Quais dificuldades você já encontrou ao procurar materiais acadêmicos? (Pode marcar mais de uma opção)
+- não saber onde procurar
+- materiais espalhados em diferentes lugares
+- links ou sites que não estão mais disponíveis 
+- não saber se o material é confiável 
+- não costumo ter dificuldades
+- outro (qual?)
+
+9 - Depois de concluir uma disciplina, o que você normalmente faz com suas anotações, provas e exercícios? (Pode marcar mais de uma opção)
+- guardo tudo 
+- seleciono os mais importantes e guardo 
+- apago/descarto tudo
+- não costumo guardar esses materiais 
+
+10 - Você compartilharia materiais de disciplinas que já cursou com outros estudantes?
+- sim
+- talvez 
+- não
+Caso tenha respondido "talvez" ou "não", qual seria o principal motivo?
+- não sei onde compartilhar
+- não acho que meus materiais seriam úteis
+- não tenho interesse
+- outro (qual?)
+
+11 - O que faria você confiar mais em um material compartilhado por outro estudante?
+- avaliações de outros alunos 
+- identificação de quem publicou 
+- comentários sobre o material 
+- possibilidade de denunciar erros 
+- outro (qual?)
+
+12 - Como você preferia que os materiais acadêmicos fossem organizados para facilitar sua busca?
+- por disciplina 
+- por período
+- por professor 
+- por tipo de material (prova, resumo, exercício)
+
+13 - Em quais momentos você mais costuma procurar materiais de outros estudantes? 
+- durante todo o semestre
+- antes de provas
+- quando teve dificuldade em algum conteúdo
+- no início da disciplina 
+- raramente procuro materiais de outros estudantes
+
