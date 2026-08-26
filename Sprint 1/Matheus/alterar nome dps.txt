@@ -1,0 +1,40 @@
+20 hipóteses:
+1. estudantes dos períodos iniciais têm mais dificuldade para encontrar materiais de estudo.
+
+2. estudantes querem ter acesso às anotações de pessoas que já cursaram a disciplina.
+
+3. muitos estudantes de períodos posteriores guardam provas e exercícios depois que terminam uma disciplina.
+
+4. estudantes estariam dispostos a compartilhar seus materiais com outros estudantes.
+
+5. os estudantes têm dificuldade para saber quais materiais são confiáveis se não forem chegados por terceiroz.
+
+6. estudantes procuram exercícios resolvidos para estudar para provas.
+
+7. os estudantes tem dificuldade, para encontrar matérias acadêmicos reunidos em um único lugar.
+
+8. separar os materiais por disciplina facilitaria a busca.
+
+9. os estudantes gostariam de avaliar os materiais publicados por outros.
+
+10. estudantes têm dificuldade para conseguir materiais quando não conhecem alunos de períodos anteriores.
+
+11. estudantes recorrem a monitores quando precisam de provas ou exercícios antigos.
+
+12. links de materiais compartilhados em grupos deixam de funcionar ou são perdidos com o tempo.
+
+13. alunos utilizariam a plataforma principalmente em períodos próximos às provas.
+
+14. os estudantes preferem materiais organizados por tipo, como prova, resumo, exercício e anotação.
+
+15. estudantes consideram útil poder salvar ou favoritar materiais para consultar posteriormente.
+
+16.  estudantes deixam de encontrar matérias pois não sabem onde foram compartilhadas
+
+17. estudantes gostariam de denunciar materiais incorretos, ou corrigidos incorretamente.
+
+18. estudantes gostariam receber uma notificação quando uma matéria de seu interesse receber uma anotação nova.
+
+19. estudantes consideram mais úteis explicações de alunos do que de professores.
+
+20. estudantes deixam de compartilhar materiais pois não há onde compartilhar de forma organizada.
