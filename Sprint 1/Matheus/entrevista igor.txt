@@ -1,0 +1,29 @@
+Entrevistador: Olá, tudo bem?
+Entrevistado: Tudo bem, como é que você está?
+Entrevistador: Tudo bem também. Você autoriza o uso do seu áudio para fins educativos e sem divulgação?
+Entrevistado: Eu autorizo.
+Entrevistador: Beleza, então vamos começar a entrevista. Qual é o seu nome, qual curso você faz e em qual período está?
+Entrevistado: Meu nome é Igor, eu faço curso de Ciência da Computação e eu estou no segundo período.
+Entrevistador: Beleza, Igor. Com qual frequência você sente necessidade de procurar materiais acadêmicos?
+Entrevistado: Cara, quase todo momento, né? Porque a gente tem que estudar para, literalmente, fazer as provas e passar. Então, o conhecimento é uma busca que não pode faltar nunca e a gente sempre tem que ter conhecimento para sempre saber o que fala.
+Entrevistador: Muito bem. Você sente dificuldade de encontrar esses materiais?
+Entrevistado: Não sinto muito, não, porque a faculdade deixa bem explícito onde pesquisar, né? Para a gente poder estudar, receber conhecimento, para fazer a prova. Então fica bem tranquilo.
+Entrevistador: Que bom. Que tipos de materiais você mais busca? Por exemplo, slides, anotações de aula, provas anteriores etc.?
+Entrevistado: Cara, eu sempre procuro mais questões. Eu sempre dou uma olhada no teórico antes, né? Assim, para saber um pouco a matéria. Posso ter esquecido algo. Mas sempre questões, porque as questões ajudam muito a fazer exatamente as avaliações. Então, eu acredito que as questões sejam a parte mais importante. E sempre uma prova anterior também é legal, né? Mas é difícil de achar, mas é isso.
+Entrevistador: Sim. Quando você encontra esses materiais, por onde você normalmente encontra?
+Entrevistado: Eu encontro no EAD ou no SAU, porque lá os professores deixam todo o conteúdo que eles deram na aula, os exercícios. Tentam se atualizar e se manter sempre bem na matéria deles.
+Entrevistador: Como você costuma organizar ou armazenar esses materiais?
+Entrevistado: Cara, eu organizo sempre na pasta do meu computador, porque fica mais fácil, fica mais tranquilo. Organizo matéria por matéria, conteúdo por conteúdo na matéria. Então, sempre quando eu vou estudar, está ali já.
+Entrevistador: Beleza. Você costuma consumir mais materiais de estudantes ou da faculdade?
+Entrevistado: Cara, eu costumo mais consumir da faculdade mesmo. Normalmente a galera sempre vem. Aí sempre está lá, o professor sempre deixa tudo separadinho, tranquilinho, então fica mais suave. Mas consumir de estudante também é bom, porque quando você não entende a matéria, pelo menos pela visão do professor, pela visão do teu amigo você pode conseguir entender, sabe? Ele fala meio que parecido contigo, então pode ser que, por ele falar parecido contigo, você consiga entender melhor.
+Entrevistador: Sim, é verdade. Como você normalmente procura os materiais das matérias que estuda com mais frequência?
+Entrevistado: Cara, é pelo EAD mesmo e também pelo YouTube, né? Porque quando você não entende um, sei lá, um professor que só escreveu três palavras, então, assim: “Cara, o que é isso aí?”. Aí tu vai lá no YouTube e o cara explica essas três palavras. Então, sempre é bom pesquisar por outras informações também.
+Entrevistador: Sim, sim. Como você avalia os materiais que você encontra?
+Entrevistado: Bem, cara, porque eu acredito que, por sempre ter o mesmo conteúdo ali, sempre que for passado, eu acredito que sempre vai ser uma boa avaliação. Mas tudo depende, né? Pode ser para o pessoal algo ruim, mas sempre tem prós ou contras disso. Então, uma vez pode ter lá, mas alguma vez você tem que procurar em outro site, entendeu? Então, sempre prós e contras.
+Entrevistador: Sim, é verdade. Você compartilha seus materiais das matérias que você já estudou?
+Entrevistado: Cara, é meio complicado falar isso, mas, pô, não sei. Eu acho que não. Porque normalmente as pessoas com quem eu venho falar quando eu vejo a matéria estão dentro da faculdade, no mesmo curso. Então, acho que não compartilho, não. Mas, pô, acho que seria até bom, né? Porque, sei lá, eu venho conhecendo uma pessoa, estou conhecendo outra pessoa e a outra pessoa me conta outra curiosidade outro dia. Então, pode ser que seja bom também.
+Entrevistador: Sim. Você gostaria de acrescentar algo que não foi abordado?
+Entrevistado: Acho que não, porque não lembro muito de outra coisa que não foi abordada. Uma pesquisa bem feita.
+Entrevistador: Muito obrigada pela sua entrevista, viu?
+Entrevistado: Obrigado, tchau.
+Entrevistador: Tchau.
