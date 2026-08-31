@@ -1,0 +1,33 @@
+Entrevistador: Oi, tudo bem?
+Entrevistado: Boa tarde.
+Entrevistador: Boa tarde. Você autoriza o uso do seu áudio para fins educativos e sem divulgação?
+Entrevistado: Autorizo.
+Entrevistador: Beleza, então vamos começar a entrevista. Qual curso você faz, qual o seu nome e em qual período está?
+Entrevistado: Faço Engenharia de Computação, meu nome é Sofia Cooper e eu estou no segundo período.
+Entrevistador: Vamos lá, Sofia. Com qual frequência você sente a necessidade de procurar materiais acadêmicos?
+Entrevistado: Mais para o final do ano, quando eu estou desesperada, e de prova final.
+Entrevistador: Tá bom. E qual a maior dificuldade de encontrar esses materiais?
+Entrevistado: Ué, demais. Eu não sei onde achar aqui na PUC, não conheço ninguém mais velho.
+Entrevistador: Que tipo de materiais você mais busca? Por exemplo, slides, anotações, provas anteriores?
+Entrevistado: Geralmente eu vejo mais slides de anos passados do professor e as provas antigas, junto com os exercícios também.
+Entrevistador: E por onde você normalmente encontra esses materiais?
+Entrevistado: Geralmente por antigos alunos, que um ou outro tem ou guardou, ou ainda tem acesso ao Moodle.
+Entrevistador: Como você costuma organizar ou armazenar esses materiais?
+Entrevistado: Eu não guardo, eu uso... Eu geralmente vejo online, né? Então eu uso e... é, fica aí.
+Entrevistador: Entendi. Você costuma consumir mais materiais de estudantes ou da faculdade?
+Entrevistado: Estudantes.
+Entrevistador: Estudantes?
+Entrevistado: Estudantes. É o que passou, né? 
+Entrevistador: Como você busca os materiais que já tem?
+Entrevistado: Ah, eu geralmente pergunto para os poucos amigos que já estão em outros períodos que eu tenho, se eles fizeram essa aula e se têm alguma anotação.
+Entrevistador: Como você procura os materiais das matérias que estuda com mais frequência?
+Entrevistado: A internet, ou IA...
+Entrevistador: Como você avalia esses materiais que encontra?
+Entrevistado: Ah, a IA é uma merda. Você tem que ficar colocando 50 vezes até ele aparecer. Você fala: “Me mande exercícios de programação sem string”, ele vai te mandar com string. E eu, tipo, eu não sei string. E a Ia “É só aprender.”, e eu tipo, eu não... Eu não quero aprender, eu preciso estudar para a prova.
+Entrevistador: Aham. Certo, então você acha ruins os materiais.
+Entrevistado: Péssimos
+ Entrevistador: Você compartilha seus materiais da matéria que você estudou ou já estudou?
+Entrevistado: Não, porque eu não tenho.
+Entrevistador: Tá bom. Você gostaria de acrescentar algo que não foi abordado?
+Entrevistado: Não.
+Entrevistador: Tá bom, muito obrigada.
