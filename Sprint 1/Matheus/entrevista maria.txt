@@ -1,0 +1,45 @@
+Entrevistador: Oi, tudo bem?
+Entrevistado: Oi, tudo bem.
+Entrevistador: Você autoriza o uso do seu áudio para fins educativos e sem divulgação?
+Entrevistado: Autorizo.
+Entrevistador: Tá, então vou começar aqui a entrevista, tá? Qual curso você faz e em qual período está?
+Entrevistado: Engenharia eletrica, no segundo período.
+Entrevistador: E qual é o seu nome?
+Entrevistado: Maria Eduarda.
+Entrevistador: Beleza. Com qual frequência você sente a necessidade de procurar materiais acadêmicos?
+Entrevistado: Hum... Não tanto.
+Entrevistador: Não tanto?
+Entrevistado: É.
+Entrevistador: Mas quando você sente a necessidade, você sente dificuldade? Qual é a maior dificuldade que você tem de encontrar esses materiais?
+Entrevistado: encontrar um fácil acesso de achar eles. Tenho que pesquisar bastante para encontrar eles.
+Entrevistador: Aham. Que tipo de materiais você mais busca? Por exemplo, slides, anotações, provas anteriores etc.?
+Entrevistado: Provas anteriores.
+Entrevistador: Provas anteriores?
+Entrevistado: Aham.
+Entrevistador: E por onde você normalmente encontra esses materiais?
+Entrevistado: Às vezes, no Instagram. O pessoal manda lá. Ou pelo EAD mesmo.
+Entrevistador: Aham. Como você costuma armazenar esses materiais?
+Entrevistado:Eu não armazeno não.
+Entrevistador: Não armazenar.
+Entrevistador: Você costuma consumir mais materiais dos estudantes ou da faculdade?
+Entrevistado: Da faculdade.
+Entrevistador: Da faculdade?
+Entrevistado: É	.
+Entrevistador: Como você busca os materiais que você já tem?
+Entrevistado: Eu entro no EAD, vou lá e vejo.
+Entrevistador: Aham. Como você procura os materiais das matérias que estuda com mais frequência? Também pelo EAD?
+Entrevistado: Pelo EAD.
+Entrevistador: Beleza. E como você avalia os materiais? Você acha eles bons?
+Entrevistado: Ah, na maioria, até hoje, não vi problema.
+Entrevistador: Não viu problema?
+Entrevistado: Não vi problema.
+Entrevistador: Mas e quando você pesquisa, tipo, na internet? Você também acha tão bom quanto os do EAD?
+Entrevistado: Eu não acho tanto na internet.
+Entrevistador: Não acha?
+Entrevistado: Não, é bem difícil de achar.
+Entrevistador: Você compartilha seus materiais das matérias que você estuda ou já estudou?
+Entrevistado: Não.
+Entrevistador: Não compartilha? Tudo bem. Você gostaria de acrescentar algo que não foi abordado?
+Entrevistado: Não, acho a entrevista bem completa.
+Entrevistador: Que ótimo, muito obrigada.
+Entrevistado: De nada.
