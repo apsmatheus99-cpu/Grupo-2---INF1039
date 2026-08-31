@@ -1,0 +1,35 @@
+Entrevistador: Olá, tudo bem?
+Entrevistado: Olá.
+Entrevistador: Você autoriza o uso do seu áudio para fins educativos e sem divulgação?
+Entrevistado: Sim, eu autorizo.
+Entrevistador: Ok, obrigada. Então, vamos começar aqui a entrevista. Qual o seu nome, qual curso você faz e em qual período está?
+Entrevistado: Ta, me chamo Luiz Eduardo, eu sou do curso de História e estou no nono período.
+Entrevistador: Certo. Com qual frequência você sente necessidade de procurar materiais acadêmicos?
+Entrevistado: Bom, a gente usa bastante material acadêmico em História, então sim, sempre, constante.
+Entrevistador: Ok. Qual a dificuldade para você de encontrar esses materiais?
+Entrevistado: Bom, no geral, a gente em História não tem tanta dificuldade, porque os professores, 90% das vezes, sempre colocam tudo no Moodle ou, quando não, eles enviam por e-mail. Então, a gente não costuma ter dificuldade.
+Entrevistador: Ok. Que tipo de material você mais busca? Por exemplo, slides, anotações de aulas, provas anteriores etc.?
+Entrevistado: Bom, no geral, o que os professores mais pedem para a gente consultar e disponibilizam são textos. Provas anteriores não fazem tanta diferença assim para a gente, porque as perguntas, na maioria das provas, são para relacionar estes autores. Então, textos no geral, PDFs de textos.
+Entrevistador: Por onde você normalmente encontra esse material?
+Entrevistado: No Moodle ou pedindo para o professor, e ele envia por e-mail. E, quando nenhuma dessas coisas funciona, a gente pede o título e procura na internet, no Google Acadêmico mesmo.
+Entrevistador: E como você costuma organizar ou armazenar esses materiais?
+Entrevistado: Bom, geralmente, ou eu deixo tudo salvo no Moodle mesmo, porque às vezes os professores não fecham a matéria do Moodle, então fica lá salvo para sempre, ou eu baixo tudo para o computador e coloco em pastas e tal. Ou, no máximo, coloco no Drive, ou às vezes baixo para o celular mesmo.
+Entrevistador: Você costuma consumir mais materiais produzidos por estudantes ou pela faculdade?
+Entrevistado: produzidos por estudantes, ou pela faculdade?. 
+Entrevistador: é
+Entrevistado: Olha, na prática, mais da faculdade mesmo. Se bem que nem sempre são os professores. 
+Entrevistador: Não, não, mas tipo no sentido de que você consome mais materiais do tipo anotações dos seus colegas?
+Entrevistado: Não, é mais da faculdade mesmo.
+Entrevistador: Tá. Como você busca os materiais que você já tem?
+Entrevistado: Bom, se eu já tenho eles, ou eu busco eles no Moodle, ou no meu e-mail, ou no meu computador mesmo, ou, quando não, no meu celular. Mas, caso não tenha em nenhum desses lugares, eu procuro o título e procuro no Google Acadêmico mesmo.
+Entrevistador: Como você procura os materiais das matérias que estuda com mais frequência?
+Entrevistado: Pelo...  Moodle... não, pelo e-mail. Mesma coisa, não muda muito.
+Entrevistador: Como você avalia esses materiais que você encontra?
+Entrevistado: No geral, bons, assim. Nem todos eles... É que às vezes é ruim que alguns deles são fotos de texto, então a gente não pode copiar e colar facilmente, tipo quando a gente quer marcar algumas cores, às vezes para colocar no trabalho e tal. Mas, no geral, eles são bons e a leitura deles é tranquila. É muito raro dar algum problema assim.
+Entrevistador: Você compartilha seus materiais das matérias que você estuda ou já estudou?
+Entrevistado: Sim. Se meus colegas pedirem, sim.
+Entrevistador: Como você faz esse compartilhamento?
+Entrevistado: Bom, geralmente por WhatsApp mesmo.
+Entrevistador: Tudo bem. Você gostaria de acrescentar algo que não foi abordado?
+Entrevistado: Não, acho que não.
+Entrevistador: Tá bom, obrigada.
