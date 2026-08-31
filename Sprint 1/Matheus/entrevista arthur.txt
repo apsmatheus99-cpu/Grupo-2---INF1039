@@ -1,0 +1,35 @@
+Entrevistador: Olá, tudo bem?
+Entrevistado: Opa, tudo bem?
+Entrevistador: Você autoriza o uso do seu áudio para fins educativos e sem divulgação?
+Entrevistado: Claro, autorizo sim.
+Entrevistador: Beleza, então vamos começar a entrevista. Primeira pergunta: qual o seu nome, qual curso você faz e em qual período está?
+Entrevistado: Meu nome é Arthur Amaral, eu faço Ciência da Computação e estou no segundo período.
+Entrevistador: Ok. Com qual frequência você sente necessidade de procurar materiais acadêmicos?
+Entrevistado: Bastante. Toda vez que eu tenho prova, enfim, testes, eu sinto a necessidade de procurar esses materiais acadêmicos.
+Entrevistador: Certo. E qual a maior dificuldade de encontrar esses materiais?
+Entrevistado: Hum, deixa eu te falar. É muito grande a dificuldade porque a gente nunca sabe realmente para onde procurar e a gente não faz nem idéia de onde vai encontrar. Então, acaba que fica naquele boca a boca, entendeu? Naquele telefone sem fio, tendo que pedir para um para ver se o outro conhece alguém que tenha. Enfim, complicado. Mas é assim, dessa forma.
+Entrevistador: Sim, verdade. Que tipo de materiais você mais busca, Arthur? Por exemplo, slides, anotações de aulas, provas anteriores etc.?
+Entrevistado: Ah, então, para ser sincero, os materiais que eu mais busco são provas anteriores, normalmente quando está chegando o período de provas. Mas eu acredito que seriam muito úteis materiais como anotações de aula, porque eu confesso que eu não sou uma pessoa que funciona muito bem anotando, sabe? Eu prefiro ficar ali totalmente prestando atenção no professor, focado nisso. Então, às vezes eu acabo sendo prejudicado por mim mesmo, né? Porque eu acabo não anotando. Mas acredito que seria uma ótima idéia, entendeu? Procurar esses materiais.
+Entrevistador: E por onde você normalmente encontra esses materiais que você citou, como as provas anteriores e as anotações?
+Entrevistado: Normalmente em grupos do WhatsApp. Eu pergunto para os próprios alunos, pergunto se alguém sabe de alguém que tem. Às vezes, em grupos também dos bolsistas, eu já encontrei algumas provas de alguns cursos anteriores. Enfim, algumas provas anteriores dos cursos, na verdade, né? Então, por ali. O Instagram da PUC também, né?
+Entrevistado: Aham, verdade.
+Entrevistador: Como você costuma organizar ou armazenar esses materiais, se você armazena?
+Entrevistado: Ah, então, eu normalmente coloco no Google Drive, sabe? Porque, se um dia alguém precisar, aí eu tenho ali guardadinho para poder compartilhar também. Com certeza, eu tenho na minha galeria ali, perdida, mas se alguém precisar, eu vou encontrar para poder compartilhar. Armazeno, sim, dessa forma.
+Entrevistador: Aham, muito bom. Você costuma consumir mais materiais de estudantes ou da faculdade?
+Entrevistado: Ah, de estudantes. Consumo mais de estudantes.
+Entrevistador: Tudo bem. Como você procura materiais das matérias que você estuda com mais frequência?
+Entrevistado: Normalmente eu procuro com outros alunos, entendeu? Mando mensagem, às vezes nos grupos. Entro em contato, conversando ali na resenha. Enfim, dessa forma que eu consigo adquirir esses materiais.
+Entrevistador: Ok. E como que você avalia esses materiais que você encontra?
+Entrevistado: Opa, não entendi.
+Entrevistador: Como você avalia os materiais que você encontra?
+Entrevistado: Como eu avalio?
+Entrevistador: É, você acha bom, ruim?
+Entrevistado: Ah, tudo bem. Então, os materiais que eu encontro, eu avalio como sempre muito úteis, sabe? Porque, como são de outros alunos, alunos como eu, eu sempre consigo entender as anotações, enfim. Então, acaba que é muito útil, confesso. As provas antigas, então, salvam muito.
+Entrevistador: Arthur, você compartilha seus materiais das matérias que você estuda ou já estudou?
+Entrevistado: Ah, compartilho sim, com certeza. E, com certeza, se algum calouro vier perguntar para mim se eu tive, se eu tenho, se eu posso compartilhar, eu compartilharei também.
+Entrevistador: E como você faz esse compartilhamento?
+Entrevistado: Ah, sempre via WhatsApp.
+Entrevistador: Uhum. Você gostaria de acrescentar algo a mais que não foi abordado?
+Entrevistado: Hum... Acredito que não. Pelo menos no momento eu não tenho nada para poder acrescentar.
+Entrevistador: Tá bom. Muito obrigada pela participação.
+Entrevistado: Ah, eu que agradeço pela entrevista.
