@@ -1,0 +1,28 @@
+As entrevistas realizadas com estudantes de diferentes cursos e períodos tiveram como função compreender como os
+universitários buscam, utilizam, armazenam e compartilham materiais acadêmicos, de modo geral, foi possível determinar
+que a procura por esses materiais acontece principalmente em períodos próximos às provas e trabalhos ou quando os alunos
+possuem dificuldade para entender determinado conteúdo apresentado em aula.
+Entre os materiais mais procurados pelos entrevistados estão: provas anteriores, listas de exercícios, slides, anotações de outros alunos,
+textos, PDFs e videoaulas. O tipo de material procurado também varia de acordo com o curso. Alunos de cursos como Ciência da Computação e Engenharia
+demonstraram maior interesse por exercícios e provas anteriores, enquanto estudantes de áreas como História e Psicologia utilizam com maior frequência textos,
+artigos, slides e anotações.
+Uma das principais dificuldades identificadas foi encontrar os materiais desejados. Alguns alunos, principalmente dos períodos iniciais, relataram
+não saber onde procurar ou não conhecer alunos de períodos anteriores que possam fornecer materiais, outros entrevistados disseram não possuir tanta dificuldade
+para encontrar conteúdos, principalmente quando os professores disponibilizam os materiais nas plataformas da faculdade.
+Também foi mencionado a dificuldade de encontrar materiais confiáveis, atualizados e que correspondam exatamente ao conteúdo abordado pelo professor.
+Os estudantes utilizam diferentes meios para realizar suas buscas, como EAD, google,  google Acadêmico, google drive, youtube, inteligência artificial,
+grupos de whatsapp, e-mail e contato direto com amigos e alunos de períodos anteriores, essa variedade de meios permite encontrar diferentes conteúdos,
+porém faz com que os materiais fiquem espalhados entre diversas plataformas e pessoas, dificultando sua localização.
+Em relação ao armazenamento, alguns entrevistados organizam seus materiais em pastas no computador ou em serviços como google drive, enquanto
+outros mantêm arquivos no celular, whatsapp, EAD, cadernos ou fichários, também existem estudantes que não possuem o hábito de armazenar os materiais
+depois de utilizá-los, dessa forma, mesmo quando o estudante já possui determinado conteúdo, pode existir dificuldade para encontrá-lo.
+O compartilhamento de materiais também é uma prática presente entre vários entrevistados. Muitos afirmaram que compartilham provas, anotações, exercícios
+e outros materiais quando algum amigo ou estudante solicita ajuda. O whatsapp apareceu como o principal meio utilizado para esse compartilhamento,
+embora google drive e discord também tenham sido mencionados, alguns estudantes também disseram não compartilhar materiais, principalmente
+porque não possuem o hábito de armazená-los.
+Com base nas entrevistas, é possível perceber que existe uma necessidade de facilitar o acesso e a organização dos materiais acadêmicos.
+Embora muitos conteúdos já estejam disponíveis, eles se encontram espalhados entre diferentes plataformas, grupos e pessoas, e além disso,
+estudantes dos períodos iniciais podem ter maior dificuldade por ainda não conhecerem alunos que já cursaram determinadas disciplinas.
+Os resultados indicam que uma plataforma centralizada para compartilhamento de materiais acadêmicos pode ser útil,
+principalmente se organizar os conteúdos por disciplina e facilitar o acesso a provas, exercícios, anotações e outros materiais de alunos
+que já cursaram as matérias, também é importante considerar formas de avaliar a confiabilidade e a qualidade dos conteúdos disponibilizados.
