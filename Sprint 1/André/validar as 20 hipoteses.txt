@@ -1,0 +1,61 @@
+Validando as hipóteses
+
+1- Os alunos de períodos iniciais tem dificuldade de encontrar os materiais.
+✓ Validado
+
+2- Os estudantes querem ter acesso aos materiais de outros alunos, principalmente os de períodos iniciais.
+✓ Validado
+
+3- Alguns estudantes armazenam os materiais depois de utilizá-los.
+✓ Validado
+
+4- Alguns estudantes compartilham seus materiais.
+✓ Validado
+
+5- Alguns sentem dificuldades em saber quais conteúdos são confiáveis.
+✓ Validado
+
+6- Não tem como saber se buscam por exercícios resolvidos ou não resolvidos.
+❌ Não validado
+
+7- Eles têm a dificuldade de encontrar o material reunido.
+✔ Validado
+
+8- Separar por disciplina facilitaria as buscas.
+✔ Validado
+
+9- Eles gostariam que alunos avaliassem os materiais encontrados
+✔ Validado
+
+10- Os alunos têm essa dificuldade, principalmente os de períodos iniciais.
+✔ Validado
+
+11- Os estudantes recorrem aos amigos e alunos de períodos anteriores.
+✔? Validado
+
+12- Não tem como saber se os links param de funcionar.
+❌ Não validado
+
+13- Visto que alguns procuram materiais próximo às provas, eles utilizariam
+✔ Validado
+
+14- Alguns gostariam de separados por tipo
+✔ Validado
+
+15- Não tem como saber se acham úteis salvar como favorito para consultar depois.
+❌ Não validado
+
+16- Eles não procuram porque não sabem por onde achar.
+✔ Validado
+
+17- Alguns alunos gostariam que tivesse a possibilidade de denunciar se houvesse erros
+✔ Validado
+
+18- Não tem como saber se eles gostariam de receber um notificação de anotação nova.
+❌ Não validado
+
+19- Alguns consideram os materiais dos estudantes mais úteis.
+✔ Validado
+
+20- Alguns não compartilham por não armazenar, porém alguns não sabem por onde compartilhar
+✔ Validado
