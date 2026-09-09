@@ -1,18 +1,24 @@
-Validando as hipóteses
+Validando as 20 hipóteses:
 
-1- Os alunos de períodos iniciais tem dificuldade de encontrar os materiais.
+1- Estudantes dos períodos iniciais têm mais dificuldade para encontrar materiais de estudo.
+R: De acordo com as entrevista e os dados dos formulários, visto que a maioria das respostas do formulário é de alunos do primeiro e do segundo período, e sendo a maioria das respostas de não saber por onde procurar. Então, os alunos de períodos iniciais tem dificuldade de encontrar os materiais.
 ✓ Validado
 
-2- Os estudantes querem ter acesso aos materiais de outros alunos, principalmente os de períodos iniciais.
+2- Estudantes querem ter acesso às anotações de pessoas que já cursaram a disciplina.
+R: De acordo com os dados do formulário e as entrevistas, 35,9% dos materiais que mais procuram são anotações de outros alunos. Então, os estudantes querem ter acesso aos materiais de outros alunos, principalmente os de períodos iniciais.
 ✓ Validado
 
-3- Alguns estudantes armazenam os materiais depois de utilizá-los.
+3- Muitos estudantes de períodos posteriores guardam provas e exercícios depois que terminam uma disciplina.
+R: De acordo com os dados do formulário, 32,1% das respostas dadas são de que eles armazenam todos os materiais depois de concluir a disciplina e 47,4% das respostas são de selecionar os mais importantes e descartar o resto. Então, Alguns estudantes armazenam os materiais depois de utilizá-los.
 ✓ Validado
 
-4- Alguns estudantes compartilham seus materiais.
+4- Estudantes estariam dispostos a compartilhar seus materiais com outros estudantes.
+R: De acordo com as entrevistas e os dados no formulário, a maioria dos entrevistados e das respostas dadas no formulário já compartilharam seus materiais de estudos. Então, alguns estudantes compartilham seus materiais.
 ✓ Validado
 
-5- Alguns sentem dificuldades em saber quais conteúdos são confiáveis.
+5- Os estudantes têm dificuldade para saber quais materiais são confiáveis se não forem chegados por terceiros.
+R: De acordo com as entrevistas e os dados no formulário, 39,7% das respostas no formulário em "Quais dificuldades você já encontrou ao procurar materiais
+acadêmicos?" são de não saber de o material é confiável. Então, alguns sentem dificuldades em saber quais conteúdos são confiáveis.
 ✓ Validado
 
 6- Não tem como saber se buscam por exercícios resolvidos ou não resolvidos.
