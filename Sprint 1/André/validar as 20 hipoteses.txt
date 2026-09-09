@@ -1,11 +1,11 @@
 Validando as 20 hipóteses:
 
 1- Estudantes dos períodos iniciais têm mais dificuldade para encontrar materiais de estudo.
-R: De acordo com as entrevista e os dados dos formulários, visto que a maioria das respostas do formulário é de alunos do primeiro e do segundo período, e sendo a maioria das respostas de não saber por onde procurar. Então, os alunos de períodos iniciais tem dificuldade de encontrar os materiais.
+R: De acordo com as entrevistas e os dados do formulário, visto que a maioria das respostas do formulário é de alunos do primeiro e do segundo período, sendo a maioria das respostas de não saber por onde procurar, e nas entrevistas, os alunos dos períodos iniciais contam que tem dificuldade em encontrar esses materiais. Então, os alunos de períodos iniciais tem dificuldade de encontrar os materiais.
 ✓ Validado
 
 2- Estudantes querem ter acesso às anotações de pessoas que já cursaram a disciplina.
-R: De acordo com os dados do formulário e as entrevistas, 35,9% dos materiais que mais procuram são anotações de outros alunos. Então, os estudantes querem ter acesso aos materiais de outros alunos, principalmente os de períodos iniciais.
+R: De acordo com os dados do formulário e as entrevistas, 35,9% das respostas no formulário são dizendo que os materiais que mais procuram são anotações de outros alunos. Então, os estudantes querem ter acesso aos materiais de outros alunos, principalmente os de períodos iniciais.
 ✓ Validado
 
 3- Muitos estudantes de períodos posteriores guardam provas e exercícios depois que terminam uma disciplina.
@@ -13,55 +13,81 @@ R: De acordo com os dados do formulário, 32,1% das respostas dadas são de que 
 ✓ Validado
 
 4- Estudantes estariam dispostos a compartilhar seus materiais com outros estudantes.
-R: De acordo com as entrevistas e os dados no formulário, a maioria dos entrevistados e das respostas dadas no formulário já compartilharam seus materiais de estudos. Então, alguns estudantes compartilham seus materiais.
+R: De acordo com as entrevistas e os dados do formulário, a maioria dos entrevistados já compartilhou seus materiais de estudos e 76,9% das respostas dadas do formulário na pergunta "Você compartilharia materiais de disciplinas que já cursou com outros estudantes?" foram dizendo que compartilharia. Então, alguns estudantes compartilhariam seus materiais.
 ✓ Validado
 
 5- Os estudantes têm dificuldade para saber quais materiais são confiáveis se não forem chegados por terceiros.
-R: De acordo com as entrevistas e os dados no formulário, 39,7% das respostas no formulário em "Quais dificuldades você já encontrou ao procurar materiais
+R: De acordo com as entrevistas e os dados do formulário, 39,7% das respostas no formulário em "Quais dificuldades você já encontrou ao procurar materiais
 acadêmicos?" são de não saber de o material é confiável. Então, alguns sentem dificuldades em saber quais conteúdos são confiáveis.
 ✓ Validado
 
-6- Não tem como saber se buscam por exercícios resolvidos ou não resolvidos.
+6- Estudantes procuram exercícios resolvidos para estudar para provas.
+R: Não tem como saber se buscam por exercícios resolvidos ou não resolvidos, pois não foi abordado e nem comentado nas estrevistas ou no formulário.
 ❌ Não validado
 
-7- Eles têm a dificuldade de encontrar o material reunido.
+7- Os estudantes tem dificuldade para encontrar matérias acadêmicos reunidos em um único lugar.
+R: De acordo com os dados do formulário, 43,6% das respostas dadas na pergunta "Quais dificuldades você já encontrou ao procurar materiais
+acadêmicos?" foram dizendo que os materiais procurados ficam em partes em locais diferentes.Então, eles têm a dificuldade de encontrar o material reunido.
 ✔ Validado
 
-8- Separar por disciplina facilitaria as buscas.
+8- Separar os materiais por disciplina facilitaria a busca.
+R: De acordo com os dados do formulário, 60,3% das respostas dadas na pergunta "Como você preferia que os materiais acadêmicos fossem organizados
+para facilitar a busca?" foram dizendo que seperar por disciplina facilitaria a busca. Então, separar por disciplina facilitaria as buscas.
 ✔ Validado
 
-9- Eles gostariam que alunos avaliassem os materiais encontrados
+9- Os estudantes gostariam de avaliar os materiais publicados por outros.
+R: De acordo com os dados do formulário, 61,5% das respostas dadas na pergunta "O que faria você confiar mais em um material compartilhado por outro
+estudante?" foram dizendo que as avaliações de outros alunos ajudariam eles confiarem mais, logo uma opção de avaliação do material ajudaria muito. Então, eles gostariam que alunos avaliassem os materiais encontrados.
 ✔ Validado
 
-10- Os alunos têm essa dificuldade, principalmente os de períodos iniciais.
+10- Estudantes têm dificuldade para conseguir materiais quando não conhecem alunos de períodos anteriores.
+R: De acordo com as entrevistas, foi dito que os alunos, de maioria, dos períodos iniciais tem dificuldade de conseguir materiais acadêmicos por não conhecer alunos de períodos anteriores. Então, os alunos têm essa dificuldade.
 ✔ Validado
 
-11- Os estudantes recorrem aos amigos e alunos de períodos anteriores.
-✔? Validado
+11- Estudantes recorrem a monitores quando precisam de provas ou exercícios antigos.
+R: De acordo com os dados do formulário, 35,9% das respostas dadas na pergunta "Quando você precisa de materiais de estudo de uma disciplina, onde
+costuma procurá-los?" foram dizendo que recorrem aos monitores. Então, os estudantes recorrem aos monitores.
+✔ Validado
 
-12- Não tem como saber se os links param de funcionar.
+12- Links de materiais compartilhados em grupos deixam de funcionar ou são perdidos com o tempo.
+R: De acordo com os dados do formulário, 32,1% das respostas dadas na pergunta "Quais dificuldades você já encontrou ao procurar materiais
+acadêmicos?" foram dizendo que links e sites deixam de ficar disponíveis, e isso dificulta o processo de achar materiais de estudo agradáveis a cada aluno. Então, os links compartilhados deixam de funcionar com o tempo.
+✔ Validado
+
+13- Alunos utilizariam a plataforma principalmente em períodos próximos às provas.
+R: De acordo com as entrevistas e com os dados do formulário, os entrevistados falaram que o momento que eles mais procuram os materiais é próximo às provas, e 60,3% das respostas dadas na pergunta "Em quais momentos você mais costuma procurar materiais de outros estudantes?" foram dizendo que mais procura antes das provas. Então, eles utilizariam próximo às provas.
+✔ Validado
+
+14- Os estudantes preferem materiais organizados por tipo, como prova, resumo, exercício e anotação.
+R: De acordo com os dados do formulário, 25,6% das respostas dadas na pergunta "Como você preferia que os materiais acadêmicos fossem organizados
+para facilitar a busca?" foram dizendo que preferem organizados por tipo. Então, alguns estudantes gostariam de separados por tipo.
+✔ Validado
+
+15- Estudantes consideram útil poder salvar ou favoritar materiais para consultar posteriormente.
+R: Não tem como saber se acham úteis salvar como favorito para consultar depois, pois não foi abordado e nem comentado nas entrevistas e no formulário.
 ❌ Não validado
 
-13- Visto que alguns procuram materiais próximo às provas, eles utilizariam
+16- Estudantes deixam de encontrar matérias pois não sabem onde foram compartilhadas
+R: De acordo com os dados do formulário, 53,8% das respostas dadas na pergunta "Quais dificuldades você já encontrou ao procurar materiais
+acadêmicos?" foram dizendo que não sabem onde procurar esses materiais. Então, eles deixam de procurar porque não sabem por onde achar.
 ✔ Validado
 
-14- Alguns gostariam de separados por tipo
+17- Estudantes gostariam de denunciar materiais incorretos, ou corrigidos incorretamente.
+R: De acordo com os dados do formulário, 28,2% das respostas dadas na pergunta "O que faria você confiar mais em um material compartilhado por outro
+estudante?" foram dizendo que a possibilidade de denunciar erros de materiais incorretos. Então, alguns alunos gostariam que tivesse a possibilidade de denunciar se houvesse erros.
 ✔ Validado
 
-15- Não tem como saber se acham úteis salvar como favorito para consultar depois.
+18- Estudantes gostariam receber uma notificação quando uma matéria de seu interesse receber uma anotação nova.
+R: Não tem como saber se eles gostariam de receber um notificação de anotação nova, pois não foi abordado e nem comentado nas entrevistas e no formulário.
 ❌ Não validado
 
-16- Eles não procuram porque não sabem por onde achar.
+19- Estudantes consideram mais úteis explicações de alunos do que de professores.
+R: De acordo com os dados do formulário, 74,4% das respostas dadas na pergunta "Quais tipos de materiais você mais procura para estudar?" foram que procuram mais os materiais de professores, porém 35,9% das respostas dizem que preferem as anotações de alunos. Então, a maioria dos estudantes busca mais materiais de professores.
 ✔ Validado
 
-17- Alguns alunos gostariam que tivesse a possibilidade de denunciar se houvesse erros
+20- Estudantes deixam de compartilhar materiais pois não há onde compartilhar de forma organizada.
+R: De acordo com os dados do formulário, 25% das respostas dadas na pergunta "Caso tenha respondido que “talvez” ou “não” compartilharia, qual seria o principal motivo?" foram dizendo que não sabem por onde compartilhar. Então, estudantes deixam de compartilhar pois não há onde.
 ✔ Validado
 
-18- Não tem como saber se eles gostariam de receber um notificação de anotação nova.
-❌ Não validado
 
-19- Alguns consideram os materiais dos estudantes mais úteis.
-✔ Validado
-
-20- Alguns não compartilham por não armazenar, porém alguns não sabem por onde compartilhar
-✔ Validado
+Concluindo que das 20 hipóteses, 17 foram validadas.
