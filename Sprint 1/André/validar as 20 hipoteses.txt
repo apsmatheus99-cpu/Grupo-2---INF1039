@@ -24,8 +24,8 @@ Validando as hipóteses
 8- Separar por disciplina facilitaria as buscas.
 ✔ Validado
 
-9- Não tem como saber se eles gostariam de avaliar os materiais.
-❌ Não validado
+9- Eles gostariam que alunos avaliassem os materiais encontrados
+✔ Validado
 
 10- Os alunos têm essa dificuldade, principalmente os de períodos iniciais.
 ✔ Validado
@@ -39,8 +39,8 @@ Validando as hipóteses
 13- Visto que alguns procuram materiais próximo às provas, eles utilizariam
 ✔ Validado
 
-14- Alguns organizam por disciplina.
-❌ Não validado
+14- Alguns gostariam de separados por tipo
+✔ Validado
 
 15- Não tem como saber se acham úteis salvar como favorito para consultar depois.
 ❌ Não validado
@@ -48,8 +48,8 @@ Validando as hipóteses
 16- Eles não procuram porque não sabem por onde achar.
 ✔ Validado
 
-17- Não tem como saber se gostariam de denunciar os materiais incorretos.
-❌ Não validado
+17- Alguns alunos gostariam que tivesse a possibilidade de denunciar se houvesse erros
+✔ Validado
 
 18- Não tem como saber se eles gostariam de receber um notificação de anotação nova.
 ❌ Não validado
@@ -57,5 +57,5 @@ Validando as hipóteses
 19- Alguns consideram os materiais dos estudantes mais úteis.
 ✔ Validado
 
-20- Alguns não compartilham por não armazenar, não por falta de organização de uma plataforma.
-❌ Não validado
+20- Alguns não compartilham por não armazenar, porém alguns não sabem por onde compartilhar
+✔ Validado
