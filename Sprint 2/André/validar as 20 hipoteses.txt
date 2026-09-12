@@ -60,7 +60,7 @@ R: De acordo com as entrevistas e com os dados do formulário, os entrevistados 
 
 14- Os estudantes preferem materiais organizados por tipo, como prova, resumo, exercício e anotação.
 R: De acordo com os dados do formulário, 25,6% das respostas dadas na pergunta "Como você preferia que os materiais acadêmicos fossem organizados
-para facilitar a busca?" foram dizendo que preferem organizados por tipo. Então, alguns estudantes gostariam de separados por tipo.
+para facilitar a busca?" foram dizendo que preferem organizados por tipo. Então, alguns estudantes gostariam de separados por tipo, contudo, a maioria prefere os materiais separados por disciplina.
 ✔ Validado
 
 15- Estudantes consideram útil poder salvar ou favoritar materiais para consultar posteriormente.
@@ -68,9 +68,8 @@ R: Não tem como saber se acham úteis salvar como favorito para consultar depoi
 ❌ Não validado
 
 16- Estudantes deixam de encontrar matérias pois não sabem onde foram compartilhadas
-R: De acordo com os dados do formulário, 53,8% das respostas dadas na pergunta "Quais dificuldades você já encontrou ao procurar materiais
-acadêmicos?" foram dizendo que não sabem onde procurar esses materiais. Então, eles deixam de procurar porque não sabem por onde achar.
-✔ Validado
+R: Não tem como saber se eles deixam de encontrar matérias por não saberem onde são compartilhadas. As respostas dadas no formulário são de que 53,8% não sabem por onde achar, mas não necessariamente eles param de procurar os materiais.
+❌ Não validado
 
 17- Estudantes gostariam de denunciar materiais incorretos, ou corrigidos incorretamente.
 R: De acordo com os dados do formulário, 28,2% das respostas dadas na pergunta "O que faria você confiar mais em um material compartilhado por outro
@@ -90,4 +89,4 @@ R: De acordo com os dados do formulário, 25% das respostas dadas na pergunta "C
 ✔ Validado
 
 
-Concluindo que das 20 hipóteses, 17 foram validadas.
+Concluindo que das 20 hipóteses, 16 foram validadas.
