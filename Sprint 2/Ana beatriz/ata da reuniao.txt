@@ -1,0 +1,27 @@
+ATA DE REUNIÃO DE PROJETO
+Data: 11 de setembro de 2026
+Horário: 20h10
+Local: Servidor do Discord de I-2.2
+Projeto: Aplicativo para Compartilhamento de Materiais Acadêmicos
+Turma / Disciplina: Turma 3WB – INF1039 (Grupo 2)
+Presentes: André, Luciana, Matheus e Ana Beatriz.
+1. PAUTA E DISCUSSÕES
+No dia onze de setembro de dois mil e vinte e seis, às vinte horas e dez minutos, no servidor do Discord de I-2.2, reuniram-se os membros do Grupo 2 da turma 3WB da matéria INF1039, para a reunião de análise dos dados obtidos até então no desenvolvimento do projeto.
+Durante a reunião, foram discutidos os seguintes tópicos:
+- Personas e Resumo do Formulário: Apresentados pela Luciana e aprovados pelo grupo.
+- Resumo das Entrevistas: Apresentado pelo Matheus e aprovado pelo grupo.
+- Validação das Hipóteses: Apresentada pelo André, contemplando as 20 hipóteses do projeto.
+- Ajuste de Hipóteses: Em relação às 20 hipóteses apresentadas, o grupo decidiu que as de número 14 e 16 deverão ser reescritas.
+2. PROBLEMAS IDENTIFICADOS (Para Solução via Aplicativo)
+Com base na validação das hipóteses e na análise dos dados, o grupo identificou os seguintes problemas que o aplicativo deverá solucionar:
+- Estudantes querem ter acesso às anotações de pessoas que já cursaram a disciplina.
+- Estudantes de períodos iniciais têm mais dificuldade para encontrar materiais de estudo.
+- Os estudantes têm dificuldade para saber quais materiais são confiáveis se não forem chegados por terceiros.
+- Os estudantes têm dificuldade para encontrar materiais acadêmicos reunidos em um único lugar.
+3. ENCAMINHAMENTOS E PRÓXIMOS PASSOS
+Ao final da reunião, ficaram definidas as seguintes soluções para os problemas apresentados: 
+- O aplicativo deve conter filtros que dividam os materiais acadêmicos por tipo(provas anteriores, anotações, exercícios resolvidos, etc), disciplina e curso, a fim de facilitar a busca dos estudantes.
+- Deve ser possível avaliar os materiais publicados e reportar erros, a fim de torná-los mais confiáveis.
+- Todos os estudantes devem realizar login na plataforma para haver maior controle sobre os materiais publicados e sobre o acesso a eles.
+4. ENCERRAMENTO
+Nada mais havendo a tratar, a reunião foi encerrada às 20:40. Esta ata foi elaborada durante a reunião e aprovada pelos membros presentes.
