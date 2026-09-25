@@ -1,0 +1,28 @@
+Feedback dos usuários
+
+Usuário 1:
+Gostou bastante do protótipo, mas acredita que a experiência poderia ser melhorada se houvesse uma lista de universidades, em vez de solicitar que o usuário digite o nome da instituição.
+Destacou a importância de considerar diferentes formas de digitação e ortografia na busca. Os materiais deveriam aparecer mesmo quando o usuário digitar uma palavra sem acento ou sem utilizar letras maiúsculas.
+Sugeriu a criação de uma seção com os materiais que o usuário já baixou, facilitando o acesso a esses conteúdos futuramente.
+
+Usuário 2:
+Sugeriu que as funcionalidades de publicação de materiais e pesquisa fossem organizadas em espaços diferentes do site, para tornar a navegação mais clara.
+Sugeriu a possibilidade de seguir outros usuários. Dessa forma, caso alguém goste dos materiais publicados por determinada pessoa, poderá acompanhar suas próximas publicações sem precisar memorizar ou pesquisar novamente o perfil.
+No geral, considerou que o protótipo atende ao que é esperado da proposta do site.
+
+Pessoa 3:
+Questionou a existência de critérios para a criação de senhas. Apesar de essa funcionalidade ainda não estar definida no protótipo, seria importante estabelecer requisitos mínimos de segurança.
+Questionou como funcionaria o cadastro utilizando a opção “Continuar com Google”, nesse caso, seria necessário preencher informações adicionais, como período e instituição?
+Observou que, ao pressionar Enter na busca, os filtros aparecem antes dos resultados, o que pode gerar confusão. Também considerou que a área destinada aos filtros está muito grande.
+No protótipo não há opção de denunciar materiais, o usuário sugeriu que essa opção ficasse na mesma área que as avaliações e comentários.
+Assim como o Usuário 1, observou que a busca deveria considerar variações na forma de escrita. Por exemplo, uma pesquisa por “calculo” deveria encontrar materiais cadastrados como “cálculo”.
+Questionou como será feita a padronização dos nomes das disciplinas no momento da publicação dos materiais, já que diferentes usuários podem escrever o mesmo nome de maneiras diferentes.
+
+
+Resumo dos tópicos que merecem atenção:
+- Lista pronta de instituições para que o usuário escolha no momento do cadastro.
+- Atenção às diferentes formas de digitação de uma palavra, a busca deve apresentar resultados mesmo que haja erros ortográficos.
+- Criação de aba de consulta aos materiais já baixados.
+- Possibilidade de seguir outros usuários.
+- A aba de filtros deve ocupar menos espaço na tela e não cobrir os resultados de busca.
+- Solução para a ausência de padronização dos nomes das disciplinas.
