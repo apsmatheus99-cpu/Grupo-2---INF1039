@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="publica.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> pagina de publicar material</title>
+</head>
+
+<body>
+    <div>
+        <button type="button">Publicar</button>
+        <form action="#" method="GET"> 
+            <input type="search" placeholder="Buscar por disciplina, máteria, assunto ou professor">
+    </form>
+    </div>
+    <div>
+        <button type="button">notificações</button>
+        <button type="button">perfil</button>
+ </div>
+<main>
+    <section>
+        <p> Compartilhe Conhecimento</p>
+        <h1>Publicar Material</h1>
+    </section>
+    <form action="#" method="Post" enctype= "multipart/form-data">
+    
+    <div>
+        <label for="titulo">Titulo do material</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ex:Calculo">
+    </div>
+
+    <div>
+        <label for="disciplina">Disciplina</label>
+        <input type="text" id="disciplina" name="disciplina" placeholder="Ex:Engenharia de Software">
+    </div>
+
+    <div>
+     <label for="tipo">Tipo de Material</label>
+     <select id="tipo" name="tipo">
+        <option value=""disabled selected>Selecione o tipo</option>
+        <option value="resumo">Resumo</option>
+        <option value="exercicio">Exercício</option>
+        <option value="prova">Prova</option>
+    </select>
+        </div>
+
+     <div>
+     <label for="curso">Curso</label>
+     <select id="curso" name="curso">
+        <option value=""disabled selected>Selecione o curso</option>
+        <option value="administracao">Administração</option>
+        <option value="arquitetura e urbanismo">Arquitetura e Urbanismo</option>
+        <option value="biomedicina">Biomedicina</option>
+        <option value="ciencias contabeis">Ciencias Contábeis</option>
+        <option value="ciencias da computacao">Ciencias da Computação</option>
+        <option value="direito">Direito</option>
+        <option value="economia">Economia</option>
+        <option value="educacao fisica">Educação fisica</option>
+        <option value="engenharia mecanica">Engenharia Mecânica</option>
+        <option value="fisica">Fisica</option>
+        <option value="historia">História</option>
+        <option value="jornalismo">Jornalismo</option>
+        <option value="letras">Letras</option>
+        <option value="matematica">Matemática</option>
+        <option value="nutricao">Nutrição</option>
+        <option value="psicologia">Psicologia</option>
+    </select>
+     </div>
+
+    <div>
+     <label for="instituição">Instituição</label>
+     <select id="instituição" name="instituição">
+        <option value=""disabled selected>Selecione a instituição</option>
+        <option value="ufmg">UFMG</option>
+        <option value="usp">USP</option>
+        <option value="ufrj">UFRJ</option>
+        <option value="puc-rio">PUC-Rio</option>
+    </select>
+     </div>
+
+    <div>
+     <label for="professor">Professor(opcional/)</label>
+     <input type="text" id="professor" name="professor" placeholder="Ex:Prof. Silva">
+     </div>
+
+    <div>
+     <label for="descrição">Descrição</label>
+     <input type="text" id="descrição" name="descrição" placeholder="Ex: Descrição do material">
+     </div>
+
+    <div>
+     <label for="tags">Tags</label>
+     <input type="text" id="tags" name="tags" placeholder="Ex: #calculointegral #revisão">
+     </div>
+
+    <div>
+     <label for="arquivo">
+     <p>Arraste ou selecione um arquivo</p>
+     <p>PDF, DOC, PPTX ou Imagen até 20MB</p>
+     </label>
+    </div>
+   
+
+    <div>
+     <button type="submit">Publicar material</button>
+    </div>
+
+    
+</main>
+</body>
+</html>
