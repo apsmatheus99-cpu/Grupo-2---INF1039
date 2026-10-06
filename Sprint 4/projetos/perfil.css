@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    margin: 0;
+    background-color: #F7E9B2;
+}
+
+body > button{
+    position: fixed;
+    z-index: 2;
+    top: 18px;
+    left: 275px;
+    width: 140px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    background-color: #4F762F;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body > button:hover{
+    background-color: #3F6126;
+}
+
+body > form:first-of-type{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #F7E9B2;
+    border-bottom: 1px solid #b3c7b9;
+}
+
+body > form:first-of-type input{
+    margin-left: 205px;
+    width: 550px;
+    height: 45px;
+    padding-left: 20px;
+    border: 1px solid #636363;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+body > form:first-of-type input:focus{
+    outline: none;
+    border-color: #4F762F;
+}
+
+body > div:first-of-type{
+    position: fixed;
+    z-index: 3;
+    top: 15px;
+    right: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+body > div:first-of-type button{
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #838E43;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+body > div:first-of-type button:hover{
+    background-color: #6F7938;
+}
+
+main{
+    margin-left: 250px;
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+
+main > section:first-child{
+    width: 850px;
+    margin-left: 80px;
+}
+
+main > section:first-child p{
+    color: #4F762F;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+main > section:first-child h1{
+    color: #142A1B;
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+main > section:first-child button{
+    float: right;
+    margin-top: -55px;
+    margin-right: 20px;
+    width: 130px;
+    height: 38px;
+    border: 1px solid #4F762F;
+    border-radius: 50px;
+    background-color: white;
+    color: #4F762F;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+main > section:first-child button:hover{
+    background-color: #4F762F;
+    color: white;
+}
+
+main > div:nth-of-type(1){
+    width: 850px;
+    height: 190px;
+    margin-left: 80px;
+    margin-top: 25px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: #fff4b6;
+    border-radius: 15px;
+    box-shadow: 0px 2px 30px rgba(147, 147, 147, 0.18);
+}
+
+main > div:nth-of-type(1) img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main > div:nth-of-type(1) h2{
+    color: #142A1B;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+main > div:nth-of-type(1) p{
+    color: #636363;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 7px 0;
+}
+
+main > div:nth-of-type(2){
+    width: 850px;
+    margin-left: 80px;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+main > div:nth-of-type(2) > div{
+    width: 270px;
+    height: 120px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #d6d6d6;
+    border-radius: 12px;
+}
+
+main > div:nth-of-type(2) h2{
+    color: #4F762F;
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+main > div:nth-of-type(2) p{
+    color: #636363;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+main > section:nth-of-type(2){
+    width: 850px;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+main > section:nth-of-type(2) h2{
+    color: #142A1B;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+main > section:nth-of-type(2) h3{
+    color: #4F762F;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+main > section:nth-of-type(3){
+    width: 850px;
+    margin-left: 80px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #b3c7b9;
+}
+
+main > section:nth-of-type(3) h2{
+    color: #142A1B;
+    font-size: 25px;
+}
