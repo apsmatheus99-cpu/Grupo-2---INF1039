@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela_cadastro.css">
+    <title> Uninotes - Cadastro </title>
+</head>
+<body>
+    <main class = "container">
+    <div class= "cadastro">
+        <form action="#">
+            <div class=" form- header"> 
+                <div class = "title"> </div>
+                <h1> CRIAR CONTA </h1>
+                <h4> Monte seu perfil acadêmico em poucos passos. </h4>
+                
+            </div>
+            
+
+            <div class = "input-group"> 
+                <div class = "input-box">
+                    <label for = "  name"> Nome completo </label>
+                    <input id = "name" type = "text" name="name" required> 
+                </div>
+
+              <div class = "input-box">
+                    <label for = " email"> E-mail </label>
+                    <input id = "email" type = "email" name="email" required> 
+                </div>
+
+                  <div class = "input-box">
+                    <label for = " faculdade "> Intituição </label>
+                    <select id="faculdade" name="faculdade" required>
+                    <option value=""> Selecione sua intituição </option> 
+                    <option value="PUC-RIO"> PUC-RIO </option> 
+                    <option value="UERJ"> UERJ </option> 
+                    <option value="UFRJ"> UFRJ </option> 
+                    <option value="UNIRIO"> UNIRIO </option> 
+                    <option value="FGV"> FGV </option>             
+                                
+                </select>
+
+
+                </div>
+
+                  <div class = "input-box">
+                    <label for = " curso "> Curso </label>
+                    
+                    <select id="curso" name="curso" required>
+                    <option value="Administração"> Administração </option>
+                    <option value="Análise e Desenvolvimento de sistemas"> ADS </option>
+                    <option value="Arquitetura e Urbanismo"> Arquitetura e Urbanismo </option>
+                    <option value="Biomedicina"> Biomedicina </option>
+                    <option value="Ciências Biológicas"> Ciências Biológicas </option>
+                    <option value="Ciências Contábeis"> Ciências Contábeis </option>
+                    <option value="Ciência da Computação"> Ciência da Computação </option>
+                    <option value="Direito"> Direito </option>
+                    <option value="Economia"> Economia </option>
+                    <option value="Educação Física"> Educação Física </option>
+                    <option value="Enfermagem"> Enfermagem </option>
+                    <option value="Engenharia Civil"> Engenharia Civil </option>
+                    <option value="Engenharia de Computação"> Engenharia de Computação </option>
+                    <option value="Engenharia de Produção"> Engenharia de Produção </option>
+                    <option value="Engenharia Elétrica"> Engenharia Elétrica </option>
+                    <option value="Engenharia Mecânica"> Engenharia Mecânica </option>
+                    <option value="Engenharia Química"> Engenharia Química </option>
+                    <option value="Farmácia"> Farmácia </option>
+                    <option value="Física"> Física </option>
+                    <option value="Fisioterapia"> Fisioterapia </option>
+                    <option value="História"> História </option>
+                    <option value="Jornalismo"> Jornalismo </option>
+                    <option value="Letras"> Letras </option>
+                    <option value="Matemática"> Matemática </option>
+                    <option value="Medicina "> Medicina </option>
+                    <option value="Nutrição"> Nutrição </option>
+                    <option value="Odontologia"> Odontologia </option>
+                    <option value="Pedagogia"> Pedagogia </option>
+                    <option value="Psicologia "> Psicologia </option>
+                    <option value="Publicidade e Propaganda"> Publicidade e Propaganda </option>
+                    <option value="Química"> Química </option>
+                    <option value="Relações Internacionais"> Relações Internacionais </option>
+                    <option value="Sistemas de Informação"> Sistemas de Informação </option>
+                    <option value="Outro"> Outro </option>
+
+
+                   </select>
+                </div>
+
+
+                <div class = "input-box">
+                    <label for = " periodo "> Período </label>
+                    <input id = "periodo" type = "text" name="periodo" placeholder="Ex.: 5" required> 
+                </div>
+                
+
+                <div class = "input-box">
+                    <label for = " password "> Senha </label>
+                    <input id = "password" type = "password" name="password" required> 
+                </div>
+
+                 <div class = "input-box confirmar-senha">
+                    <label for = " confirmpassword "> Confirmar senha </label>
+                    <input id = "confirmpassword" type = "password" name="confirmpassword" required> 
+                </div>
+
+  
+                <button type="submit" class="continuar">CONTINUAR</button>
+            </div>
+
+            
+
+            <div class = "register-link">
+                <p> Já tem conta? <a> Entrar</a> </p>
+
+            </div>
+        </form>
+
+    </div>
+
+
+
+    </main>
+</body>
+</html>
