@@ -30,6 +30,26 @@ body > button:hover{
     background-color: #3F6126;
 }
 
+body > a{
+    position: fixed;
+    z-index: 2;
+    top: 18px;
+    left: 275px;
+    width: 140px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    background-color: #4F762F;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+body > a:hover{
+    background-color: #3F6126;
+}
+
 body > form:first-of-type{
     position: fixed;
     z-index: 1;

@@ -10,10 +10,10 @@ body{
     margin:0;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    background-color: #FCE9A4;
+    background-color: #F7E9B2;
 }
 
-.publicar-pesquisa{
+.publicar-pesquisa {
     position: fixed;
     z-index: 2;
     display: flex;
@@ -27,7 +27,7 @@ body{
     gap: 20px;
     padding-left: 20px;
 
-    button{
+    .a {
         background-color:#4F762F;
         color: white;
         border-radius: 50px;
@@ -37,7 +37,7 @@ body{
         font-weight: 600;
         border: none;
     }
-    button:hover{
+    a:hover {
         background-color: #5a7f35;
     }
 
@@ -129,7 +129,7 @@ body{
 
 
 
-.barraLateral{
+.barraLateral {
     position: fixed;
     top: 0;
     left: 0;
@@ -166,6 +166,22 @@ body{
 .barraLateral img{
     width: 40px;
     height: 40px;
+}
+
+.barraLateral a{
+    display: block;
+    color:white;
+    background-color: #838E43;
+    border: none;
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+    border-radius: 7px;
+    height: 40px;
+}
+.barraLateral a:hover{
+    background-color: #a0ad56;
 }
 
 .barraLateral button{

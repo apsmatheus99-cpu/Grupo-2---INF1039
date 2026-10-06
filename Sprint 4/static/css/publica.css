@@ -35,6 +35,21 @@ body{
     background-color: #3f6126;
 }
 
+.barra-topo a{
+    background-color: #4F762F;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    width: 140px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.barra-topo a:hover{
+    background-color: #3f6126;
+}
+
 .barra-topo form{
     margin: 0;
 }
