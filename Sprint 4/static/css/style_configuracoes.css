@@ -27,7 +27,7 @@ body{
     gap: 20px;
     padding-left: 20px;
 }
-.publicar-busca button{
+.publicar-busca a{
     background-color:#4F762F;
     color: white;
     border-radius: 50px;
@@ -37,7 +37,7 @@ body{
     font-weight: 600;
     border: none;
 }
-.publicar-busca button:hover{
+.publicar-busca a:hover{
     background-color: #5a7f35;
 }
 
@@ -50,6 +50,11 @@ body{
     color:#556b5c;
     font-weight: 500;
     padding-left: 20px;
+}
+
+.publicar-busca img{
+        width: 30px;
+        height: 30px;
 }
 
 .barra-lateral{
@@ -104,6 +109,22 @@ body{
     height: 40px;
 }
 .barra-lateral button:hover {
+    background-color: #a0ad56;
+}
+
+.barra-lateral a{
+    display: block;
+    color:white;
+    background-color: #838E43;
+    border: none;
+    width: 220px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+    border-radius: 7px;
+    height: 40px;
+}
+.barra-lateral a:hover {
     background-color: #a0ad56;
 }
 
@@ -169,6 +190,10 @@ body{
     border: none;
     border-radius: 10px;
     padding: 10px 16px;
+}
+
+.configuracoes .sair button:hover {
+    background-color: darkred;
 }
 
 .configuracoes .notificao {
