@@ -5,9 +5,13 @@
     font-family: "Montserrat", sans-serif;
 }
 
+input{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
 body{
     margin: 0;
-    background-color: #F7E9B2;
+    background-color: #FFEBA6;
 }
 
 .barra-topo{
@@ -109,6 +113,7 @@ main > section p{
     color: #4F762F;
     font-size: 14px;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 
 main > section h1{
@@ -120,7 +125,7 @@ main > section h1{
 
 main > form{
     margin-left: 80px;
-    background-color: #fff4b6;
+    background-color: white;
     border-radius: 15px;
     width: 850px;
     padding: 30px;
@@ -135,6 +140,7 @@ main label{
     display: block;
     color: #142A1B;
     font-size: 13px;
+    font-weight: 700;
     margin-bottom: 7px;
 }
 
@@ -149,6 +155,7 @@ main select{
     color: #142A1B;
     font-size: 13px;
     font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 main input[type="text"]:focus,
@@ -207,6 +214,7 @@ main button[type="submit"]{
     background-color: #4F762F;
     color: white;
     font-size: 14px;
+    font-weight: 700;
     cursor: pointer;
 }
 

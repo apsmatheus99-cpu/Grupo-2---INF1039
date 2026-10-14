@@ -2,26 +2,43 @@
 <html lang="pt-br">
 <head>
     <link rel="stylesheet" href="../static/css/publica.css">
+    <link rel="stylesheet" href="../static/css/barraLateral.css">
+    <link rel="stylesheet" href="../static/css/publicarPesquisa.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> pagina de publicar material</title>
 </head>
 
 <body>
-    <div>
-        <a href="pagina de publica.html">Publicar</a>
-        <form action="#" method="GET"> 
-            <input type="search" placeholder="Buscar por disciplina, máteria, assunto ou professor">
-    </form>
+    <div class="publicar-pesquisa">
+        <a href="pagina de publica.html">PUBLICAR</a>
+        <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
+        <img src="imagens/notificacao.png">
+        <img src="imagens/perfil-de-usuario.png">
     </div>
-    <div>
-        <button type="button">notificações</button>
-        <a href="tela de perfil.html">perfil</a>
- </div>
+
+    <section class="barraLateral">
+        <div class="logo-titulo">
+            <img src="imagens/Logo Uninotes.png">
+            <h2><b>UNINOTES</b></h2>
+        </div>
+        <div class="botao-inicio">
+            <a href="telaInicio.html"><img src="imagens/icone casa.png"><b>INÍCIO</b></a>
+        </div>
+        <div class="botao-meusMateriais">
+            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
+        </div>
+        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
+        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
+        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
+        <a href="tela de perfil.html"><img src="imagens/usuario.png"><b>PERFIL</b></a>
+        <a href="pagina_configuracoes.html"><img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
+    </section>
+
 <main>
     <section>
-        <p> Compartilhe Conhecimento</p>
-        <h1>Publicar Material</h1>
+        <p> COMPARTILHE CONHECIMENTO</p>
+        <h1>PUBLICAR MATERIAL</h1>
     </section>
     <form action="#" method="Post" enctype= "multipart/form-data">
     
@@ -80,7 +97,7 @@
      </div>
 
     <div>
-     <label for="professor">Professor(opcional/)</label>
+     <label for="professor">Professor(opcional)</label>
      <input type="text" id="professor" name="professor" placeholder="Ex:Prof. Silva">
      </div>
 
@@ -103,9 +120,10 @@
    
 
     <div>
-     <button type="submit">Publicar material</button>
+     <button type="submit">PUBLICAR MATERIAL</button>
     </div>
 
+    </form>
     
 </main>
 </body>

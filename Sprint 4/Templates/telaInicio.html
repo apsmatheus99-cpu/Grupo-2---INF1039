@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>UNINOTES-Materiais Acadêmicos</title>
     <link rel="stylesheet" href="../static/css/styleInicio.css">
+    <link rel="stylesheet" href="../static/css/barraLateral.css">
+    <link rel="stylesheet" href="../static/css/publicarPesquisa.css">
 </head>
 <body>
     <div class="publicar-pesquisa">
         <a href="pagina de publica.html">PUBLICAR</a>
-        <input type="text" placeholder="Buscar por disciplina,matéria,assunto ou professor...">
+        <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
         <img src="imagens/notificacao.png">
         <img src="imagens/perfil-de-usuario.png">
     </div>
@@ -21,8 +23,11 @@
         <h1><b>ENCONTRE O MATERIAL CERTO<br>
         PARA ESTUDAR MELHOR</b></h1>
         <p>Resumos, exercícios e anotações compartilhados por estudantes de várias universidades.</p>
-        <input type="text" placeholder="Qual conteúdo você procura? ">
-        <button><b>BUSCAR</b></button>
+        <input 
+            type="text" 
+            id="barraPesquisa"
+            placeholder="Qual conteúdo você procura? ">
+        <button id="botaoBuscar">BUSCAR</button>
         </div>
     </section>
     <div class="materiais-recomendados">
@@ -43,7 +48,7 @@
                     <button>SEGUIR</button>
                 </div>
                 <a href="material.html">
-                <b>ABRIR</b>
+                <h4>ABRIR</h4>
                 </a>
             </div>
             <div class="material-box">
@@ -60,7 +65,7 @@
                     <button>SEGUIR</button>
                 </div>
                 <a href="material.html">
-                <b>ABRIR</b>
+                <h4>ABRIR</h4>
                 </a>
             </div>
             <div class="material-box">
@@ -77,7 +82,7 @@
                     <button>SEGUIR</button>
                 </div>
                 <a href="material.html">
-                <b>ABRIR</b>
+                <h4>ABRIR</h4>
                 </a>
             </div>
         </div>
@@ -100,7 +105,7 @@
                     <button>SEGUIR</button>
                 </div>
                 <a href="material.html">
-                <b>ABRIR</b>
+                <h4>ABRIR</h4>
                 </a>
             </div>
             <div class="material-box">
@@ -112,12 +117,13 @@
                 <p><b>Slides</b></p><img src="imagens/avaliacao (2).png">
                 </div>
                 <div class="autor">
+                    <div class="nome">
                     <p>Por:</p>
-                    <p>Ana Beatriz Ferreira</p>
+                    <p>Ana Beatriz Ferreira</p></div>
                     <button>SEGUIR</button>
                 </div>
                 <a href="material.html">
-                <b>ABRIR</b>
+                <h4>ABRIR</h4>
                 </a>
             </div>
             <div class="material-box">
@@ -134,7 +140,7 @@
                     <button>SEGUIR</button>
                 </div>
                 <a href="material.html">
-                <b>ABRIR</b>
+                <h4>ABRIR</h4>
                 </a>
             </div>
     </div>
@@ -153,15 +159,16 @@
         <div class="botao-meusMateriais">
             <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
     </div>
-            <button><b>SALVOS</b></button>
-            <button><b>MENSAGENS</b></button>
-            <button><b>ESTATÍSTICAS</b></button>
+        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
+        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
+        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
             <a href="tela de perfil.html">
-                <b>PERFIL</b>
+            <img src="imagens/usuario.png"><b>PERFIL</b>
             </a>
             <a href="pagina_configuracoes.html">
-                <b>CONFIGURAÇÕES</b>
+            <img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b>
             </a>
     </section>
+    <script src="../static/javascript/inicio.js"></script>
 </body>
 </html>

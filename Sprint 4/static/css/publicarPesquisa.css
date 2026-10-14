@@ -1,0 +1,56 @@
+body > div.publicar-pesquisa{
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 250px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: calc(100% - 250px);
+    height: 70px;
+    margin: 0;
+    padding: 0 20px;
+    background-color: #FFEBA6;
+    border-bottom: 1px solid #b3c7b9;
+    font-family: "Montserrat", sans-serif;
+}
+
+.publicar-pesquisa > a{
+    display: inline-flex;
+    flex: 0 0 110px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    color: white;
+    background-color: #4F762F;
+    border: none;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.publicar-pesquisa > a:hover{
+    background-color: #5a7f35;
+}
+
+.publicar-pesquisa > input{
+    flex: 1 1 670px;
+    min-width: 0;
+    max-width: 670px;
+    height: 45px;
+    padding-left: 20px;
+    color: #556b5c;
+    border: 1px solid #636363;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.publicar-pesquisa > img{
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+}
