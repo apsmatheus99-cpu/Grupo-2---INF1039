@@ -1,0 +1,276 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #F7E9B2;
+    color: #142A1B;
+}
+
+/* MENU LATERAL */
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #838E43;
+    padding-top: 10px;
+}
+
+aside > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 10px 35px;
+}
+
+aside > div img {
+    width: 50px;
+    height: 50px;
+}
+
+aside > div span {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    margin: 5px 10px;
+}
+
+aside a {
+    display: block;
+    padding: 13px 15px;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+aside a:hover {
+    background-color: #6F7938;
+}
+
+aside ul:first-of-type li:nth-child(3) a {
+    background-color: #4F762F;
+}
+
+aside hr {
+    margin: 25px 15px;
+    border: none;
+    border-top: 1px solid #B3C7B9;
+}
+
+/* TOPO DA PÁGINA */
+
+body > div {
+    margin-left: 250px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #F7E9B2;
+    border-bottom: 1px solid #B3C7B9;
+    z-index: 2;
+}
+
+header > button {
+    width: 140px;
+    height: 40px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50px;
+    background-color: #4F762F;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+header > button:hover {
+    background-color: #3F6126;
+}
+
+header form {
+    flex: 1;
+    margin: 0;
+}
+
+header input[type="search"] {
+    width: 100%;
+    max-width: 550px;
+    height: 45px;
+    padding-left: 20px;
+    border: 1px solid #636363;
+    border-radius: 50px;
+    font-size: 12px;
+}
+
+header input[type="search"]:focus {
+    outline: none;
+    border-color: #4F762F;
+}
+
+header > div {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+header > div button {
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #838E43;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+header > div button:hover {
+    background-color: #6F7938;
+}
+
+header > div button span {
+    margin-left: 5px;
+    font-weight: 800;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    margin-left: 80px;
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+
+main section {
+    width: 850px;
+}
+
+main section:first-child p {
+    margin-bottom: 5px;
+    color: #4F762F;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+main h1 {
+    margin-top: 0;
+    color: #142A1B;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+/* CARTÃO DO MATERIAL */
+
+main article {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    padding: 25px;
+    min-height: 150px;
+    background-color: #FFF4B6;
+    border-radius: 15px;
+    box-shadow: 0 2px 30px rgba(147, 147, 147, 0.18);
+}
+
+main article > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    background-color: #FFF9D6;
+    border-radius: 12px;
+}
+
+main article > div:first-child img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+main article > div:nth-child(2) {
+    flex: 1;
+}
+
+main article p:first-child {
+    color: #4F762F;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+main article h2 {
+    margin: 8px 0;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+main article p:last-child {
+    color: #636363;
+    font-size: 12px;
+}
+
+main article strong {
+    color: #142A1B;
+}
+
+main article > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main article button {
+    height: 38px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+main article button:first-child {
+    background-color: #4F762F;
+    color: white;
+}
+
+main article button:first-child:hover {
+    background-color: #3F6126;
+}
+
+main article button:last-child {
+    background-color: white;
+    border: 1px solid #B65C4B;
+    color: #B65C4B;
+}
+
+main article button:last-child:hover {
+    background-color: #B65C4B;
+    color: white;
+}
