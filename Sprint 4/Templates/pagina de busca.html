@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - UNINOTES</title>
+    <link rel="stylesheet" href="busca.css">
+</head>
+<body>
+    <aside class="barraLateral">
+        <div class="logo-titulo">
+            <img src="logo-uninotes.png" alt="Logo UNINOTES">
+            <h2>UNINOTES</h2>
+        </div>x
+
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Meus Materiais</a></li>
+                <li><a href="#">Salvos</a></li>
+                <li><a href="#">Mensagens</a></li>
+            </ul>
+
+            <hr>
+
+            <ul>
+                <li><a href="#">Estatísticas</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="conteudo">
+        <header class="publicar-pesquisa">
+            <a href="#">Publicar</a>
+
+            <form action="#" method="get">
+                <input type="search" name="busca" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
+            </form>
+
+            <div class="acoes-topo">
+                <button type="button">🔔</button>
+                <button type="button">👤</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="inicio">
+                <h4>EXPLORE A BIBLIOTECA</h4>
+                <h1>RESULTADOS</h1>
+
+                <form action="#" method="get">
+                    <input type="search" name="busca" placeholder="Buscar materiais...">
+                    <button type="submit">BUSCAR</button>
+                </form>
+            </section>
+
+            <div class="area-resultados">
+                <aside class="filtros">
+                    <h2>FILTROS</h2>
+
+                    <form action="#" method="get">
+                        <div>
+                            <label for="tipo">Tipo de material</label>
+                            <select id="tipo" name="tipo">
+                                <option value="todos">Todos</option>
+                                <option value="slides">Slides</option>
+                                <option value="resumo">Resumo</option>
+                                <option value="prova">Prova</option>
+                                <option value="exercicios">Exercícios</option>
+                                <option value="livro">Livro</option>
+                                <option value="videoaula">Videoaula</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="disciplina">Disciplina</label>
+                            <input type="text" id="disciplina" name="disciplina" placeholder="Filtrar por disciplina">
+                        </div>
+
+                        <div>
+                            <label for="curso">Curso</label>
+                            <input type="text" id="curso" name="curso" placeholder="Filtrar por curso">
+                        </div>
+
+                        <div>
+                            <label for="professor">Professor</label>
+                            <input type="text" id="professor" name="professor" placeholder="Filtrar por professor">
+                        </div>
+
+                        <div>
+                            <label for="instituicao">Instituição</label>
+                            <input type="text" id="instituicao" name="instituicao" placeholder="Filtrar por instituição">
+                        </div>
+
+                        <button type="reset">LIMPAR FILTROS</button>
+                    </form>
+                </aside>
+
+                
+</body>
+</html>
