@@ -11,3 +11,9 @@ def esqueci_senha(request):
 
 def inicio(request):
     return render(request, 'telaInicio.html')
+
+def configuracoes(request):
+    return render(request, 'pagina_configuracoes.html')
+
+def perfil(request):
+    return render(request, 'tela_de_perfil.html')

@@ -25,6 +25,7 @@ urlpatterns = [
     path('esqueci-senha/',esqueci_senha),
     path('', inicio),
     path('inicio/', inicio),
-
+    path('configuracoes/', configuracoes),
+    path('perfil/', perfil),
 
 ]
