@@ -1,0 +1,87 @@
+.barraLateral{
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    background-color: #838E43;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.barraLateral .logo-titulo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 0 10px;
+}
+
+.barraLateral .logo-titulo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.barraLateral .logo-titulo h2{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.barraLateral > a,
+.barraLateral > button,
+.barraLateral .botao-inicio > a,
+.barraLateral .botao-meusMateriais > button{
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    margin: 20px 0 0 10px;
+    padding: 0 10px;
+    gap: 8px;
+    color: white;
+    background-color: #838E43;
+    border: none;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+
+.barraLateral a b,
+.barraLateral button b{
+    font-weight: 700;
+}
+
+.barraLateral .botao-inicio > a{
+    gap: 14px;
+}
+
+.barraLateral > a:hover,
+.barraLateral > button:hover,
+.barraLateral .botao-inicio > a:hover,
+.barraLateral .botao-meusMateriais > button:hover{
+    background-color: #a0ad56;
+}
+
+.barraLateral button{
+    cursor: pointer;
+}
+
+.barraLateral .botao-inicio img,
+.barraLateral .botao-meusMateriais img,
+.barraLateral > a img,
+.barraLateral > button img{
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+}
