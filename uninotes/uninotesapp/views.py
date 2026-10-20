@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Curso
 
 def login(request):
     return render(request, 'tela_login.html')
