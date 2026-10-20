@@ -18,3 +18,9 @@ def configuracoes(request):
 
 def perfil(request):
     return render(request, 'tela_de_perfil.html')
+
+def mensagens(request):
+    return render(request, 'tela_mensagem.html')
+
+def estatisticas(request):
+    return render(request, 'tela_estatistica.html')
