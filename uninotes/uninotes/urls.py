@@ -29,5 +29,8 @@ urlpatterns = [
     path('perfil/', perfil),
     path('mensagens/', mensagens),
     path('estatisticas/', estatisticas),
+    path('materiais/', meus_materiais),
+    path('salvos/', salvos),
+    path('publicar/', publicar),
 
 ]
