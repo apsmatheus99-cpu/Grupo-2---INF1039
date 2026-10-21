@@ -6,85 +6,112 @@
     box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    display: grid;
+    place-items: center;
     min-height: 100vh;
-    background: #f7e9b2;
+    padding: 24px 16px;
+    background: #FFEBA6;
     font-family: "Montserrat", sans-serif;
 }
 
-.container {
+.container:has(> .form){
     display: flex;
     flex-direction: column;
-    width: 400px;
-}
-
-.voltar {
-    text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
-    color: #5A762F;
-}
-
-.form {
-    width: 400px;
-    height: 250px;
+    width: min(700px, calc(100vw - 32px));
+    height: auto;
+    min-height: 0;
+    padding: 24px;
     background: #fff;
-    border: 10px solid #fff;
     border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.103);
 }
 
-.form input{
-    border-radius: 50px;
-    border:1px solid #636363;
-    height: 30px;
+.voltar{
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.voltar a{
+    color: #557A35;
+    text-decoration: none;
+}
+
+.voltar a:hover{
+    text-decoration: underline;
+}
+
+.container:has(> .form) > .form{
     width: 100%;
-    font-size: 12px;
-    color:#556b5c;
-    font-weight: 500;
-    padding-left: 20px;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
 }
-.form h1{  
-    text-align: left;
-    font-size: 30px;
-    color: #333;
 
+.form h1{
+    margin: 0;
+    padding: 0 0 8px;
+    color: #333;
+    font-size: clamp(24px, 5vw, 30px);
+    font-weight: 800;
+    text-align: left;
 }
 
 .linha{
-    margin-bottom: 50px;
-    color: #58738F;
+    margin: 0 0 24px;
+    color: #575757;
 }
 
-.form h4{
-    text-align: left
-    margin-bottom: 10px;
-    font-size: 15px;
+.linha h4{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.form > h4{
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form input{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
 }
 
 .enviar{
-    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 30px;
-    border: 1px solid #008000;
-    background: #008000;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
+    min-height: 42px;
+    margin-top: 16px;
+    border: 0;
     border-radius: 10px;
+    background: #557A35;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
-    display: block;
-    text-align: center;
 }
 
 .enviar:hover{
-    background: #fff;
-    color: #008000;
+    background: #5f873b;
 }
 
-.voltar a {
-    color: #5A762F;
-    text-decoration: none;
+@media (max-width: 480px){
+    .container:has(> .form){
+        padding: 20px;
+    }
 }

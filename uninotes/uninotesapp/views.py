@@ -7,6 +7,8 @@ def login(request):
 def cadastro(request):
     return render(request, 'tela_cadastro.html')
 
+def material(request):
+    return render(request,'material.html')
 def esqueci_senha(request):
     return render(request, 'esqueci_senha.html')
 
@@ -24,12 +26,3 @@ def mensagens(request):
 
 def estatisticas(request):
     return render(request, 'tela_estatistica.html')
-
-def meus_materiais(request):
-    return render(request, 'meus materiais.html')
-
-def salvos(request):
-    return render(request, 'salvos.html')
-
-def publicar(request):
-    return render(request, 'pagina de publica.html')
