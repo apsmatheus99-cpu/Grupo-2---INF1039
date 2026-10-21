@@ -1,0 +1,715 @@
+:root {
+    --largura-menu: clamp(13rem, 17vw, 15.625rem);
+    --espaco-conteudo: clamp(1.25rem, 4vw, 4rem);
+}
+
+html {
+    font-size: clamp(14px, 0.9vw, 16px);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.barraLateral,
+.barra-lateral,
+aside {
+    width: var(--largura-menu);
+}
+
+.barraLateral > a,
+.barraLateral > button,
+.barraLateral .botao-inicio > a,
+.barraLateral .botao-meusMateriais > button,
+.barra-lateral a,
+.barra-lateral button {
+    max-width: calc(100% - 1.25rem);
+}
+
+.publicar-pesquisa,
+body > div.publicar-pesquisa,
+.publicar-busca,
+.barra-topo,
+header,
+body > form:first-of-type {
+    left: var(--largura-menu);
+    right: 0;
+    width: auto;
+    margin: 0;
+}
+
+.publicar-pesquisa > input,
+.publicar-busca input,
+.barra-topo input[type="search"],
+header input[type="search"],
+header input {
+    min-width: 0;
+    max-width: 100%;
+}
+
+aside + div {
+    margin-left: var(--largura-menu);
+}
+
+main {
+    max-width: calc(100vw - var(--largura-menu) - var(--espaco-conteudo) * 2);
+}
+
+main section,
+main > form {
+    max-width: 100%;
+}
+
+main > form {
+    width: min(53rem, calc(100% - var(--espaco-conteudo)));
+    margin-left: var(--espaco-conteudo);
+}
+
+main > section:first-child {
+    width: min(53rem, calc(100% - var(--espaco-conteudo)));
+    margin-left: var(--espaco-conteudo);
+}
+
+main > section:not(:first-child) {
+    width: min(53rem, calc(100% - var(--espaco-conteudo)));
+    margin-left: var(--espaco-conteudo);
+}
+
+main > div:nth-of-type(1),
+main > div:nth-of-type(2) {
+    width: min(53rem, calc(100% - var(--espaco-conteudo)));
+    margin-left: var(--espaco-conteudo);
+}
+
+main article {
+    flex-wrap: wrap;
+}
+
+main article > div:nth-child(2) {
+    min-width: 0;
+}
+
+.inicio,
+.materiais-recomendados,
+.configuracoes,
+.estatisticas,
+.cabecalho:not(form) {
+    width: auto;
+    max-width: 80rem;
+    margin-left: calc(var(--largura-menu) + var(--espaco-conteudo));
+    margin-right: var(--espaco-conteudo);
+}
+
+.pesquisa {
+    width: min(56.25rem, 100%);
+    height: auto;
+    min-height: 18rem;
+    margin-left: 0;
+    padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.pesquisa h1 {
+    font-size: clamp(1.6rem, 3.4vw, 2.8rem);
+}
+
+.inicio input {
+    width: calc(100% - 3.75rem);
+}
+
+.boxes-materiais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+}
+
+.material-box {
+    width: 100%;
+    min-height: 18.75rem;
+    height: auto;
+}
+
+.material-box a {
+    width: 100%;
+    margin-left: 0;
+}
+
+.avaliacao {
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.configuracoes .opcoes-box,
+.configuracoes .notificao {
+    width: 100%;
+}
+
+.configuracoes .check-box {
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 1rem;
+}
+
+.grade-estatisticas {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+}
+
+.painel-mensagens {
+    width: 100%;
+}
+
+.material {
+    width: min(50rem, calc(100vw - var(--largura-menu) - var(--espaco-conteudo) * 2));
+    height: auto;
+    min-height: 33rem;
+    margin-left: calc(var(--largura-menu) + var(--espaco-conteudo));
+    padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.avaliacao-comentario {
+    width: min(50rem, calc(100vw - var(--largura-menu) - var(--espaco-conteudo) * 2));
+    margin-left: calc(var(--largura-menu) + var(--espaco-conteudo));
+}
+
+.boxes {
+    flex: 1 1 18rem;
+    min-width: 0;
+    width: auto;
+    height: auto;
+    min-height: 9.375rem;
+    padding: 1.25rem;
+}
+
+.boxes input {
+    width: 100%;
+}
+
+.container {
+    width: min(clamp(20rem, 35vw, 28rem), calc(100vw - 2rem));
+    height: auto;
+    min-height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.container > form,
+.container > .cadastro,
+.container .form {
+    width: 100%;
+}
+
+main.container > form {
+    margin: 0;
+}
+
+.container .form {
+    height: auto;
+    min-height: 15.625rem;
+    padding: 1rem;
+}
+
+.container .input-box input,
+.container .input-box select {
+    min-height: 2.5rem;
+    height: auto;
+}
+
+.container .cabecalho h1,
+.container .cabecalho > p,
+.container .input-box p,
+.container .input-box input,
+.container .remember-forgot,
+.container .entrar,
+.container .continuar {
+    margin-left: 0;
+}
+
+.container .input-box input,
+.container .entrar,
+.container .continuar {
+    width: 100%;
+}
+
+.container .input-box i {
+    right: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    body:has(.barraLateral),
+    body:has(.barra-lateral),
+    body:has(aside) {
+        padding-bottom: 4.25rem;
+    }
+
+    .barraLateral,
+    .barra-lateral,
+    aside {
+        position: fixed;
+        z-index: 10;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 4rem;
+        min-height: 4rem;
+        padding: 0 0.25rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .barraLateral .logo-titulo,
+    .barra-lateral .logo,
+    aside > div {
+        display: none;
+    }
+
+    .barraLateral > a,
+    .barraLateral > button,
+    .barraLateral .botao-inicio,
+    .barraLateral .botao-meusMateriais,
+    .barra-lateral .menu,
+    .barra-lateral .menu button {
+        flex: 1 1 0;
+        width: auto;
+        max-width: none;
+        height: 100%;
+        min-width: 2.75rem;
+        margin: 0;
+    }
+
+    .barraLateral > a,
+    .barraLateral > button,
+    .barraLateral .botao-inicio > a,
+    .barraLateral .botao-meusMateriais > button,
+    .barra-lateral .menu button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 0.5rem;
+        border-radius: 0;
+    }
+
+    .barraLateral b,
+    .barra-lateral .menu b {
+        display: none;
+    }
+
+    .barra-lateral .menu {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .barraLateral > a img,
+    .barraLateral > button img,
+    .barraLateral .botao-inicio img,
+    .barraLateral .botao-meusMateriais img {
+        margin: 0;
+    }
+
+    aside {
+        display: block;
+        height: auto;
+        padding: 0;
+    }
+
+    aside nav {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    aside ul {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        margin: 0;
+    }
+
+    aside li {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    aside a {
+        padding: 0.75rem;
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+
+    aside hr {
+        display: none;
+    }
+
+    .publicar-pesquisa,
+    body > div.publicar-pesquisa,
+    .publicar-busca,
+    .barra-topo,
+    header,
+    body > form:first-of-type {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        min-height: 3.75rem;
+        height: auto;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .publicar-pesquisa > a,
+    .publicar-busca a,
+    .barra-topo a,
+    .barra-topo button,
+    header > button {
+        flex: 0 0 auto;
+        width: auto;
+        min-width: 5rem;
+        padding: 0 0.65rem;
+        font-size: 0.7rem;
+    }
+
+    .publicar-pesquisa > input,
+    .publicar-busca input,
+    .barra-topo input[type="search"],
+    header input[type="search"],
+    header input {
+        flex: 1 1 6rem;
+        width: 1%;
+        height: 2.5rem;
+        padding-left: 0.75rem;
+        font-size: 0.7rem;
+    }
+
+    .publicar-pesquisa > img,
+    .publicar-busca img {
+        flex: 0 0 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    header > div {
+        gap: 0.25rem;
+    }
+
+    header > div button {
+        height: 2.5rem;
+        padding: 0 0.5rem;
+        font-size: 0.65rem;
+    }
+
+    body > div > main,
+    aside + div,
+    main {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 5.25rem 1rem 2rem;
+    }
+
+    main section,
+    main > section,
+    main > form {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    main > section:first-child {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    main > section:not(:first-child) {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    main > section:first-child button {
+        float: none;
+        width: auto;
+        margin: 0 0 1rem;
+    }
+
+    main > div:nth-of-type(1),
+    main > div:nth-of-type(2),
+    main > section:nth-of-type(2),
+    main > section:nth-of-type(3) {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0 0;
+    }
+
+    main > div:nth-of-type(1) {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    main > div:nth-of-type(1) img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    main > div:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+        gap: 0.75rem;
+    }
+
+    main > div:nth-of-type(2) > div {
+        width: auto;
+        height: auto;
+        padding: 0.75rem;
+    }
+
+    main h1 {
+        font-size: clamp(1.6rem, 7vw, 2.5rem);
+    }
+
+    main article {
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    main article > div:last-child {
+        flex: 1 1 100%;
+        justify-content: flex-end;
+    }
+
+    main article button {
+        min-height: 2.5rem;
+    }
+
+    .inicio,
+    .materiais-recomendados,
+    .configuracoes,
+    .estatisticas,
+    .cabecalho:not(form) {
+        width: auto;
+        max-width: none;
+        margin: 0 1rem;
+    }
+
+    .inicio {
+        margin-top: 5rem;
+    }
+
+    .pesquisa {
+        min-height: 0;
+        padding: 1.25rem;
+    }
+
+    .pesquisa h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.45rem, 6vw, 2.25rem);
+    }
+
+    .pesquisa h4,
+    .pesquisa p {
+        margin-left: 0;
+    }
+
+    .pesquisa h4 {
+        padding-top: 0;
+    }
+
+    .inicio input {
+        width: 100%;
+        height: 3rem;
+        margin: 0.75rem 0 0;
+        padding-right: 6rem;
+    }
+
+    .inicio button {
+        margin: 1.5rem 0 0 -6.5rem;
+    }
+
+    .materiais-recomendados {
+        margin-top: 2rem;
+    }
+
+    .boxes-materiais {
+        grid-template-columns: 1fr;
+    }
+
+    .configuracoes {
+        margin-top: 5rem;
+    }
+
+    .configuracoes .opcoes-box {
+        min-height: 5rem;
+        height: auto;
+        padding: 0.75rem;
+    }
+
+    .configuracoes .check-box {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .estatisticas,
+    .cabecalho:not(form) {
+        margin-top: 5rem;
+    }
+
+    .grade-estatisticas {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-mensagens {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .lista-conversas {
+        padding: 1rem;
+        border-right: 0;
+        border-bottom: 1px solid #e5dfc9;
+    }
+
+    .lista-conversas .conversa {
+        padding: 0.5rem;
+    }
+
+    .chat-mensagens {
+        min-height: 16rem;
+        padding: 1rem;
+    }
+
+    .material {
+        width: auto;
+        min-height: 0;
+        margin: 5rem 1rem 0;
+        padding: 1.25rem;
+    }
+
+    .material .titulo-material h1 {
+        font-size: clamp(1.1rem, 5vw, 1.5rem);
+        overflow-wrap: anywhere;
+    }
+
+    .material > div,
+    .material .categorias,
+    .material .titulo-material,
+    .material .descricao-material,
+    .material .autor-material,
+    .material .prof-curso-instituicao-data,
+    .material .prof-curso-instituicao-data-DADOS,
+    .material .avaliacao,
+    .material .abrir-baixar-salvar-compartilhar,
+    .material .reportar {
+        max-width: 100%;
+        margin: 0.75rem 0;
+    }
+
+    .prof-curso-instituicao-data,
+    .prof-curso-instituicao-data-DADOS {
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+
+    .abrir-baixar-salvar-compartilhar {
+        flex-wrap: wrap;
+    }
+
+    .abrir-baixar-salvar-compartilhar button {
+        flex: 1 1 8rem;
+        width: auto !important;
+    }
+
+    .avaliacao-comentario {
+        width: auto;
+        margin: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .volte-aos-materiais button {
+        margin: 5rem 1rem 0;
+    }
+
+    .configuracoes .check-box {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: calc(100% - 1.5rem);
+        padding: 1.25rem;
+    }
+
+    .container .form {
+        min-height: 0;
+    }
+
+    .container h1 {
+        font-size: clamp(1.4rem, 7vw, 1.875rem);
+    }
+
+    .container .input-group {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .container .confirmar-senha,
+    .container .continuar {
+        grid-column: 1;
+    }
+
+    .input-box {
+        margin: 1rem 0;
+    }
+
+    .register-link {
+        margin: 1.5rem 0 0;
+        font-size: 0.8rem;
+    }
+
+    .container .form h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    .container .linha {
+        margin-bottom: 1.5rem;
+    }
+
+    .container .enviar,
+    .container .continuar,
+    .container .entrar {
+        min-height: 2.5rem;
+        height: auto;
+    }
+}
+
+.container .cadastro {
+    width: 100%;
+    margin: 0;
+}
+
+.container:has(.cadastro) {
+    width: min(clamp(20rem, 45vw, 32rem), calc(100vw - 2rem));
+}
+
+.container .cadastro .cabecalho {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.container .cadastro .cabecalho h1 {
+    margin: 0;
+    padding: 0 0 0.5rem;
+}
+
+.container .cadastro .cabecalho h4 {
+    margin: 0;
+    line-height: 1.5;
+}
