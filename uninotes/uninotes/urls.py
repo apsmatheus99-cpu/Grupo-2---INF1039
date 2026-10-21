@@ -23,4 +23,5 @@ urlpatterns = [
     path('', login),
     path('login/', login),
     path('cadastro/', cadastro),
+    path('material/', material),
 ]
