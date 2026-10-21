@@ -1,0 +1,264 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #FFEBA6;
+    color: #142A1B;
+}
+
+.barraLateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding-top: 10px;
+    background-color: #838E43;
+    color: white;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0 30px 10px;
+}
+
+.logo-titulo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-titulo h2 {
+    font-size: 23px;
+}
+
+.barraLateral ul {
+    padding: 0;
+    list-style: none;
+}
+
+.barraLateral a {
+    display: block;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.barraLateral a:hover {
+    background-color: #6F7938;
+}
+
+.barraLateral hr {
+    margin: 25px 15px;
+}
+
+.conteudo {
+    margin-left: 250px;
+}
+
+.publicar-pesquisa {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 250px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 70px;
+    padding: 0 20px;
+    background-color: #FFEBA6;
+    border-bottom: 1px solid #B3C7B9;
+}
+
+.publicar-pesquisa > a,
+.inicio button,
+.filtros button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #4F762F;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.publicar-pesquisa form {
+    flex: 1;
+}
+
+.publicar-pesquisa input {
+    width: 100%;
+    height: 42px;
+    padding: 0 15px;
+    border: 1px solid #B3C7B9;
+    border-radius: 50px;
+}
+
+.acoes-topo {
+    display: flex;
+    gap: 10px;
+}
+
+.acoes-topo button {
+    padding: 10px;
+    border: 1px solid #B3C7B9;
+    border-radius: 50px;
+    background-color: #FFF4B6;
+    cursor: pointer;
+}
+
+main {
+    padding: 100px 30px 40px;
+}
+
+.inicio h4 {
+    color: #4F762F;
+    font-size: 14px;
+}
+
+.inicio h1 {
+    margin-bottom: 25px;
+    font-size: 36px;
+}
+
+.inicio form {
+    display: flex;
+    gap: 10px;
+    max-width: 850px;
+}
+
+.inicio input {
+    flex: 1;
+    min-width: 0;
+    height: 45px;
+    padding: 0 20px;
+    border: 1px solid #B3C7B9;
+    border-radius: 50px;
+}
+
+.area-resultados {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.filtros {
+    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #FFF4B6;
+    box-shadow: 0 2px 15px #00000015;
+}
+
+.filtros h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.filtros form > div {
+    margin-bottom: 18px;
+}
+
+.filtros label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.filtros input,
+.filtros select {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #B3C7B9;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.filtros button {
+    width: 100%;
+}
+
+button:hover,
+.publicar-pesquisa > a:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+    .acoes-topo {
+        display: none;
+    }
+
+    .area-resultados {
+        flex-direction: column;
+    }
+
+    .filtros {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .barraLateral {
+        width: 180px;
+    }
+
+    .logo-titulo {
+        gap: 5px;
+    }
+
+    .logo-titulo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo-titulo h2 {
+        font-size: 16px;
+    }
+
+    .conteudo {
+        margin-left: 180px;
+    }
+
+    .publicar-pesquisa {
+        left: 180px;
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .publicar-pesquisa > a {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    main {
+        padding: 95px 12px 25px;
+    }
+
+    .inicio h1 {
+        font-size: 26px;
+    }
+
+    .inicio form {
+        flex-direction: column;
+    }
+
+    .inicio button {
+        width: 100%;
+    }
+
+    .filtros {
+        padding: 15px;
+    }
+}
