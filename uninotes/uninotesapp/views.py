@@ -14,6 +14,9 @@ def cadastro(request):
 
 def material(request):
     return render(request,'material.html')
+
+def mensagens(request):
+    return render(request,'tela_mensagem.html')
     
 def esqueci_senha(request):
     return render(request, 'esqueci_senha.html')
