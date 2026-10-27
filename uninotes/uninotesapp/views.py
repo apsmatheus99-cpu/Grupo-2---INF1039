@@ -66,4 +66,20 @@ def logout_usuario(request):
     
     return redirect("login")        
 
+def cadastro_usuario(request):
+    if request.method == 'POST':
+        password = request.POST['password']
+        confirmpassword = request.POST['confirmpassword']
 
+        if password != confirmpassword:
+            messages.error(request, "As senhas não coincidem.")
+            return redirect("cadastro")
+
+        user = User.objects.create_user(
+            request.POST['name'],
+            request.POST['email'], 
+            request.POST['password'])
+
+        user.save()
+        return redirect("login")
+    return render(request, "tela_cadastro.html")

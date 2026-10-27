@@ -10,7 +10,13 @@
 <body>
     <main class = "container">
     <div class= "cadastro">
-        <form action="#">
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        <form method="post" action="{% url 'cadastro_usuario' %}">
+        {% csrf_token %}
             <div class=" form- header"> 
                 <div class = "title"> </div>
                 <h1> CRIAR CONTA </h1>
@@ -106,7 +112,7 @@
                 </div>
 
   
-                <a href="telaInicio.html" type="submit" class="continuar">CONTINUAR</a>
+                <button type="submit" class="continuar">CONTINUAR</button>
             </div>
 
             
