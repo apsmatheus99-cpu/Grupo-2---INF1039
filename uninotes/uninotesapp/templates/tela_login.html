@@ -5,35 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/tela_login.css">
-    <link rel="stylesheet" href="../static/css/responsivo.css">
     <title>Uninotes - Login</title>
 </head>
 <body>
     <main class = "container">
-        <form>
+        <form method="POST" action="{% url 'login_usuario' %}">
+            {% csrf_token %}
             <h1>ENTRAR</h1>
             <h4>Acesse seus materiais e continue estudando.</h4>
             <div class = "input-box">
                 <h4>E-mail acadêmico</h4>
-                <input placeholder="voce@universidade.edu.br" type = "email">
+                <input placeholder="voce@universidade.edu.br" type = "email" name="username" required>
                 <i class="bx bxs-user"></i>
             </div>
             <div class = "input-box">
                 <h4>Senha</h4>
-                <input placeholder="Senha" type="password">
+                <input placeholder="Senha" type="password" name="password" required>
                 <i class ="bx bxs-lock-alt"></i>
             </div>
-
+{% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
             <div class = "remember-forgot">
             
-                <a href="#">Esqueci minha senha</a>
+                <a href="/esqueci-senha/">Esqueci minha senha</a>
             </div>
 
-            <a href="telaInicio.html" type="submit" class="entrar">ENTRAR</a>
+            <button type="submit" class="entrar">ENTRAR</button>
 
             <h5 class="separador"> ------------------------------ OU  ------------------------------ </h5>
 
-            <button type="submit" class="continuar">CONTINUAR COM GOOGLE</button>
+            <button type="button" class="continuar">CONTINUAR COM GOOGLE</button>
 
             <div class = "register-link">
                 <p> Ainda não tem conta? <a href="/cadastro/"> Criar conta</a> </p>

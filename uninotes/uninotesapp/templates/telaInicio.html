@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="publicar-pesquisa">
-        <a href="pagina de publica.html">PUBLICAR</a>
+        <a href="/publicar/">PUBLICAR</a>
         <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
         <img src="imagens/notificacao.png">
         <img src="imagens/perfil-de-usuario.png">
@@ -66,7 +66,7 @@
                     <p>Ana Beatriz Ferreira</p>
                     <button>SEGUIR</button>
                 </div>
-                <a href="material.html">
+                <a href="/material/">
                 <h4>ABRIR</h4>
                 </a>
             </div>
@@ -83,7 +83,7 @@
                     <p>Bruno Ferraz</p>
                     <button>SEGUIR</button>
                 </div>
-                <a href="material.html">
+                <a href="/material/">
                 <h4>ABRIR</h4>
                 </a>
             </div>
@@ -106,7 +106,7 @@
                     <p>Lucas Soares</p>
                     <button>SEGUIR</button>
                 </div>
-                <a href="material.html">
+                <a href="/material/">
                 <h4>ABRIR</h4>
                 </a>
             </div>
@@ -124,7 +124,7 @@
                     <p>Ana Beatriz Ferreira</p></div>
                     <button>SEGUIR</button>
                 </div>
-                <a href="material.html">
+                <a href="/material/">
                 <h4>ABRIR</h4>
                 </a>
             </div>
@@ -141,7 +141,7 @@
                     <p>Bruno Ferraz</p>
                     <button>SEGUIR</button>
                 </div>
-                <a href="material.html">
+                <a href="/material/">
                 <h4>ABRIR</h4>
                 </a>
             </div>
@@ -150,26 +150,36 @@
 
     <section class="barraLateral">
         <div class="logo-titulo">
-        <img src="imagens/Logo Uninotes.png">
+        <img src="../imagens/Logo Uninotes.png">
         <h2><b>UNINOTES</b></h2>
         </div>
             <div class="botao-inicio">
-                <a href="telaInicio.html">
+                <a href="">
                     <img src="imagens/icone casa.png"><b>INÍCIO</b>
                 </a>
             </div>
-        <div class="botao-meusMateriais">
-            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
-    </div>
-        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
-        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
-        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
-            <a href="tela de perfil.html">
+            <a href="/materiais/">
+            <img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b>
+            </a>
+            <a href="/salvos/">
+            <img src="imagens/salvar.png"><b>SALVOS</b>
+            </a>
+            <a href="/mensagens/">
+            <img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b>
+            </a>
+            <a href="/estatisticas/">
+            <img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b>
+            </a>
+            <a href="/perfil/">
             <img src="imagens/usuario.png"><b>PERFIL</b>
             </a>
-            <a href="pagina_configuracoes.html">
+            <a href="/configuracoes/">
             <img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b>
             </a>
+            <form method="POST" action="{% url 'logout_usuario' %}">
+    {% csrf_token %}
+    <button type="submit">SAIR</button>
+</form>
     </section>
     <script src="../static/javascript/inicio.js"></script>
 </body>

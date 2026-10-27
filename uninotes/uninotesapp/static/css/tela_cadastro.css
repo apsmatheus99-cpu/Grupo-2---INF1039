@@ -11,9 +11,10 @@ body{
     place-items: center;
     min-height: 100vh;
     padding: 24px 16px;
-    background: #f7e9b2;
+    background: #FFEBA6;
     font-family: "Montserrat", sans-serif;
 }
+
 
 .container{
     width: min(100%, 448px);
@@ -22,6 +23,8 @@ body{
     padding: 24px;
     background: #fff;
     border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.103);
 }
 
 .cadastro,
@@ -35,10 +38,12 @@ body{
     margin: 0;
 }
 
-.container .cabecalho h1{
+.container .cabecalho h1{  
     margin: 0;
     padding: 0 0 8px;
     font-size: clamp(24px, 5vw, 30px);
+    font-weight: 900;
+    color: #333;
     white-space: nowrap;
 }
 
@@ -49,7 +54,6 @@ body{
     font-weight: 500;
     line-height: 1.5;
 }
-
 
 .input-group{
     display: grid;
@@ -68,6 +72,21 @@ body{
     font-size: 14px;
     font-weight: 600;
     white-space: nowrap;
+    font-family: "Montserrat", sans-serif;
+}
+
+.input-box select, .input-box select option{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.103);
+}
+
+.input-box input{
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.103);
 }
 
 .confirmar-senha{
@@ -85,7 +104,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #008000;
+    background: #557A35;
     color: white;
     border: none;
     border-radius: 10px;
@@ -96,7 +115,7 @@ body{
 }
 
 .continuar:hover{
-    background: #006400;
+    background: #628a3e;
 }
 
 
@@ -136,15 +155,12 @@ body{
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 0 10px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
 }
 
-.input-box select option{
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
+@media (max-width: 480px){
+    .container{
+        padding: 20px;
+    }
 }
 
 @media (max-width: 900px){
@@ -155,11 +171,5 @@ body{
     .confirmar-senha,
     .continuar{
         grid-column: 1;
-    }
-}
-
-@media (max-width: 480px){
-    .container{
-        padding: 20px;
     }
 }

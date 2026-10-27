@@ -15,14 +15,29 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from uninotesapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', login),
-    path('login/', login),
-    path('cadastro/', cadastro),
+    path('users/', cadastro_usuario, name='cadastro_usuario'),
+    path('users/',
+        include('django.contrib.auth.urls')),
+    path('login/', login, name='login'),
+    path('login_usuario/', login_usuario, name='login_usuario'),
+    path('logout_usuario/', logout_usuario, name='logout_usuario'),
+    path('cadastro/', cadastro, name='cadastro'),
     path('material/', material),
     path('mensagens/', mensagens)
+    path('esqueci-senha/',esqueci_senha),
+    path('', login),
+    path('inicio/', inicio),
+    path('configuracoes/', configuracoes),
+    path('perfil/', perfil),
+    path('mensagens/', mensagens),
+    path('estatisticas/', estatisticas),
+    path('materiais/', meus_materiais),
+    path('salvos/', salvos),
+    path('publicar/', publicar),
+
 ]
