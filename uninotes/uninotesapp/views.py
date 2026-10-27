@@ -47,20 +47,20 @@ def publicar(request):
     return render(request, 'pagina de publica.html')
 
 def login_usuario(request):
-    if request.method=="POST":
-        user= authenticate(
-            request,
-            username=request.POST["username"],
-            password=request.POST["password"]
+    if request.method == "POST":
+        email = request.POST["username"]
+        usuario = User.objects.filter(email=email).first()
+
+        if usuario:
+            user = authenticate(
+                request,
+                username=usuario.username,
+                password=request.POST["password"]
             )
-        if user is not None:
-            fazer_login(request, user)
-            return redirect("inicio")
-        else:
-            messages.error(request, "Nome de usuário ou senha incorretos.")
-            return render(request, "tela_login.html")
-        
-    return render(request, "tela_login.html")
+
+            if user is not None:
+                fazer_login(request, user)
+                return redirect("inicio")
 
 def logout_usuario(request):
     if request.method == "POST":
