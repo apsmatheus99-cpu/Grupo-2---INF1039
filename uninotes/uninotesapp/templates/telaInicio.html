@@ -176,6 +176,10 @@
             <a href="/configuracoes/">
             <img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b>
             </a>
+            <form method="POST" action="{% url 'logout_usuario' %}">
+    {% csrf_token %}
+    <button type="submit">SAIR</button>
+</form>
     </section>
     <script src="../static/javascript/inicio.js"></script>
 </body>
