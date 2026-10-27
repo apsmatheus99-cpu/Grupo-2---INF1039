@@ -31,7 +31,7 @@ urlpatterns = [
     path('mensagens/', mensagens)
     path('esqueci-senha/',esqueci_senha),
     path('', login),
-    path('inicio/', inicio),
+    path('inicio/', inicio, name='inicio'),
     path('configuracoes/', configuracoes),
     path('perfil/', perfil),
     path('mensagens/', mensagens),
