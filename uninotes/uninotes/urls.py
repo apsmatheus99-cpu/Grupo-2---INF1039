@@ -20,7 +20,9 @@ from uninotesapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login),
+    path('login/', login, name='login'),
+    path('login_usuario/', login_usuario, name='login_usuario'),
+    path('logout_usuario/', logout_usuario, name='logout_usuario'),
     path('cadastro/', cadastro),
     path('material/', material),
     path('esqueci-senha/',esqueci_senha),
