@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <title>UNINOTES</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/styleMaterial.css">
-    <link rel="stylesheet" href="../static/css/barraLateral.css">
-    <link rel="stylesheet" href="../static/css/publicarPesquisa.css">
-    <link rel="stylesheet" href="../static/css/responsivo.css">
-</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
 <body>
     <div class="publicar-pesquisa">
         <a href="pagina de publica.html">PUBLICAR</a>
@@ -73,22 +63,7 @@
         </div>
     </div>
 
-    <section class="barraLateral">
-        <div class="logo-titulo">
-            <img src="imagens/Logo Uninotes.png">
-            <h2><b>UNINOTES</b></h2>
-        </div>
-        <div class="botao-inicio">
-            <a href="telaInicio.html"><img src="imagens/icone casa.png"><b>INÍCIO</b></a>
-        </div>
-        <div class="botao-meusMateriais">
-            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
-        </div>
-        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
-        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
-        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
-        <a href="tela de perfil.html"><img src="imagens/usuario.png"><b>PERFIL</b></a>
-        <a href="pagina_configuracoes.html"><img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
-    </section>
 </body>
 </html>
+
+{% endblock %}
