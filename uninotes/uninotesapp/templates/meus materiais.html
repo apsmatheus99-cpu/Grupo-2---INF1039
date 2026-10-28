@@ -1,7 +1,11 @@
-
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Meus Materiais{% endblock %}
+{% block title %} Materiais Salvos - UNINOTES{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/meus-materiais.css' %}">
+{% endblock %}
 
 {% block content %}
 
@@ -41,9 +45,5 @@
             </section>
         </main>
 
-    </div>
-
-</body>
-</html>
 
 {% endblock %}

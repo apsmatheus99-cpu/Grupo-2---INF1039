@@ -31,14 +31,15 @@ urlpatterns = [
     path('configuracoes/', configuracoes, name = 'configuracoes'),
     path('estatisticas/', estatisticas, name = 'estatisticas'),
     path('mensagens/', mensagens, name = 'mensagens'),
+    path('salvos/', salvos, name= 'salvos'),
+    path('materiais/', meus_materiais, name = 'meus_materiais'),
+
     
     path('material/', material),
     path('mensagens/', mensagens),
     path('esqueci-senha/',esqueci_senha),
     path('', login),
     path('inicio/', inicio, name='inicio'),
-    path('materiais/', meus_materiais),
-    path('salvos/', salvos),
     path('publicar/', publicar),
 
 ]

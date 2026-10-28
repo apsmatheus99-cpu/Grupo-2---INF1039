@@ -1,55 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <link rel="stylesheet" href="../static/css/salvos.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Materiais Salvos - UNINOTES</title>
-    <link rel="stylesheet" href="../static/css/responsivo.css">
-</head>
+{% extends 'base.html' %}
+{% load static %}
 
-<body>
+{% block title %} Materiais Salvos - UNINOTES{% endblock %}
 
-     <!-- menu lateral-->
-    <aside>
-        <div>
-            <img src="logo-uninotes.png" alt="Logo UNINOTES" width="50">
-            <span>UNINOTES</span>
-        </div>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/salvos.css' %}">
+{% endblock %}
 
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Meus Materiais</a></li>
-                <li><a href="#"><strong>Salvos</strong></a></li>
-                <li><a href="#">Mensagens</a></li>
-            </ul>
+{% block content %}
 
-            <hr>
-
-            <ul>
-                <li><a href="#">Estatísticas</a></li>
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Configurações</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <div>
-        
-        <!-- topo da pagina-->
-        <header>
-            <button type="button">Publicar</button>
-
-            <form action="#" method="GET">
-                <input type="search" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-            </form>
-
-            <div>
-                <button type="button">Notificações </button>
-                <button type="button">Perfil</button>
-            </div>
-        </header>
 
         <!-- materiais salvos-->
         <main>
@@ -86,5 +45,4 @@
 
     </div>
 
-</body>
-</html>
+{% endblock %}
