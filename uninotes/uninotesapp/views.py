@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Curso
+from .models import Curso, Faculdade
 from django.shortcuts import redirect, render 
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as fazer_login, logout as fazer_logout
@@ -10,10 +10,19 @@ def login(request):
     return render(request, 'tela_login.html')
 
 def cadastro(request):
-    return render(request, 'tela_cadastro.html')
+    cursos = Curso.objects.all()
+    faculdades = Faculdade.objects.all()
+
+    return render(request, 'tela_cadastro.html',{
+        'cursos': cursos,
+        'faculdades': faculdades
+    })
 
 def material(request):
     return render(request,'material.html')
+
+def mensagens(request):
+    return render(request,'tela_mensagem.html')
     
 def esqueci_senha(request):
     return render(request, 'esqueci_senha.html')
@@ -44,20 +53,20 @@ def publicar(request):
     return render(request, 'pagina de publica.html')
 
 def login_usuario(request):
-    if request.method=="POST":
-        user= authenticate(
-            request,
-            username=request.POST["username"],
-            password=request.POST["password"]
+    if request.method == "POST":
+        email = request.POST["username"]
+        usuario = User.objects.filter(email=email).first()
+
+        if usuario:
+            user = authenticate(
+                request,
+                username=usuario.username,
+                password=request.POST["password"]
             )
-        if user is not None:
-            fazer_login(request, user)
-            return redirect("inicio")
-        else:
-            messages.error(request, "Nome de usuário ou senha incorretos.")
-            return render(request, "tela_login.html")
-        
-    return render(request, "tela_login.html")
+
+            if user is not None:
+                fazer_login(request, user)
+                return redirect("inicio")
 
 def logout_usuario(request):
     if request.method == "POST":
@@ -66,4 +75,20 @@ def logout_usuario(request):
     
     return redirect("login")        
 
+def cadastro_usuario(request):
+    if request.method == 'POST':
+        password = request.POST['password']
+        confirmpassword = request.POST['confirmpassword']
 
+        if password != confirmpassword:
+            messages.error(request, "As senhas não coincidem.")
+            return redirect("cadastro")
+
+        user = User.objects.create_user(
+            request.POST['name'],
+            request.POST['email'], 
+            request.POST['password'])
+
+        user.save()
+        return redirect("login")
+    return render(request, "tela_cadastro.html")
