@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Curso
+from .models import Curso, Faculdade
 from django.shortcuts import redirect, render 
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as fazer_login, logout as fazer_logout
@@ -10,7 +10,13 @@ def login(request):
     return render(request, 'tela_login.html')
 
 def cadastro(request):
-    return render(request, 'tela_cadastro.html')
+    cursos = Curso.objects.all()
+    faculdades = Faculdade.objects.all()
+
+    return render(request, 'tela_cadastro.html',{
+        'cursos': cursos,
+        'faculdades': faculdades
+    })
 
 def material(request):
     return render(request,'material.html')
