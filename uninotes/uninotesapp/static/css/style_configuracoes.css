@@ -191,8 +191,9 @@ body{
     margin: 0;
 }
 
-.configuracoes .sair a {
+.configuracoes .sair button{
     background-color: red;
+    cursor: pointer;
     color: white;
     border: none;
     border-radius: 10px;
@@ -202,7 +203,7 @@ body{
     font-weight: 200;
 }
 
-.configuracoes .sair a:hover {
+.configuracoes .sair button:hover {
     background-color: darkred;
 }
 
