@@ -14,26 +14,26 @@
     <div class="publicar-pesquisa">
         <a href="pagina de publica.html">PUBLICAR</a>
         <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img src="imagens/notificacao.png">
-        <img src="imagens/perfil-de-usuario.png">
+        <img src="/static/imagens/notificacao.png">
+        <img src="/static/imagens/perfil-de-usuario.png">
     </div>
 
     <section class="barraLateral">
         <div class="logo-titulo">
-            <img src="imagens/Logo Uninotes.png">
+            <img src="/static/imagens/Logo Uninotes.png">
             <h2><b>UNINOTES</b></h2>
         </div>
         <div class="botao-inicio">
-            <a href="telaInicio.html"><img src="imagens/icone casa.png"><b>INÍCIO</b></a>
+            <a href="telaInicio.html"><img src="/static/imagens/icone casa.png"><b>INÍCIO</b></a>
         </div>
         <div class="botao-meusMateriais">
-            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
+            <button><img src="/static/imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
         </div>
-        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
-        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
-        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
-        <a href="tela de perfil.html"><img src="imagens/usuario.png"><b>PERFIL</b></a>
-        <a href="pagina_configuracoes.html"><img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
+        <button><img src="/static/imagens/salvar.png"><b>SALVOS</b></button>
+        <button><img src="/static/imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
+        <button><img src="/static/imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
+        <a href="tela de perfil.html"><img src="/static/imagens/usuario.png"><b>PERFIL</b></a>
+        <a href="pagina_configuracoes.html"><img src="/static/imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
     </section>
 
     <div class="configuracoes">
@@ -41,7 +41,7 @@
         <h1><b>CONFIGURAÇÕES</b></h1>
 
         <div class="opcoes-box">
-            <img src="imagens/perfil.png">
+            <img src="/static/imagens/perfil.png">
             <div class="textos">
                 <p><b>Editar dados pessoais</b></p>
                 <h5>Nome, curso, instituição e período</h5>
@@ -49,7 +49,7 @@
             <button>⋮</button>
         </div>
         <div class="opcoes-box">
-            <img src="imagens/cadeado.png">
+            <img src="/static/imagens/cadeado.png">
             <div class="textos">
                 <p><b>Alterar senha</b></p>
                 <h5>Mantenha sua conta protegida</h5>
@@ -57,7 +57,7 @@
             <button>⋮</button>
         </div>
         <div class="opcoes-box">
-            <img src="imagens/foto.png">
+            <img src="/static/imagens/foto.png">
             <div class="textos">
                 <p><b>Alterar foto</b></p>
                 <h5>Escolha uma imagem para o seu perfil</h5>
@@ -65,7 +65,7 @@
             <button>⋮</button>
         </div>
         <div class="opcoes-box">
-            <img src="imagens/privacidade.png">
+            <img src="/static/imagens/privacidade.png">
             <div class="textos">
                 <p><b>Privacidade</b></p>
                 <h5>Gerencie suas preferências de privacidade</h5>
@@ -89,7 +89,9 @@
         </div>
 
         <div class="sair">
-            <a href="tela_login.html" class="sair-link"><b>Sair da conta</b></a>
+                   <form method="POST" action="{% url 'logout_usuario' %}">
+    {% csrf_token %}
+    <button type="submit">Sair da conta</button>
         </div>
     </div>
 
