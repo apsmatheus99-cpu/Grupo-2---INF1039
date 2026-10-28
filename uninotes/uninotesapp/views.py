@@ -67,6 +67,10 @@ def login_usuario(request):
             if user is not None:
                 fazer_login(request, user)
                 return redirect("inicio")
+            
+        messages.error(request, "E-mail ou senha incorretos.")
+
+    return render(request, "tela_login.html")
 
 def logout_usuario(request):
     if request.method == "POST":
