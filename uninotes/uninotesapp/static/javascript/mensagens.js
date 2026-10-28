@@ -27,6 +27,10 @@ const historico_conversa=[
         { texto: "Você vai para a monitoria amanhã?", tipo: "enviada" },
         { texto: "Oi! Vou sim", tipo: "recebida"},
         { texto: "Até amanhã!", tipo: "enviada"}
+    ],
+    [
+        {texto: "OIII", tipo:"enviada"},
+        {texto: "Tchau", tipo:"recebida"}
     ]
 ];
 
@@ -88,7 +92,6 @@ campoTexto.addEventListener("keydown",function(evento){
 conversas.forEach(function(conversa,indice){
     conversa.addEventListener("click",function(){
         conversaAtual=indice;
-        console.log(conversaAtual);
 
         conversas.forEach(function(conversa_lateral){
             conversa_lateral.classList.remove("selecionada");

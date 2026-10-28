@@ -274,3 +274,18 @@ main article button:last-child:hover {
     background-color: #B65C4B;
     color: white;
 }
+
+.botao_abrir button{
+    
+    border-radius: 20px;
+    background-color: #3F6126;
+    
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+    }
+    i{
+        font-size: 15px;
+    }
+}
