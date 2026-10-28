@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 {% load static %}
 
@@ -16,7 +15,7 @@
         <h1><b>CONFIGURAÇÕES</b></h1>
 
         <div class="opcoes-box">
-            <img src="imagens/perfil.png">
+            <img src="{% static 'imagens/perfil.png' %}">
             <div class="textos">
                 <p><b>Editar dados pessoais</b></p>
                 <h5>Nome, curso, instituição e período</h5>
@@ -24,7 +23,7 @@
             <button>⋮</button>
         </div>
         <div class="opcoes-box">
-            <img src="imagens/cadeado.png">
+            <img src="{% static 'imagens/cadeado.png' %}">
             <div class="textos">
                 <p><b>Alterar senha</b></p>
                 <h5>Mantenha sua conta protegida</h5>
@@ -32,7 +31,7 @@
             <button>⋮</button>
         </div>
         <div class="opcoes-box">
-            <img src="imagens/foto.png">
+            <img src="{% static 'imagens/foto.png' %}">
             <div class="textos">
                 <p><b>Alterar foto</b></p>
                 <h5>Escolha uma imagem para o seu perfil</h5>
@@ -40,7 +39,7 @@
             <button>⋮</button>
         </div>
         <div class="opcoes-box">
-            <img src="imagens/privacidade.png">
+            <img src="{% static 'imagens/privacidade.png' %}">
             <div class="textos">
                 <p><b>Privacidade</b></p>
                 <h5>Gerencie suas preferências de privacidade</h5>
@@ -64,13 +63,9 @@
         </div>
 
         <div class="sair">
-            <a href="tela_login.html" class="sair-link"><b>Sair da conta</b></a>
+            <a href="{% url 'login' %}" class="sair-link"><b>Sair da conta</b></a>
         </div>
     </div>
 
-
-</body>
-
-</html>
 
 {% endblock %}

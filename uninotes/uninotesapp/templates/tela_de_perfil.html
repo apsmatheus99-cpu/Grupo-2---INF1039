@@ -1,42 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    <link rel="stylesheet" href="../static/css/perfil.css">
-    <link rel="stylesheet" href="../static/css/barraLateral.css">
-    <link rel="stylesheet" href="../static/css/publicarPesquisa.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perfil usuário</title>
-    <link rel="stylesheet" href="../static/css/responsivo.css">
-</head>
+{% block title %}Configurações - UNINOTES{% endblock %}
 
-<body>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style_perfil.css' %}">
+{% endblock %}
 
-    <div class="publicar-pesquisa">
-        <a href="pagina de publica.html">PUBLICAR</a>
-        <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img src="imagens/notificacao.png">
-        <img src="imagens/perfil-de-usuario.png">
-    </div>
+{% block content %}
 
-    <section class="barraLateral">
-        <div class="logo-titulo">
-            <img src="imagens/Logo Uninotes.png">
-            <h2><b>UNINOTES</b></h2>
-        </div>
-        <div class="botao-inicio">
-            <a href="telaInicio.html"><img src="imagens/icone casa.png"><b>INÍCIO</b></a>
-        </div>
-        <div class="botao-meusMateriais">
-            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
-        </div>
-        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
-        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
-        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
-        <a href="tela de perfil.html"><img src="imagens/usuario.png"><b>PERFIL</b></a>
-        <a href="pagina_configuracoes.html"><img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
-    </section>
 
     <main>
 
@@ -89,6 +61,5 @@
 
     </main>
 
-</body>
 
-</html>
+{% endblock %}

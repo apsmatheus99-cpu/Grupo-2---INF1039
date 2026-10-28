@@ -1,41 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/tela_estatistica.css">
-    <link rel="stylesheet" href="../static/css/barraLateral.css">
-    <link rel="stylesheet" href="../static/css/publicarPesquisa.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title> Uninotes - Estatistica </title>
-    <link rel="stylesheet" href="../static/css/responsivo.css">
-</head>
+{% extends 'base.html' %}
+{% load static %}
 
-<body>
-    <div class="publicar-pesquisa">
-        <a href="pagina de publica.html">PUBLICAR</a>
-        <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img src="imagens/notificacao.png">
-        <img src="imagens/perfil-de-usuario.png">
-    </div>
+{% block title %}Estatísticas - UNINOTES{% endblock %}
 
-    <section class="barraLateral">
-        <div class="logo-titulo">
-            <img src="imagens/Logo Uninotes.png">
-            <h2><b>UNINOTES</b></h2>
-        </div>
-        <div class="botao-inicio">
-            <a href="telaInicio.html"><img src="imagens/icone casa.png"><b>INÍCIO</b></a>
-        </div>
-        <div class="botao-meusMateriais">
-            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
-        </div>
-        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
-        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
-        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
-        <a href="tela de perfil.html"><img src="imagens/usuario.png"><b>PERFIL</b></a>
-        <a href="pagina_configuracoes.html"><img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
-    </section>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/tela_estatistica.css' %}">
+{% endblock %}
+
+{% block content %}
 
     <div class="estatisticas">
         <h4> SEU IMPACTO NA COMUNIDADE </h4>
@@ -166,5 +138,5 @@
     </div>
 
     </div>
-</body>
-</html>    
+
+{% endblock %}

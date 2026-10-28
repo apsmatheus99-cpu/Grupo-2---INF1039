@@ -4,37 +4,49 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>UNINOTES</title>
+    <title>{% block title %}UNINOTES{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/styleMaterial.css">
-    <link rel="stylesheet" href="../static/css/barraLateral.css">
-    <link rel="stylesheet" href="../static/css/publicarPesquisa.css">
-    <link rel="stylesheet" href="../static/css/responsivo.css">
+    <link rel="stylesheet" href="{% static 'css/barraLateral.css' %}">
+    <link rel="stylesheet" href="{% static 'css/publicarPesquisa.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsivo.css' %}">
+    
 </head>
 
-{% block content %}
 
-
-{% endblock %}
+<body>
 
 <section class="barraLateral">
         <div class="logo-titulo">
-            <img src="imagens/Logo Uninotes.png">
+            <img src="{% static 'imagens/Logo Uninotes.png' %}">
             <h2><b>UNINOTES</b></h2>
         </div>
         <div class="botao-inicio">
-            <a href="telaInicio.html"><img src="imagens/icone casa.png"><b>INÍCIO</b></a>
+            <a href="{% url 'inicio' %}"><img src="{% static 'imagens/icone casa.png' %}"><b>INÍCIO</b></a>
         </div>
         <div class="botao-meusMateriais">
-            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
+            <button><img src="{% static 'imagens/documentos-google.png' %}"><b>MEUS MATERIAIS</b></button>
         </div>
-        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
-        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
-        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
-        <a href="tela de perfil.html"><img src="imagens/usuario.png"><b>PERFIL</b></a>
-        <a href="pagina_configuracoes.html"><img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
+        <button><img src="{% static 'imagens/salvar.png' %}"><b>SALVOS</b></button>
+        <button><img src="{% static 'imagens/balao-de-bate-papo.png' %}"><b>MENSAGENS</b></button>
+        <a href="{% url 'estatisticas' %}"><img src="{% static 'imagens/estatistica.png' %}"><b>ESTATÍSTICAS</b></a>
+        <a href="{% url 'perfil' %}"><img src="{% static 'imagens/usuario.png' %}"><b>PERFIL</b></a>
+        <a href="{% url 'configuracoes' %}"><img src="{% static 'imagens/configuracao.png' %}"><b>CONFIGURAÇÕES</b></a>
     </section>
 
+    <div class="publicar-pesquisa">
+        <a href="pagina de publica.html">PUBLICAR</a>
+        <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
+        <img src="{% static 'imagens/notificacao.png' %}">
+        <img src="{% static 'imagens/perfil-de-usuario.png' %}">
+    </div>
+    
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
