@@ -35,6 +35,8 @@ class Avaliacao(models.Model):
         ]   
     avaliacao = models.IntegerField( default=0, choices= ESTRELAS)
     material = models.ForeignKey('Material',on_delete=models.CASCADE,related_name='avaliacoes')
+    aluno = models.ForeignKey(Aluno,on_delete=models.PROTECT,null=True,blank=True)
+    
     
     def __str__(self):
         return str(self.avaliacao)    
