@@ -1,10 +1,13 @@
 from django.shortcuts import render
-from .models import Curso, Faculdade
+from django.shortcuts import get_object_or_404
+from .models import Curso, Faculdade, Mensagem
 from django.shortcuts import redirect, render 
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as fazer_login, logout as fazer_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.urls import reverse
+
 
 
 def login(request):
@@ -23,9 +26,32 @@ def cadastro(request):
 def material(request):
     return render(request,'material.html')
 
+
 @login_required(login_url='login')
 def mensagens(request):
-    return render(request,'tela_mensagem.html')
+    if request.method== 'POST':
+        destinatario_id= request.POST.get('destinatario')
+        conteudo= request.POST.get('conteudo', '').strip()
+        if destinatario_id and conteudo:
+            destinatario = get_object_or_404(User, id=destinatario_id)
+            Mensagem.objects.create(remetente= request.user, destinatario= destinatario, conteudo= conteudo)
+        return redirect(f"{reverse('mensagens')}?contato={destinatario_id}")
+    contato_id= request.GET.get('contato')
+    print("id dos contatos: ", contato_id) #lembrar de remover depois
+    contato_selecionado= None
+    mensagens_conversa=[]
+    if contato_id:
+        contato_selecionado= get_object_or_404(User, id= contato_id)
+        if contato_selecionado:
+            mensagens_enviadas= Mensagem.objects.filter(remetente= request.user, destinatario= contato_selecionado)
+            mensagens_recebidas= Mensagem.objects.filter(remetente= contato_selecionado, destinatario= request.user)
+            print("mensagens enviadas: ", mensagens_enviadas) #lembrar de remover depois
+            print("mensagens recebidas: ", mensagens_recebidas) #lembrar de remover depois
+            mensagens_conversa= (mensagens_enviadas | mensagens_recebidas).order_by('data_envio')
+            print("historico: ", mensagens_conversa) #lembrar de remover depois
+    contatos= User.objects.exclude(id=request.user.id)
+    return render(request, 'tela_mensagem.html', {'contatos': contatos, 'contato_selecionado': contato_selecionado, 'mensagens_conversa': mensagens_conversa})
+
     
 def esqueci_senha(request):
     return render(request, 'esqueci_senha.html')
@@ -84,6 +110,7 @@ def logout_usuario(request):
         return redirect("login")
     
     return redirect("login")        
+
 
 def cadastro_usuario(request):
     if request.method == 'POST':
