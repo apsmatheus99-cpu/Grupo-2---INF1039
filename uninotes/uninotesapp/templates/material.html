@@ -14,55 +14,84 @@
     <div class="volte-aos-materiais">
         <button><p>Voltar aos materiais</p></div>
     <div class="material">
-        <div class="categorias"><!---img---><p><b>ECONOMIA - ANOTAÇÃO</b></p></div>
-        <div class="titulo-material"><!---img---><h1>MACROECONOMIA — <br>POLÍTICA MONETÁRIA</h1></div>
-        <div class="descricao-material"><!---img---><p>Selic, inflação e o papel do Banco Central.</p></div>
-        <div class="autor-material"><!---img---><p>Publicado por:</p><p><b> Gustavo Prado</b></p><button><!---img---><b>SEGUIR</b></button></div>
+
+        <div class="categorias">
+            <p>
+                <b>{{ material.disciplina }} - {{ material.get_tipo_display }}</b>
+            </p>
+        </div>
+
+        <div class="titulo-material">
+            <h1>{{ material.titulo }}</h1>
+        </div>
+
         <div class="prof-curso-instituicao-data">
+
             <p><b>PROFESSOR</b></p>
             <p><b>CURSO</b></p>
-            <p><b>INSTITUIÇÃO</b></p> 
+            <p><b>INSTITUIÇÃO</b></p>
             <p><b>PUBLICADO</b></p>
+
         </div>
+
         <div class="prof-curso-instituicao-data-DADOS">
-            <p>Prof. Livia Andrade</p>
-            <p>Economia</p>
-            <p>PUC-Rio</p> 
-            <p>20 de jul. de 2026</p>
-        </div>
-        <div class="avaliacao">
-            <p><b>AVALIACAO<b></p>
-            <div class="estrelas">
-                <img src="imagens/avaliacao (2).png">
-                <p>(3)</p>
-            </div>
+
+            <p>
+                {% if material.professor %}
+                    {{ material.professor }}
+                {% else %}
+                    Não informado
+                {% endif %}
+            </p>
+
+            <p>{{ material.curso }}</p>
+
+            <p>{{ material.faculdade }}</p>
+
+            <p>{{ material.data_publicacao|date:"d/m/Y" }}</p>
+
         </div>
 
         <div class="abrir-baixar-salvar-compartilhar">
-            <button><b>ABRIR MATERIAL</b></button>
-            <button><b>Baixar</b></button>
-            <button><b>SALVAR</b></button>
-            <button>Compartilhar</button>
+
+            <a href="{{ material.arquivo.url }}" target="_blank">
+                <button type="button"><b>ABRIR MATERIAL</b></button>
+            </a>
+
+            <a href="{{ material.arquivo.url }}" download>
+                <button type="button"><b>BAIXAR</b></button>
+            </a>
+
+            <button type="button"><b>SALVAR</b></button>
+
+            <button type="button">COMPARTILHAR</button>
+
         </div>
+
+    </div>
         <div class="reportar">
             <button>Reportar material</button>
         </div>
-    </div>
     
     <div class="avaliacao-comentario">
         <div class="boxes">
-            <h3><b>AVALIAÇÕES</b></h3>
-            <p>Como foi sua experiência com este material?</p>
-            <img src="imagens/avaliacao (1).png">
-        </div>
-        <div class="boxes">
+
             <h3><b>COMENTÁRIOS</b></h3>
+
             <p>Deixe seu comentário sobre este material.</p>
-            <form id="form-comentario">
+
+            <form id="form-comentario"
+                action="{% url 'criar_comentario' material.id %}"
+                method="POST">
+
+                {% csrf_token %}
 
                 <textarea
                     id="campo-comentario"
+                    name="texto"
                     placeholder="Escreva um comentário..."
+                    maxlength="1000"
+                    required
                 ></textarea>
 
                 <button type="submit">
@@ -71,9 +100,26 @@
 
             </form>
 
-            <div id="lista-comentarios"
-                data-usuario="{{ request.user.get_full_name|default:request.user.username }}">
+            <div id="lista-comentarios">
+
+                {% for comentario in material.comentario_set.all %}
+
+                    <div class="comentario">
+
+                        <p class="autor-comentario">
+                            {{ comentario.usuario.get_full_name|default:comentario.usuario.username }}
+                        </p>
+
+                        <p class="texto-comentario">
+                            {{ comentario.texto }}
+                        </p>
+
+                    </div>
+
+                {% endfor %}
+
             </div>
+
         </div>
     </div>
 <script src="{% static 'javascript/comentarios.js' %}"></script>

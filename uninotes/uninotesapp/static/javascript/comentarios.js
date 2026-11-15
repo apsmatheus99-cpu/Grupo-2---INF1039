@@ -2,42 +2,57 @@ document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.getElementById("form-comentario");
     const campoComentario = document.getElementById("campo-comentario");
     const listaComentarios = document.getElementById("lista-comentarios");
-    const nomeUsuario = listaComentarios.dataset.usuario;
 
-    formulario.addEventListener("submit", function (event) {
+    formulario.addEventListener("submit", async function (event) {
+
         event.preventDefault();
 
         const texto = campoComentario.value.trim();
 
         if (texto === "") {
-        alert("Digite um comentário antes de publicar.");
-        return;
+            alert("Digite um comentário antes de publicar.");
+            return;
         }
 
-        const comentario = document.createElement("div");
-        comentario.classList.add("comentario");
+        try {
 
-        const autor = document.createElement("p");
-        autor.classList.add("autor-comentario");
-        autor.textContent = nomeUsuario;
+            const resposta = await fetch(formulario.action, {
+                method: "POST",
+                body: new FormData(formulario)
+            });
 
-        const mensagem = document.createElement("p");
-        mensagem.classList.add("texto-comentario");
-        mensagem.textContent = texto;
+            const dados = await resposta.json();
 
-        const botaoExcluir = document.createElement("button");
-        botaoExcluir.textContent = "Excluir";
-        botaoExcluir.classList.add("excluir-comentario");
+            if (!resposta.ok) {
+                alert(dados.erro || "Não foi possível publicar o comentário.");
+                return;
+            }
 
-        botaoExcluir.addEventListener("click", function () {
-            comentario.remove();
-        });
+            const comentario = document.createElement("div");
+            comentario.classList.add("comentario");
 
-        comentario.appendChild(autor);
-        comentario.appendChild(mensagem);
-        comentario.appendChild(botaoExcluir);
+            const autor = document.createElement("p");
+            autor.classList.add("autor-comentario");
+            autor.textContent = dados.usuario;
 
-        listaComentarios.appendChild(comentario);
-        campoComentario.value = "";
+            const mensagem = document.createElement("p");
+            mensagem.classList.add("texto-comentario");
+            mensagem.textContent = dados.texto;
+
+            comentario.appendChild(autor);
+            comentario.appendChild(mensagem);
+
+            listaComentarios.appendChild(comentario);
+
+            campoComentario.value = "";
+
+        } catch (erro) {
+
+            console.error("Erro:", erro);
+            alert("Erro ao enviar o comentário.");
+
+        }
+
     });
+
 });

@@ -35,11 +35,15 @@ urlpatterns = [
     path('materiais/', meus_materiais, name = 'meus_materiais'),
 
     
-    path('material/', material),
-    path('mensagens/', mensagens),
+    path('material/<int:material_id>/', material, name='material'),
     path('esqueci-senha/',esqueci_senha),
     path('', login),
     path('inicio/', inicio, name='inicio'),
     path('publicar/', publicar),
+    path(
+        "material/<int:material_id>/comentarios/",
+        criar_comentario,
+        name="criar_comentario"
+    ),
 
 ]
