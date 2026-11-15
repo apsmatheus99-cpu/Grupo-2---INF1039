@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login as fazer_login, logout as fa
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
+
 def login(request):
     return render(request, 'tela_login.html')
 
@@ -18,9 +19,11 @@ def cadastro(request):
         'faculdades': faculdades
     })
 
+@login_required(login_url='login')
 def material(request):
     return render(request,'material.html')
 
+@login_required(login_url='login')
 def mensagens(request):
     return render(request,'tela_mensagem.html')
     
@@ -31,24 +34,27 @@ def esqueci_senha(request):
 def inicio(request):
     return render(request, 'telaInicio.html')
 
+@login_required(login_url='login')
 def configuracoes(request):
     return render(request, 'pagina_configuracoes.html')
 
+@login_required(login_url='login')
 def perfil(request):
     return render(request, 'tela_de_perfil.html')
 
-def mensagens(request):
-    return render(request, 'tela_mensagem.html')
-
+@login_required(login_url='login')
 def estatisticas(request):
     return render(request, 'tela_estatistica.html')
 
+@login_required(login_url='login')
 def meus_materiais(request):
     return render(request, 'meus materiais.html')
 
+@login_required(login_url='login')
 def salvos(request):
     return render(request, 'salvos.html')
 
+@login_required(login_url='login')
 def publicar(request):
     return render(request, 'pagina de publica.html')
 
