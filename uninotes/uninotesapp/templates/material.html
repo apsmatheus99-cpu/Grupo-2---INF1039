@@ -58,11 +58,25 @@
         <div class="boxes">
             <h3><b>COMENTÁRIOS</b></h3>
             <p>Deixe seu comentário sobre este material.</p>
-            <!--img-->
-            <input type="text" placeholder="Escreva um comentário...">
+            <form id="form-comentario">
+
+                <textarea
+                    id="campo-comentario"
+                    placeholder="Escreva um comentário..."
+                ></textarea>
+
+                <button type="submit">
+                    PUBLICAR
+                </button>
+
+            </form>
+
+            <div id="lista-comentarios"
+                data-usuario="{{ request.user.get_full_name|default:request.user.username }}">
+            </div>
         </div>
     </div>
-
+<script src="{% static 'javascript/comentarios.js' %}"></script>
 </body>
 </html>
 
