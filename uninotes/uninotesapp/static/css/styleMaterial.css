@@ -362,7 +362,8 @@ button{
     font-weight: 500;
     font-size: 12px;
 }
-.boxes input{
+#campo-comentario{
+    padding-top: 8px;
     width: 300px;
     height: 35px;
     border-radius: 7px;
@@ -371,6 +372,67 @@ button{
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
 }
+
 .boxes img{
     margin-top: -40px;
+}
+
+#form-comentario button {
+    margin-top: 10px;
+    background-color: #4F762F;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+}
+#form-comentario button:hover{
+    background-color: #6c9649;
+    cursor: pointer;
+}
+
+.comentario {
+    position: relative;
+    background-color: #F5F0DE;
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.autor-comentario {
+    color: #23370E;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 30px 8px 0;
+}
+
+.texto-comentario {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.excluir-comentario {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #60705A;
+    font-size: 0;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.excluir-comentario::before {
+    content: "🗑";
+    font-size: 17px;
+}
+
+.excluir-comentario:hover {
+    color: #B33A3A;
 }

@@ -1,12 +1,13 @@
-from django.shortcuts import render
-from django.shortcuts import get_object_or_404
-from .models import Curso, Faculdade, Mensagem
-from django.shortcuts import redirect, render 
+from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as fazer_login, logout as fazer_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
+from .models import Curso, Faculdade, Material, Comentario, Mensagem
 from django.urls import reverse
+
 
 
 
@@ -22,6 +23,18 @@ def cadastro(request):
         'faculdades': faculdades
     })
 
+def material(request, material_id):
+    material = get_object_or_404(
+        Material.objects.select_related(
+            'curso',
+            'faculdade',
+            'professor',
+            'usuario'
+        ),
+        id=material_id
+    )
+
+    return render(request, 'material.html', {'material': material})
 @login_required(login_url='login')
 def material(request):
     return render(request,'material.html')
@@ -58,7 +71,11 @@ def esqueci_senha(request):
 
 @login_required(login_url='login')
 def inicio(request):
-    return render(request, 'telaInicio.html')
+    materiais = Material.objects.all()
+
+    return render(request, 'telaInicio.html', {
+        'materiais': materiais
+    })
 
 @login_required(login_url='login')
 def configuracoes(request):
@@ -129,3 +146,40 @@ def cadastro_usuario(request):
         user.save()
         return redirect("login")
     return render(request, "tela_cadastro.html")
+
+@login_required
+@require_POST
+def criar_comentario(request, material_id):
+
+    material = get_object_or_404(Material, id=material_id)
+
+    texto = request.POST.get("texto", "").strip()
+
+    if not texto:
+        return JsonResponse(
+            {"erro": "O comentário não pode estar vazio."},
+            status=400
+        )
+
+    if len(texto) > 1000:
+        return JsonResponse(
+            {"erro": "O comentário deve ter no máximo 1000 caracteres."},
+            status=400
+        )
+
+    comentario = Comentario.objects.create(
+        material=material,
+        usuario=request.user,
+        texto=texto
+    )
+
+    nome_usuario = (
+        request.user.get_full_name()
+        or request.user.username
+    )
+
+    return JsonResponse({
+        "id": comentario.id,
+        "usuario": nome_usuario,
+        "texto": comentario.texto
+    }, status=201)
