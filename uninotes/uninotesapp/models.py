@@ -102,5 +102,11 @@ class Comentario(models.Model):
     def __str__(self):
         return f"{self.usuario} - {self.material}"
 
+class Mensagem(models.Model):
+    remetente= models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='mensagens_enviadas')
+    destinatario= models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='mensagens_recebidas')
+    conteudo= models.TextField()
+    data_envio= models.DateTimeField(auto_now_add=True)
 
-
+    def __str__(self):
+        return f'{self.remetente}->{self.destinatario}'
