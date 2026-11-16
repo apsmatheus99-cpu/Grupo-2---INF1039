@@ -36,7 +36,6 @@ urlpatterns = [
 
     
     path('material/', material),
-    path('mensagens/', mensagens),
     path('esqueci-senha/',esqueci_senha),
     path('', login),
     path('inicio/', inicio, name='inicio'),
