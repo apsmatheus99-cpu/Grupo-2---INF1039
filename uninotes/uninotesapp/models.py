@@ -110,3 +110,14 @@ class Mensagem(models.Model):
 
     def __str__(self):
         return f'{self.remetente}->{self.destinatario}'
+
+class Denuncia(models.Model):
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,related_name='denuncias')
+    material = models.ForeignKey('Material',on_delete=models.CASCADE,related_name='denuncias')
+    descricao = models.TextField()
+    data_criacao = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'Denúncia do material: {self.material.titulo}'
+
+    

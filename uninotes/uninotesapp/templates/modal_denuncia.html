@@ -10,9 +10,15 @@
     <main class = "container">
         <h2>Denúncia</h2>
         <H4>Descreva o motivo da sua denúncia:</H4>
-        <div class = "texto">
-            <textarea placeholder=" Digite aqui..." name="denuncia" required></textarea>
-        </div>
+        <form method="POST" action="{% url 'salvar_denuncia' %}">
+    {% csrf_token %}
+
+    <input type="hidden" name="material_id" value="{{ material.id }}">
+
+    <textarea name="descricao" placeholder="Descreva a denúncia..."required></textarea>
+
+    <button type="submit">Enviar denúncia</button>
+</form>
         <div class = "botao">
             <button type="submit">Enviar</button>
         </div>

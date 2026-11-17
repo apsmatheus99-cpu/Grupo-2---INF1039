@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth import views
 from django.urls import path, include
 from uninotesapp.views import *
 
@@ -45,5 +46,5 @@ urlpatterns = [
         criar_comentario,
         name="criar_comentario"
     ),
-
+    path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
 ]

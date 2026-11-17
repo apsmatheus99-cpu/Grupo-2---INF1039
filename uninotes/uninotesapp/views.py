@@ -5,10 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from .models import Curso, Faculdade, Material, Comentario, Mensagem
+from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem
 from django.urls import reverse
-
-
 
 
 def login(request):
@@ -183,3 +181,19 @@ def criar_comentario(request, material_id):
         "usuario": nome_usuario,
         "texto": comentario.texto
     }, status=201)
+
+
+
+@login_required
+def salvar_denuncia(request):
+    if request.method == "POST":
+        descricao = request.POST.get("descricao", "").strip()
+        material_id = request.POST.get("material_id")
+
+        if descricao and material_id:
+            material = get_object_or_404(Material, pk=material_id)
+
+            Denuncia.objects.create(usuario=request.user,material=material,descricao=descricao)
+        return redirect(request.META.get("HTTP_REFERER", "/"))
+
+    return redirect("/")
