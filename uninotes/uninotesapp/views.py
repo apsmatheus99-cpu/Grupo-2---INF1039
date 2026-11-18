@@ -21,6 +21,7 @@ def cadastro(request):
         'faculdades': faculdades
     })
 
+@login_required(login_url='login')
 def material(request, material_id):
     material = get_object_or_404(
         Material.objects.select_related(
@@ -33,10 +34,6 @@ def material(request, material_id):
     )
 
     return render(request, 'material.html', {'material': material})
-@login_required(login_url='login')
-def material(request):
-    return render(request,'material.html')
-
 
 @login_required(login_url='login')
 def mensagens(request):
