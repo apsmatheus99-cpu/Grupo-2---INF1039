@@ -1,8 +1,12 @@
+from django.shortcuts import render, get_object_or_404
+from .models import Curso, Faculdade
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as fazer_login, logout as fazer_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from .models import Material, Avaliacao
+from django.db.models import Avg, Count
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem
@@ -21,19 +25,73 @@ def cadastro(request):
         'faculdades': faculdades
     })
 
+
 @login_required(login_url='login')
 def material(request, material_id):
-    material = get_object_or_404(
-        Material.objects.select_related(
-            'curso',
-            'faculdade',
-            'professor',
-            'usuario'
-        ),
-        id=material_id
+    material_atual = get_object_or_404(Material, pk=material_id)
+
+    if request.method == 'POST' and 'nota' in request.POST:
+        if not request.user.is_authenticated:
+            return redirect('login')
+        
+        nota = request.POST['nota']
+
+        if nota not in ('1', '2', '3', '4', '5'):
+            messages.error(request, 'A nota precisa ser de 1 a 5.')
+            return redirect(request.path)
+
+        Avaliacao.objects.update_or_create(
+            material=material_atual,
+            usuario=request.user,
+            defaults={'avaliacao': int(nota)},
+        )
+
+        return redirect(request.path)
+        
+
+    resumo = material_atual.avaliacoes.filter(
+        usuario__isnull=False,
+        avaliacao__range=(1, 5),
+    ).aggregate(
+        media=Avg('avaliacao'),
+        quantidade=Count('id'),
     )
 
-    return render(request, 'material.html', {'material': material})
+    preenchimento_estrelas = round((resumo['media'] or 0) * 20)
+
+
+    minha_nota = 0
+
+    if request.user.is_authenticated:
+        minha_nota = (
+            material_atual.avaliacoes
+            .filter(usuario=request.user)
+            .values_list('avaliacao', flat=True)
+            .first()
+        ) or 0
+
+    return render(request, 'material.html', {
+        'material': material_atual,
+        'media_avaliacoes': resumo['media'],
+        'quantidade_avaliacoes': resumo['quantidade'],
+        'preenchimento_estrelas': preenchimento_estrelas,
+        'minha_nota': minha_nota,
+        'opcoes_de_nota':range(1, 6),
+    })
+
+
+# def material(request, material_id):
+#     material = get_object_or_404(
+#         Material.objects.select_related(
+#             'curso',
+#             'faculdade',
+#             'professor',
+#             'usuario'
+#         ),
+#         id=material_id
+#     )
+
+    # return render(request, 'material.html', {'material': material})
 
 @login_required(login_url='login')
 def mensagens(request):

@@ -1,0 +1,324 @@
+[
+  {
+    "model": "uninotesapp.curso",
+    "pk": 1,
+    "fields": {
+      "name": "Administração"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 2,
+    "fields": {
+      "name": "Análise e Desenvolvimento de sistemas"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 3,
+    "fields": {
+      "name": "Arquitetura e Urbanismo"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 4,
+    "fields": {
+      "name": "Biomedicina"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 5,
+    "fields": {
+      "name": "Ciências Biológicas"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 6,
+    "fields": {
+      "name": "Ciências Contábeis"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 7,
+    "fields": {
+      "name": "Ciência da Computação"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 8,
+    "fields": {
+      "name": "Direito"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 9,
+    "fields": {
+      "name": "Economia"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 10,
+    "fields": {
+      "name": "Educação Física"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 11,
+    "fields": {
+      "name": "Enfermagem"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 12,
+    "fields": {
+      "name": "Engenharia Civil"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 13,
+    "fields": {
+      "name": "Engenharia de Computação"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 14,
+    "fields": {
+      "name": "Engenharia de Produção"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 15,
+    "fields": {
+      "name": "Engenharia Elétrica"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 16,
+    "fields": {
+      "name": "Engenharia Mecânica"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 17,
+    "fields": {
+      "name": "Engenharia Química"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 18,
+    "fields": {
+      "name": "Farmácia"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 19,
+    "fields": {
+      "name": "Física"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 20,
+    "fields": {
+      "name": "Fisioterapia"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 21,
+    "fields": {
+      "name": "História"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 22,
+    "fields": {
+      "name": "Jornalismo"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 23,
+    "fields": {
+      "name": "Letras"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 24,
+    "fields": {
+      "name": "Matemática"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 25,
+    "fields": {
+      "name": "Medicina"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 26,
+    "fields": {
+      "name": "Nutrição"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 27,
+    "fields": {
+      "name": "Odontologia"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 28,
+    "fields": {
+      "name": "Pedagogia"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 29,
+    "fields": {
+      "name": "Psicologia"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 30,
+    "fields": {
+      "name": "Publicidade e Propaganda"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 31,
+    "fields": {
+      "name": "Química"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 32,
+    "fields": {
+      "name": "Relações Internacionais"
+    }
+  },
+  {
+    "model": "uninotesapp.curso",
+    "pk": 33,
+    "fields": {
+      "name": "Sistemas de Informação"
+    }
+  },
+  {
+    "model": "uninotesapp.faculdade",
+    "pk": 1,
+    "fields": {
+      "name": "PUC-RIO"
+    }
+  },
+  {
+    "model": "uninotesapp.faculdade",
+    "pk": 2,
+    "fields": {
+      "name": "UERJ"
+    }
+  },
+  {
+    "model": "uninotesapp.faculdade",
+    "pk": 3,
+    "fields": {
+      "name": "UFRJ"
+    }
+  },
+  {
+    "model": "uninotesapp.faculdade",
+    "pk": 4,
+    "fields": {
+      "name": "UNIRIO"
+    }
+  },
+  {
+    "model": "uninotesapp.faculdade",
+    "pk": 5,
+    "fields": {
+      "name": "FGV"
+    }
+  },
+  {
+    "model": "uninotesapp.professor",
+    "pk": 1,
+    "fields": {
+      "name": "Luís Bicalho"
+    }
+  },
+  {
+    "model": "uninotesapp.professor",
+    "pk": 3,
+    "fields": {
+      "name": "Paulo Ivson"
+    }
+  },
+  {
+    "model": "uninotesapp.professor",
+    "pk": 4,
+    "fields": {
+      "name": "Claudia Ferlin"
+    }
+  },
+  {
+    "model": "uninotesapp.professor",
+    "pk": 5,
+    "fields": {
+      "name": "Greis Francy"
+    }
+  },
+  {
+    "model": "uninotesapp.professor",
+    "pk": 6,
+    "fields": {
+      "name": "Ivan Mathias"
+    }
+  },
+  {
+    "model": "uninotesapp.professor",
+    "pk": 7,
+    "fields": {
+      "name": "Joísa de Souza"
+    }
+  },
+  {
+    "model": "uninotesapp.professor",
+    "pk": 8,
+    "fields": {
+      "name": "Adriano Branco"
+    }
+  },
+  {
+    "model": "uninotesapp.professor",
+    "pk": 9,
+    "fields": {
+      "name": "Livia Andrade"
+    }
+  }
+]

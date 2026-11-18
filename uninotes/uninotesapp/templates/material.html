@@ -51,10 +51,23 @@
 
         </div>
         <div class="avaliacao">
-            <p><b>AVALIACAO<b></p>
+            <p><b>AVALIACAO</b></p>
             <div class="estrelas">
-                <img src="/static/imagens/avaliacao (2).png">
-                <p>(3)</p>
+                {% if quantidade_avaliacoes %}
+                <span class="estrelas-media" aria-hidden="true">
+                    ★★★★★
+                    <span class="estrelas-media-preenchidas"
+                        style="width: {{ preenchimento_estrelas }}%;">★★★★★</span>
+                </span>    
+                            
+                <p>
+                        {{ media_avaliacoes|floatformat:1 }} de 5 ·
+                        {{ quantidade_avaliacoes }}
+                        {% if quantidade_avaliacoes == 1 %}avaliação{% else %}avaliações{% endif %}
+                    </p>
+                {% else %}
+                    <p>Ainda sem avaliações</p>
+                {% endif %}
             </div>
         </div>
 
@@ -83,7 +96,19 @@
         <div class="boxes">
             <h3><b>AVALIAÇÕES</b></h3>
             <p>Como foi sua experiência com este material?</p>
-            <img src="/static/imagens/avaliacao (1).png">
+            <form method="post" class="avaliacao-estrelas" aria-label="Avaliar material">
+                {% csrf_token %}
+                {% for numero in opcoes_de_nota %}
+                    <button type="submit"
+                            name="nota"
+                            value="{{ numero }}"
+                            class="{% if numero <= minha_nota %}estrela-marcada{% endif %}"
+                            aria-label="Dar {{ numero }} estrela{{ numero|pluralize }}">
+                        {% if numero <= minha_nota %}★{% else %}☆{% endif %}
+                    </button>
+                {% endfor %}
+
+            </form>
         </div>
         <div class="boxes">
             <h3><b>COMENTÁRIOS</b></h3>
