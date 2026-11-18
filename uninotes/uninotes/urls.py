@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.contrib.auth import views
 from django.urls import path, include
 from uninotesapp.views import *
+from uninotesapp import views as app_views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -47,4 +48,5 @@ urlpatterns = [
         name="criar_comentario"
     ),
     path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
+    path('material/<int:material_id>/denuncia/',app_views.modal_denuncia,name='modal_denuncia'),
 ]

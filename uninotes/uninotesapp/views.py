@@ -183,14 +183,22 @@ def criar_comentario(request, material_id):
 
 @login_required
 def salvar_denuncia(request):
-    if request.method == "POST":
-        descricao = request.POST.get("descricao", "").strip()
-        material_id = request.POST.get("material_id")
+    if request.method == 'POST':
+        material_id = request.POST.get('material_id')
+        descricao = request.POST.get('descricao', '').strip()
 
-        if descricao and material_id:
-            material = get_object_or_404(Material, pk=material_id)
+        material = get_object_or_404(Material,id=material_id)
 
+        if descricao:
             Denuncia.objects.create(usuario=request.user,material=material,descricao=descricao)
-        return redirect(request.META.get("HTTP_REFERER", "/"))
 
-    return redirect("/")
+        return redirect(
+            request.META.get('HTTP_REFERER', '/'))
+
+    return redirect('/')
+
+
+def modal_denuncia(request, material_id):
+    material = get_object_or_404(Material, id=material_id)
+
+    return render(request, 'modal_denuncia.html', {'material': material})
