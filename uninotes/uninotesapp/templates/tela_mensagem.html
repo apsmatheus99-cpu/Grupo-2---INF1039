@@ -22,72 +22,66 @@
             <h3>Conversas</h3>
             <input type="text" class="buscar-conversa" placeholder="Buscar estudante...">
 
-            <div class="conversa selecionada">
-                <div class="avatar"> LC </div>
-                <div class="dados-conversa">
-                    <h4> Luciana Chen </h4>
-                    <p>Obrigada pelo material!</p>
+            {% for usuario in contatos %}
+            <div class= "conversa" data-user-id= "{{ usuario.id}}">
+                <div class= "avatar">
+                    {{usuario.username|slice:":2"|upper}}
+                </div>
+                <div class= "dados-conversa">
+                    <h4>{{ usuario.username }}</h4>
+                    <p>Iniciar conversa</p>
                 </div>
             </div>
-
-            <div class="conversa">
-                <div class="avatar">MS</div>
-                <div class="dados-conversa">
-                    <h4> Matheus Soares </h4>
-                    <p>Você tem os slides da aula?</p>
-                </div>
-            </div>
-
-            <div class="conversa">
-                <div class="avatar">AB</div>
-                <div class="dados-conversa">
-                    <h4> Ana Beatriz</h4>
-                    <p>Vou te enviar a lista.</p>
-                </div>
-            </div>
-
-            <div class="conversa">
-                <div class="avatar">AL</div>
-                <div class="dados-conversa">
-                    <h4> André Luiz</h4>
-                    <p>Até amanhã!</p>
-                </div>
-            </div>
-
-            <div class="conversa">
-                <div class="avatar">LB</div>
-                <div class="dados-conversa">
-                    <h4>Luis Bicalho</h4>
-                    <p>Tchau</p>
-                </div>
-            </div>
-
+            {% endfor %}
         </div>
-
 
 
         <div class="area-chat">
             <div class="chat-cabecalho">
-                <div class="avatar"> LC </div>
+                <div class="avatar">
+                    {% if contato_selecionado %}
+                        {{ contato_selecionado.username | slice:":2"|upper }}
+                    {% endif %}
+                </div>
                 <div>
-                    <h3> Luciana Chen </h3>
-                    <p>Estudante de Ciência da Computação</p>
+                    {% if contato_selecionado %}
+                        <h3>{{ contato_selecionado.username }}</h3>
+                        <p>Conversa Privada</p>
+                    {% else %}
+                        <h3>Selecione um estudante</h3>
+                        <p>Suas mensagens aparecerão aqui</p>
+                    {% endif %}
                 </div>
             </div>
 
             <div class="chat-mensagens">
-                <p class="data-mensagem">Hoje</p>
-                <div class="mensagem recebida"> Oi! Você tem o resumo da última aula?</div>
-                <div class="mensagem enviada">Oi, tenho sim! Vou te mandar.</div>
-                <div class="mensagem recebida">Obrigada pelo material!</div>
+                <p>Quantidade de mensagens: {{ mensagens_conversa|length }}</p> <!-- remover depois-->
+        
+                {% for mensagem in mensagens_conversa %}
+                    {% if mensagem.remetente == request.user %}
+                        <div class= "mensagem enviada">
+                            {{ mensagem.conteudo }}
+                        </div>
+                    {% else %}
+                        <div class= "mensagem recebida">
+                            {{ mensagem.conteudo }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
 
-            <div class="campo-mensagem">
-                <input type="text" placeholder="Digite sua mensagem...">
-                <button type="button" aria-label="Enviar mensagem">
+            <form class="campo-mensagem" method="POST">
+                {% csrf_token %}
+                <input type= "hidden" name= "destinatario" id= "destinatario" value="{{ contato_selecionado.id|default:'' }}">
+
+                <input type="text" name= "conteudo" placeholder="Digite sua mensagem..." required>
+                <button type="submit" id="botao-enviar" aria-label="Enviar mensagem" 
+                {% if not contato_selecionado %}
+                    disabled
+                {% endif %}>
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
-            </div>
+            </form>
 
         </div>
 
