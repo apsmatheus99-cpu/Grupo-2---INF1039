@@ -11,11 +11,11 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='avaliacao',
-            name='aluno',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='uninotesapp.aluno'),
-        ),
+        # migrations.AddField(
+        #     model_name='avaliacao',
+        #     name='aluno',
+        #     field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='uninotesapp.aluno'),
+        # ),
         migrations.AlterField(
             model_name='avaliacao',
             name='avaliacao',
