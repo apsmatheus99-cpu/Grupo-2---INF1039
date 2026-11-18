@@ -35,7 +35,7 @@ urlpatterns = [
     path('materiais/', meus_materiais, name = 'meus_materiais'),
 
     
-    path('material/', material),
+    path('material/<int:material_id>/', material),
     path('mensagens/', mensagens),
     path('esqueci-senha/',esqueci_senha),
     path('', login),

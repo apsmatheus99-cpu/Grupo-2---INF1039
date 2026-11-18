@@ -15,7 +15,7 @@
         <button><p>Voltar aos materiais</p></div>
     <div class="material">
         <div class="categorias"><!---img---><p><b>ECONOMIA - ANOTAÇÃO</b></p></div>
-        <div class="titulo-material"><!---img---><h1>MACROECONOMIA — <br>POLÍTICA MONETÁRIA</h1></div>
+      <div class="titulo-material"><h1>{{ material.titulo }}</h1></div>
         <div class="descricao-material"><!---img---><p>Selic, inflação e o papel do Banco Central.</p></div>
         <div class="autor-material"><!---img---><p>Publicado por:</p><p><b> Gustavo Prado</b></p><button><!---img---><b>SEGUIR</b></button></div>
         <div class="prof-curso-instituicao-data">
@@ -33,8 +33,15 @@
         <div class="avaliacao">
             <p><b>AVALIACAO<b></p>
             <div class="estrelas">
-                <img src="imagens/avaliacao (2).png">
-                <p>(3)</p>
+                {% if quantidade_avaliacoes %}
+                    <p>
+                        {{ media_avaliacoes|floatformat:1 }} de 5 ·
+                        {{ quantidade_avaliacoes }}
+                        {% if quantidade_avaliacoes == 1 %}avaliação{% else %}avaliações{% endif %}
+                    </p>
+                {% else %}
+                    <p>Ainda sem avaliações</p>
+                {% endif %}
             </div>
         </div>
 
@@ -53,7 +60,15 @@
         <div class="boxes">
             <h3><b>AVALIAÇÕES</b></h3>
             <p>Como foi sua experiência com este material?</p>
-            <img src="imagens/avaliacao (1).png">
+            <form method="post" aria-label="Avaliar material">
+                {% csrf_token %}
+
+                <button type="submit" name="nota" value="1" aria-label="Dar 1 estrela">★</button>
+                <button type="submit" name="nota" value="2" aria-label="Dar 2 estrelas">★</button>
+                <button type="submit" name="nota" value="3" aria-label="Dar 3 estrelas">★</button>
+                <button type="submit" name="nota" value="4" aria-label="Dar 4 estrelas">★</button>
+                <button type="submit" name="nota" value="5" aria-label="Dar 5 estrelas">★</button>
+            </form>
         </div>
         <div class="boxes">
             <h3><b>COMENTÁRIOS</b></h3>

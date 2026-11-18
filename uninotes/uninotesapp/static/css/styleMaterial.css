@@ -165,7 +165,8 @@ button{
 .material{
     background-color: white;
     width: 800px;
-    height: 530px;
+    min-height: 530px;
+    height: auto;
     border-radius: 20px;
     margin-left: 300px;
     box-shadow: 3px 3px 50px #dfd4a6;
@@ -250,14 +251,15 @@ button{
 
 .avaliacao{
     margin-left: 40px;
-    margin-top: -10px;
+    margin-top: 0;
+    margin-bottom: 12px;
     font-size: 12px;
     color:#636363;
 
 }
 .estrelas{
     display: flex;
-    margin-top:-40px;
+    margin-top:0px;
     align-items: center;
     gap: 5px;
 }
@@ -272,7 +274,7 @@ button{
     display: flex;
     gap: 10px;
     margin-left: 40px;
-    margin-top: -10px;
+    margin-top: 12px;
 }
 
 .abrir-baixar-salvar-compartilhar button{
