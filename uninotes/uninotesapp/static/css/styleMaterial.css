@@ -376,3 +376,35 @@ button{
 .boxes img{
     margin-top: -40px;
 }
+
+.estrelas-media {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    color: #ccc;
+    font-size: 22px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.estrelas-media-preenchidas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: #e3a500;
+}
+
+.avaliacao-estrelas button.estrela-marcada {
+    color: #e3a500;
+}
+
+.avaliacao-estrelas button {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    color: #767676;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}

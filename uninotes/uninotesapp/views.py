@@ -42,8 +42,6 @@ def material(request, material_id):
         return redirect(request.path)
         
 
-
-
     resumo = material_atual.avaliacoes.filter(
         usuario__isnull=False,
         avaliacao__range=(1, 5),
@@ -52,10 +50,26 @@ def material(request, material_id):
         quantidade=Count('id'),
     )
 
+    preenchimento_estrelas = round((resumo['media'] or 0) * 20)
+
+
+    minha_nota = 0
+
+    if request.user.is_authenticated:
+        minha_nota = (
+            material_atual.avaliacoes
+            .filter(usuario=request.user)
+            .values_list('avaliacao', flat=True)
+            .first()
+        ) or 0
+
     return render(request, 'material.html', {
         'material': material_atual,
         'media_avaliacoes': resumo['media'],
         'quantidade_avaliacoes': resumo['quantidade'],
+        'preenchimento_estrelas': preenchimento_estrelas,
+        'minha_nota': minha_nota,
+        'opcoes_de_nota':range(1, 6),
     })
 
 
