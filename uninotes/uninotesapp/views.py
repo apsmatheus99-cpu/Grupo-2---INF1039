@@ -1,15 +1,11 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Curso, Faculdade
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as fazer_login, logout as fazer_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Material, Avaliacao
-from django.db.models import Avg, Count
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem
+from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, Professor
 from django.urls import reverse
 
 
@@ -25,73 +21,19 @@ def cadastro(request):
         'faculdades': faculdades
     })
 
-
-@login_required(login_url='login')
 def material(request, material_id):
-    material_atual = get_object_or_404(Material, pk=material_id)
-
-    if request.method == 'POST' and 'nota' in request.POST:
-        if not request.user.is_authenticated:
-            return redirect('login')
-        
-        nota = request.POST['nota']
-
-        if nota not in ('1', '2', '3', '4', '5'):
-            messages.error(request, 'A nota precisa ser de 1 a 5.')
-            return redirect(request.path)
-
-        Avaliacao.objects.update_or_create(
-            material=material_atual,
-            usuario=request.user,
-            defaults={'avaliacao': int(nota)},
-        )
-
-        return redirect(request.path)
-        
-
-    resumo = material_atual.avaliacoes.filter(
-        usuario__isnull=False,
-        avaliacao__range=(1, 5),
-    ).aggregate(
-        media=Avg('avaliacao'),
-        quantidade=Count('id'),
+    material = get_object_or_404(
+        Material.objects.select_related(
+            'curso',
+            'faculdade',
+            'professor',
+            'usuario'
+        ),
+        id=material_id
     )
 
-    preenchimento_estrelas = round((resumo['media'] or 0) * 20)
+    return render(request, 'material.html', {'material': material})
 
-
-    minha_nota = 0
-
-    if request.user.is_authenticated:
-        minha_nota = (
-            material_atual.avaliacoes
-            .filter(usuario=request.user)
-            .values_list('avaliacao', flat=True)
-            .first()
-        ) or 0
-
-    return render(request, 'material.html', {
-        'material': material_atual,
-        'media_avaliacoes': resumo['media'],
-        'quantidade_avaliacoes': resumo['quantidade'],
-        'preenchimento_estrelas': preenchimento_estrelas,
-        'minha_nota': minha_nota,
-        'opcoes_de_nota':range(1, 6),
-    })
-
-
-# def material(request, material_id):
-#     material = get_object_or_404(
-#         Material.objects.select_related(
-#             'curso',
-#             'faculdade',
-#             'professor',
-#             'usuario'
-#         ),
-#         id=material_id
-#     )
-
-    # return render(request, 'material.html', {'material': material})
 
 @login_required(login_url='login')
 def mensagens(request):
@@ -100,21 +42,18 @@ def mensagens(request):
         conteudo= request.POST.get('conteudo', '').strip()
         if destinatario_id and conteudo:
             destinatario = get_object_or_404(User, id=destinatario_id)
+            if destinatario== request.user:
+                return redirect('mensagens')
             Mensagem.objects.create(remetente= request.user, destinatario= destinatario, conteudo= conteudo)
         return redirect(f"{reverse('mensagens')}?contato={destinatario_id}")
     contato_id= request.GET.get('contato')
-    print("id dos contatos: ", contato_id) #lembrar de remover depois
     contato_selecionado= None
     mensagens_conversa=[]
     if contato_id:
         contato_selecionado= get_object_or_404(User, id= contato_id)
-        if contato_selecionado:
-            mensagens_enviadas= Mensagem.objects.filter(remetente= request.user, destinatario= contato_selecionado)
-            mensagens_recebidas= Mensagem.objects.filter(remetente= contato_selecionado, destinatario= request.user)
-            print("mensagens enviadas: ", mensagens_enviadas) #lembrar de remover depois
-            print("mensagens recebidas: ", mensagens_recebidas) #lembrar de remover depois
-            mensagens_conversa= (mensagens_enviadas | mensagens_recebidas).order_by('data_envio')
-            print("historico: ", mensagens_conversa) #lembrar de remover depois
+        mensagens_enviadas= Mensagem.objects.filter(remetente= request.user, destinatario= contato_selecionado)
+        mensagens_recebidas= Mensagem.objects.filter(remetente= contato_selecionado, destinatario= request.user)
+        mensagens_conversa= (mensagens_enviadas | mensagens_recebidas).order_by('data_envio')
     contatos= User.objects.exclude(id=request.user.id)
     return render(request, 'tela_mensagem.html', {'contatos': contatos, 'contato_selecionado': contato_selecionado, 'mensagens_conversa': mensagens_conversa})
 
@@ -125,10 +64,7 @@ def esqueci_senha(request):
 @login_required(login_url='login')
 def inicio(request):
     materiais = Material.objects.all()
-
-    return render(request, 'telaInicio.html', {
-        'materiais': materiais
-    })
+    return render(request, 'telaInicio.html', {'materiais': materiais})
 
 @login_required(login_url='login')
 def configuracoes(request):
@@ -152,7 +88,39 @@ def salvos(request):
 
 @login_required(login_url='login')
 def publicar(request):
-    return render(request, 'pagina de publica.html')
+    cursos= Curso.objects.all()
+    faculdades= Faculdade.objects.all()
+    if request.method == 'POST':
+        titulo= request.POST.get('titulo')
+        disciplina= request.POST.get('disciplina')
+        tipo= request.POST.get('tipo')
+        curso_id= request.POST.get('curso')
+        faculdade_id= request.POST.get('instituicao')
+        professor_nome= request.POST.get('professor')
+        arquivo= request.FILES.get('arquivo')
+
+        if titulo and disciplina and tipo and curso_id and faculdade_id and arquivo:
+            curso= get_object_or_404(Curso, id=curso_id)
+            faculdade= get_object_or_404(Faculdade, id=faculdade_id)
+            professor= None
+            if professor_nome:
+                professor, criado= Professor.objects.get_or_create(name=professor_nome)
+            if arquivo.size <= 20*1024*1024:
+                Material.objects.create(
+                    titulo=titulo,
+                    disciplina=disciplina,
+                    tipo=tipo,
+                    curso=curso,
+                    faculdade=faculdade,
+                    professor=professor,
+                    usuario=request.user,
+                    arquivo=arquivo
+                )
+                return redirect('inicio')
+            else: 
+                messages.error(request, "O arquivo excede o tamanho permitido de 20MB.")
+    
+    return render(request, 'pagina de publica.html', {'cursos': cursos, 'faculdades' : faculdades})
 
 def login_usuario(request):
     if request.method == "POST":
@@ -241,22 +209,14 @@ def criar_comentario(request, material_id):
 
 @login_required
 def salvar_denuncia(request):
-    if request.method == 'POST':
-        material_id = request.POST.get('material_id')
-        descricao = request.POST.get('descricao', '').strip()
+    if request.method == "POST":
+        descricao = request.POST.get("descricao", "").strip()
+        material_id = request.POST.get("material_id")
 
-        material = get_object_or_404(Material,id=material_id)
+        if descricao and material_id:
+            material = get_object_or_404(Material, pk=material_id)
 
-        if descricao:
             Denuncia.objects.create(usuario=request.user,material=material,descricao=descricao)
+        return redirect(request.META.get("HTTP_REFERER", "/"))
 
-        return redirect(
-            request.META.get('HTTP_REFERER', '/'))
-
-    return redirect('/')
-
-
-def modal_denuncia(request, material_id):
-    material = get_object_or_404(Material, id=material_id)
-
-    return render(request, 'modal_denuncia.html', {'material': material})
+    return redirect("/")
