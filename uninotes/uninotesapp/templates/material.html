@@ -85,8 +85,8 @@
 
             <button type="button">COMPARTILHAR</button>
 
-            <a href="{% url 'modal_denuncia' material.id %}"><button type="button">Reportar material</button></a>
-
+            <button type="button" id="abrir-modal-denuncia">Reportar material</button>
+            {% include 'modal_denuncia.html' %}
         </div>
 
     </div>
@@ -157,6 +157,7 @@
 
         </div>
     </div>
+
 <script src="{% static 'javascript/comentarios.js' %}"></script>
 </body>
 </html>
