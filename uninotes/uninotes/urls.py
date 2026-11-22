@@ -20,6 +20,7 @@ from django.urls import path, include
 from uninotesapp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from uninotesapp import views as app_views
 
 
 urlpatterns = [
