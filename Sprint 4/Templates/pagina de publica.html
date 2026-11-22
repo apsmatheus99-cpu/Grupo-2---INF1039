@@ -1,102 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <link rel="stylesheet" href="../static/css/publica.css">
-    <link rel="stylesheet" href="../static/css/barraLateral.css">
-    <link rel="stylesheet" href="../static/css/publicarPesquisa.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> pagina de publicar material</title>
-    <link rel="stylesheet" href="../static/css/responsivo.css">
-</head>
+{% extends 'base.html' %}
+{% load static %}
 
-<body>
+{% block content %}
     <div class="publicar-pesquisa">
-        <a href="pagina de publica.html">PUBLICAR</a>
+        <a href="{% url 'publicar' %}">PUBLICAR</a>
         <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img src="imagens/notificacao.png">
-        <img src="imagens/perfil-de-usuario.png">
+        <img src="/static/imagens/notificacao.png">
+        <img src="/static/imagens/perfil-de-usuario.png">
     </div>
 
-    <section class="barraLateral">
-        <div class="logo-titulo">
-            <img src="imagens/Logo Uninotes.png">
-            <h2><b>UNINOTES</b></h2>
-        </div>
-        <div class="botao-inicio">
-            <a href="telaInicio.html"><img src="imagens/icone casa.png"><b>INÍCIO</b></a>
-        </div>
-        <div class="botao-meusMateriais">
-            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
-        </div>
-        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
-        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
-        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
-        <a href="tela de perfil.html"><img src="imagens/usuario.png"><b>PERFIL</b></a>
-        <a href="pagina_configuracoes.html"><img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
-    </section>
 
 <main>
     <section>
         <p> COMPARTILHE CONHECIMENTO</p>
         <h1>PUBLICAR MATERIAL</h1>
     </section>
-    <form action="#" method="Post" enctype= "multipart/form-data">
+    <form action="{% url 'publicar' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if messages %}
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+
+
     
     <div>
         <label for="titulo">Titulo do material</label>
-        <input type="text" id="titulo" name="titulo" placeholder="Ex:Calculo">
+        <input type="text" id="titulo" name="titulo" placeholder="Ex:Calculo" required>
     </div>
 
     <div>
         <label for="disciplina">Disciplina</label>
-        <input type="text" id="disciplina" name="disciplina" placeholder="Ex:Engenharia de Software">
+        <input type="text" id="disciplina" name="disciplina" placeholder="Ex:Engenharia de Software" required>
     </div>
 
     <div>
      <label for="tipo">Tipo de Material</label>
-     <select id="tipo" name="tipo">
+     <select id="tipo" name="tipo" required>
         <option value=""disabled selected>Selecione o tipo</option>
         <option value="resumo">Resumo</option>
-        <option value="exercicio">Exercício</option>
-        <option value="prova">Prova</option>
+        <option value="exerc">Exercício</option>
+        <option value="pr">Prova</option>
+        <option value="txt">Texto</option>
+        <option value="slide">Slide</option>
+        <option value="anot">Anotações</option>
     </select>
         </div>
 
-     <div>
-     <label for="curso">Curso</label>
-     <select id="curso" name="curso">
-        <option value=""disabled selected>Selecione o curso</option>
-        <option value="administracao">Administração</option>
-        <option value="arquitetura e urbanismo">Arquitetura e Urbanismo</option>
-        <option value="biomedicina">Biomedicina</option>
-        <option value="ciencias contabeis">Ciencias Contábeis</option>
-        <option value="ciencias da computacao">Ciencias da Computação</option>
-        <option value="direito">Direito</option>
-        <option value="economia">Economia</option>
-        <option value="educacao fisica">Educação fisica</option>
-        <option value="engenharia mecanica">Engenharia Mecânica</option>
-        <option value="fisica">Fisica</option>
-        <option value="historia">História</option>
-        <option value="jornalismo">Jornalismo</option>
-        <option value="letras">Letras</option>
-        <option value="matematica">Matemática</option>
-        <option value="nutricao">Nutrição</option>
-        <option value="psicologia">Psicologia</option>
-    </select>
-     </div>
-
     <div>
-     <label for="instituição">Instituição</label>
-     <select id="instituição" name="instituição">
-        <option value=""disabled selected>Selecione a instituição</option>
-        <option value="ufmg">UFMG</option>
-        <option value="usp">USP</option>
-        <option value="ufrj">UFRJ</option>
-        <option value="puc-rio">PUC-Rio</option>
+        <label for="curso">Curso</label>
+        <select id="curso" name="curso">
+            <option value="" disabled selected>Selecione o curso</option>
+            {% for curso in cursos %}
+                <option value="{{ curso.id }}">{{ curso.name }}</option>
+            {% endfor %}
     </select>
-     </div>
+</div>
 
+
+<div>
+    <label for="instituicao">Instituição</label>
+    <select id="instituicao" name="instituicao">
+        <option value="" disabled selected>Selecione a instituição</option>
+        {% for faculdade in faculdades %}
+            <option value="{{ faculdade.id }}">{{ faculdade.name }}</option>
+        {% endfor %}
+    </select>
+
+</div>
     <div>
      <label for="professor">Professor(opcional)</label>
      <input type="text" id="professor" name="professor" placeholder="Ex:Prof. Silva">
@@ -113,9 +85,11 @@
      </div>
 
     <div>
-     <label for="arquivo">
-     <p>Arraste ou selecione um arquivo</p>
-     <p>PDF, DOC, PPTX ou Imagen até 20MB</p>
+        <label for="arquivo">
+            <p>Arraste ou selecione um arquivo</p>
+            <p>PDF, DOC, PPTX ou Imagen até 20MB</p>
+            <input type="file" id="arquivo" name="arquivo"
+                accept=".pdf, .doc, .docx, .pptx, .jpg, .png, .jpeg" required>
      </label>
     </div>
    
@@ -127,5 +101,4 @@
     </form>
     
 </main>
-</body>
-</html>
+{% endblock %}
