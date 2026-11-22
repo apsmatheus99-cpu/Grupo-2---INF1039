@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.db import models
 from django.conf import settings
 
@@ -29,36 +28,20 @@ class Aluno(models.Model):
 
 class Avaliacao(models.Model):
     ESTRELAS = [
+            (0, 'Sem avaliação'),
             (1, '⭐'),
             (2, '⭐⭐'),
             (3, '⭐⭐⭐'),
             (4, '⭐⭐⭐⭐'),
             (5, '⭐⭐⭐⭐⭐'),
         ]   
-    avaliacao = models.IntegerField(choices= ESTRELAS)
+    avaliacao = models.IntegerField( default=0, choices= ESTRELAS)
     material = models.ForeignKey('Material',on_delete=models.CASCADE,related_name='avaliacoes')
-    aluno = models.ForeignKey(Aluno,
-    on_delete=models.PROTECT,
-    null=True,
-    blank=True,)
-    usuario = models.ForeignKey(
-    settings.AUTH_USER_MODEL,
-    on_delete=models.CASCADE,
-    null=True,
-    blank=True,
-    )
-
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=['material', 'aluno'],
-                name='uma_avaliacao_por_aluno',
-            ),
-            models.UniqueConstraint(
-                fields=['material', 'usuario'],
-                name='uma_avaliacao_por_usuario_e_material',
-            ),
-        ] 
+    aluno = models.ForeignKey(Aluno,on_delete=models.PROTECT,null=True,blank=True)
+    
+    
+    def __str__(self):
+        return str(self.avaliacao)    
 
 class Material(models.Model):
     titulo = models.CharField(max_length=100)
@@ -81,8 +64,6 @@ class Material(models.Model):
     usuario = models.ForeignKey(
     settings.AUTH_USER_MODEL,
     on_delete=models.CASCADE,
-    null=True,
-    blank=True
     )
 
     arquivo = models.FileField(upload_to='materiais/')
