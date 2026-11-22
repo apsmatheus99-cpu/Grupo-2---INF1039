@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.contrib.auth import views
 from django.urls import path, include
 from uninotesapp.views import *
-from uninotesapp import views as app_views 
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,17 +38,17 @@ urlpatterns = [
     path('salvos/', salvos, name= 'salvos'),
     path('materiais/', meus_materiais, name = 'meus_materiais'),
 
-    path('material/', material),
     path('material/<int:material_id>/', material, name='material'),
     path('esqueci-senha/',esqueci_senha),
     path('', login),
     path('inicio/', inicio, name='inicio'),
-    path('publicar/', publicar),
+    path('publicar/', publicar, name='publicar'),
     path(
         "material/<int:material_id>/comentarios/",
         criar_comentario,
         name="criar_comentario"
     ),
     path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
-    path('material/<int:material_id>/denuncia/',app_views.modal_denuncia,name='modal_denuncia'),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
