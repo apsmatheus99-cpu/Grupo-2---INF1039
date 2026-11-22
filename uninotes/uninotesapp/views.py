@@ -9,6 +9,7 @@ from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, 
 from django.urls import reverse
 from django.http import FileResponse, Http404
 
+
 def login(request):
     return render(request, 'tela_login.html')
 
@@ -32,7 +33,11 @@ def material(request, material_id):
         id=material_id
     )
 
-    return render(request, 'material.html', {'material': material})
+    return render(request, 'material.html', {
+    'material': material,
+    'opcoes_de_nota': range(1, 6),
+    'minha_nota': 0,
+})
 
 
 @login_required(login_url='login')
