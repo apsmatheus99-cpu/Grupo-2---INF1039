@@ -137,23 +137,27 @@
 
             <div id="lista-comentarios">
 
-                {% for comentario in material.comentario_set.all %}
+    {% for comentario in material.comentario_set.all %}
 
-                    <div class="comentario">
+        <div class="comentario">
 
-                        <p class="autor-comentario">
-                            {{ comentario.usuario.get_full_name|default:comentario.usuario.username }}
-                        </p>
+            <p class="autor-comentario">
+                {{ comentario.usuario.get_full_name|default:comentario.usuario.username }}
+            </p>
 
-                        <p class="texto-comentario">
-                            {{ comentario.texto }}
-                        </p>
+            <p class="data-comentario">
+                {{ comentario.criado_em|date:"d/m/Y H:i" }}
+            </p>
 
-                    </div>
+            <p class="texto-comentario">
+                {{ comentario.texto }}
+            </p>
 
-                {% endfor %}
+        </div>
 
-            </div>
+    {% endfor %}
+
+</div>
 
         </div>
     </div>

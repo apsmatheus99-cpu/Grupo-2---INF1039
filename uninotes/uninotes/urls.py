@@ -44,11 +44,7 @@ urlpatterns = [
     path('', login),
     path('inicio/', inicio, name='inicio'),
     path('publicar/', publicar, name='publicar'),
-    path(
-        "material/<int:material_id>/comentarios/",
-        criar_comentario,
-        name="criar_comentario"
-    ),
+    path("material/<int:material_id>/comentarios/", criar_comentario, name="criar_comentario"),
     path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
     path('material/<int:material_id>/denuncia/',app_views.modal_denuncia,name='modal_denuncia'),
     path('material/<int:material_id>/baixar/',app_views.baixar_material,name='baixar_material'),
