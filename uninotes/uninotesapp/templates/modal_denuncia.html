@@ -1,32 +1,24 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denúncia</title>
 
-    <link rel="stylesheet" href="{% static 'css/modal_denuncia.css' %}">
-</head>
-<body>
-    <main class="container">
+<link rel="stylesheet" href="{% static 'css/modal_denuncia.css' %}">
+
+<div id="modal-denuncia">
+    <div class="container-modal">
+
+        <button type="button" id="fechar-modal-denuncia"class="fechar-modal"aria-label="Fechar janela">&times;</button>
         <h2>Denúncia</h2>
-
-        <h4>Descreva o motivo da sua denúncia:</h4>
+        <p>Informe o motivo pelo qual você deseja denunciar este material.</p>
 
         <form method="POST" action="{% url 'salvar_denuncia' %}">
             {% csrf_token %}
 
             <input type="hidden" name="material_id" value="{{ material.id }}">
-            <div class="texto">
-            <textarea name="descricao"placeholder="Descreva a denúncia..."required></textarea>
-            </div>
-            <div class="botao">
+            <label for="motivo-denuncia">Motivo da denúncia:</label>
+            <textarea id="motivo-denuncia" name="descricao" placeholder="Descreva aqui o motivo da denúncia..." required></textarea>
             <button type="submit">Enviar denúncia</button>
-            <div>
         </form>
-    </main>
-</body>
-</html>
 
+    </div>
+</div>
 
+<script src="{% static 'javascript/modal_denuncia.js' %}"></script>
