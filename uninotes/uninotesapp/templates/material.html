@@ -73,9 +73,11 @@
 
         <div class="abrir-baixar-salvar-compartilhar">
 
-            <a href="{{ material.arquivo.url }}" target="_blank">
-                <button type="button"><b>ABRIR MATERIAL</b></button>
-            </a>
+            {% if material.arquivo %}
+                <a href="{{ material.arquivo.url }}" target="_blank" rel="noopener">
+                    <button type="button"><b>ABRIR MATERIAL</b></button>
+                </a>
+            {% endif %}
 
             <a href="{% url 'baixar_material' material.id %}">
                 <button type="button"><b>BAIXAR</b></button>
