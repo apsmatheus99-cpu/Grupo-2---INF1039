@@ -11,7 +11,7 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem
 from django.urls import reverse
-
+from django.http import FileResponse, Http404
 
 def login(request):
     return render(request, 'tela_login.html')
@@ -260,3 +260,18 @@ def modal_denuncia(request, material_id):
     material = get_object_or_404(Material, id=material_id)
 
     return render(request, 'modal_denuncia.html', {'material': material})
+
+
+@login_required(login_url='login')
+def baixar_material(request, material_id):
+
+    material = get_object_or_404(Material, id=material_id)
+    if not material.arquivo:
+        raise Http404("Este material não possui arquivo.")
+    nome_arquivo = material.arquivo.name.rsplit('/', 1)[-1]
+    try:
+        arquivo = material.arquivo.open('rb')
+    except (FileNotFoundError, OSError):
+        raise Http404("O arquivo deste material não foi encontrado.")
+
+    return FileResponse(arquivo, as_attachment=True,filename=nome_arquivo)

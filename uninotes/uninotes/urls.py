@@ -49,4 +49,5 @@ urlpatterns = [
     ),
     path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
     path('material/<int:material_id>/denuncia/',app_views.modal_denuncia,name='modal_denuncia'),
+    path('material/<int:material_id>/baixar/',app_views.baixar_material,name='baixar_material'),
 ]
