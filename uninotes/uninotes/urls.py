@@ -50,8 +50,9 @@ urlpatterns = [
         name="criar_comentario"
     ),
     path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
-    path('material/<int:material_id>/denuncia/',app_views.modal_denuncia,name='modal_denuncia'),
-    path('material/<int:material_id>/baixar/',app_views.baixar_material,name='baixar_material'),
+    path('material/<int:material_id>/denuncia/', modal_denuncia, name='modal_denuncia'),
+    path('material/<int:material_id>/baixar/', baixar_material, name='baixar_material'),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
