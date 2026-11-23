@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.utils import timezone
 
 
 class Curso(models.Model):
@@ -117,5 +118,21 @@ class Denuncia(models.Model):
 
     def __str__(self):
         return f'Denúncia do material: {self.material.titulo}'
+
+class Visualizacao(models.Model):
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    material = models.ForeignKey(Material, on_delete=models.CASCADE)
+    visualizado_em = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['usuario', 'material'],
+                name='visualizacao_unica_por_usuario_material'
+            )
+        ]
+
+    def __str__(self):
+        return f'{self.usuario} visualizou {self.material}'
 
     
