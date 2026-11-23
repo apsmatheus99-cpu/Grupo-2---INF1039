@@ -73,9 +73,11 @@
 
         <div class="abrir-baixar-salvar-compartilhar">
 
-            <a href="{{ material.arquivo.url }}" target="_blank">
-                <button type="button"><b>ABRIR MATERIAL</b></button>
-            </a>
+            {% if material.arquivo %}
+                <a href="{{ material.arquivo.url }}" target="_blank" rel="noopener">
+                    <button type="button"><b>ABRIR MATERIAL</b></button>
+                </a>
+            {% endif %}
 
             <a href="{% url 'baixar_material' material.id %}">
                 <button type="button"><b>BAIXAR</b></button>
@@ -137,23 +139,27 @@
 
             <div id="lista-comentarios">
 
-                {% for comentario in material.comentario_set.all %}
+    {% for comentario in material.comentario_set.all %}
 
-                    <div class="comentario">
+        <div class="comentario">
 
-                        <p class="autor-comentario">
-                            {{ comentario.usuario.get_full_name|default:comentario.usuario.username }}
-                        </p>
+            <p class="autor-comentario">
+                {{ comentario.usuario.get_full_name|default:comentario.usuario.username }}
+            </p>
 
-                        <p class="texto-comentario">
-                            {{ comentario.texto }}
-                        </p>
+            <p class="data-comentario">
+                {{ comentario.criado_em|date:"d/m/Y H:i" }}
+            </p>
 
-                    </div>
+            <p class="texto-comentario">
+                {{ comentario.texto }}
+            </p>
 
-                {% endfor %}
+        </div>
 
-            </div>
+    {% endfor %}
+
+</div>
 
         </div>
     </div>
