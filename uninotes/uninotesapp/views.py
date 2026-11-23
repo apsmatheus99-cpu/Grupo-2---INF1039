@@ -5,9 +5,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, Professor
+from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, Professor, Visualizacao
 from django.urls import reverse
 from django.http import FileResponse, Http404
+from django.utils import timezone
 
 def login(request):
     return render(request, 'tela_login.html')
@@ -21,15 +22,24 @@ def cadastro(request):
         'faculdades': faculdades
     })
 
+@login_required(login_url='login')
 def material(request, material_id):
+
     material = get_object_or_404(
         Material.objects.select_related(
             'curso',
             'faculdade',
-            'professor',
-            'usuario'
+            'professor'
         ),
         id=material_id
+    )
+
+    Visualizacao.objects.update_or_create(
+        usuario=request.user,
+        material=material,
+        defaults={
+            'visualizado_em': timezone.now()
+        }
     )
 
     return render(request, 'material.html', {'material': material})
@@ -64,7 +74,12 @@ def esqueci_senha(request):
 @login_required(login_url='login')
 def inicio(request):
     materiais = Material.objects.all()
-    return render(request, 'telaInicio.html', {'materiais': materiais})
+    recentes = []
+
+    if request.user.is_authenticated:
+        recentes = Visualizacao.objects.filter(usuario=request.user).select_related('material').order_by('-visualizado_em')[:3]
+
+    return render(request, 'telainicio.html', {'materiais': materiais, 'recentes': recentes})
 
 @login_required(login_url='login')
 def configuracoes(request):
