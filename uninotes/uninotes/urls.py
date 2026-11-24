@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 from uninotesapp import views as app_views
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', cadastro_usuario, name='cadastro_usuario'),
@@ -48,6 +49,8 @@ urlpatterns = [
     path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
     path('material/<int:material_id>/denuncia/', modal_denuncia, name='modal_denuncia'),
     path('material/<int:material_id>/baixar/', baixar_material, name='baixar_material'),
+    path('material/<int:material_id>/salvar/', salvar_material, name='salvar_material'),
+    path('material/<int:material_id>/dessalvar/', dessalvar_material, name='dessalvar_material'),
 
 ]
 if settings.DEBUG:

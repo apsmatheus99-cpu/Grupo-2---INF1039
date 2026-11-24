@@ -1,16 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/publica.css' %}">
+{% endblock %}  
 
 {% block content %}
-
-<body>
-    <div class="publicar-pesquisa">
-        <a href="pagina de publica.html">PUBLICAR</a>
-        <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img src="imagens/notificacao.png">
-        <img src="imagens/perfil-de-usuario.png">
-    </div>
-
 
 <main>
     <section>
@@ -103,5 +97,4 @@
     </form>
     
 </main>
-</body>
-</html>
+{% endblock %}

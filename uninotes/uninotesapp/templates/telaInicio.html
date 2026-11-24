@@ -1,20 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UNINOTES-Materiais Acadêmicos</title>
-    <link rel="stylesheet" href="../static/css/styleInicio.css">
-    <link rel="stylesheet" href="../static/css/barraLateral.css">
-    <link rel="stylesheet" href="../static/css/publicarPesquisa.css">
-    <link rel="stylesheet" href="../static/css/responsivo.css">
+    <link rel="stylesheet" href="{% static 'css/styleInicio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/barraLateral.css' %}">
+    <link rel="stylesheet" href="{% static 'css/publicarPesquisa.css' %}?v=icons-22">
+    <link rel="stylesheet" href="{% static 'css/responsivo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <div class="publicar-pesquisa">
         <a href="/publicar/">PUBLICAR</a>
         <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img src="/static/imagens/notificacao.png">
-        <img src="/static/imagens/perfil-de-usuario.png">
+        <i class="fa-solid fa-bell icone-barra-pesquisa" style="color: rgb(64, 94, 68);" aria-hidden="true"></i>
+        <i class="fa-solid fa-circle-user icone-barra-pesquisa" style="color: rgb(64, 94, 68);" aria-hidden="true"></i>
     </div>
 
 
@@ -45,7 +47,7 @@
 
             <div class="avaliacao">
                 <p><b>{{ material.get_tipo_display }}</b></p>
-                <img src="/static/imagens/avaliacao (2).png">
+                <img src="{% static 'imagens/avaliacao (2).png' %}">
             </div>
 
             <div class="autor">
@@ -79,7 +81,7 @@
 
                         <div class="avaliacao">
                             <p><b>{{ item.get_tipo_display }}</b></p>
-                            <img src="/static/imagens/avaliacao (2).png">
+                            <img src="{% static 'imagens/avaliacao (2).png' %}">
                         </div>
 
                         <div class="autor">
@@ -112,33 +114,33 @@
 
     <section class="barraLateral">
         <div class="logo-titulo">
-        <img src="/static/imagens/Logo Uninotes.png">
+        <img src="{% static 'imagens/Logo Uninotes.png' %}">
         <h2><b>UNINOTES</b></h2>
         </div>
             <div class="botao-inicio">
                 <a href="">
-                    <img src="/static/imagens/icone casa.png"><b>INÍCIO</b>
+                    <img src="{% static 'imagens/icone casa.png' %}"><b>INÍCIO</b>
                 </a>
             </div>
             <a href="/materiais/">
-            <img src="/static/imagens/documentos-google.png"><b>MEUS MATERIAIS</b>
+            <img src="{% static 'imagens/documentos-google.png' %}"><b>MEUS MATERIAIS</b>
             </a>
             <a href="/salvos/">
-            <img src="/static/imagens/salvar.png"><b>SALVOS</b>
+            <img src="{% static 'imagens/salvar.png' %}"><b>SALVOS</b>
             </a>
             <a href="/mensagens/">
-            <img src="/static/imagens/balao-de-bate-papo.png"><b>MENSAGENS</b>
+            <img src="{% static 'imagens/balao-de-bate-papo.png' %}"><b>MENSAGENS</b>
             </a>
             <a href="/estatisticas/">
-            <img src="/static/imagens/estatistica.png"><b>ESTATÍSTICAS</b>
+            <img src="{% static 'imagens/estatistica.png' %}"><b>ESTATÍSTICAS</b>
             </a>
             <a href="/perfil/">
-            <img src="/static/imagens/usuario.png"><b>PERFIL</b>
+            <img src="{% static 'imagens/usuario.png' %}"><b>PERFIL</b>
             </a>
             <a href="/configuracoes/">
-            <img src="/static/imagens/configuracao.png"><b>CONFIGURAÇÕES</b>
+            <img src="{% static 'imagens/configuracao.png' %}"><b>CONFIGURAÇÕES</b>
             </a>
     </section>
-    <script src="../static/javascript/inicio.js"></script>
+    <script src="{% static 'javascript/inicio.js' %}"></script>
 </body>
 </html>

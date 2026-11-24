@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="{% static 'css/meus-materiais.css' %}">
 {% endblock %}
 
+{% block botao_publicar %}{% endblock %}
+
 {% block content %}
 
         <!--meus materiais-->
@@ -14,14 +16,13 @@
             <section>
                 <p><small>SUA BIBLIOTECA · 1 PUBLICADO(S)</small></p>
                 <h1>MEUS MATERIAIS</h1>
-                <button type="button">PUBLICAR</button>
             </section>
 
             <!-- lista dos materiais-->
             <section>
                 <article>
                     <div>
-                        <img src="icone-slide.png" alt="Ícone de Slides">
+                        <i class="fa-regular fa-file-powerpoint" style="color: rgb(64, 94, 68); font-size: 28px;"></i>
                     </div>
 
                     <div>

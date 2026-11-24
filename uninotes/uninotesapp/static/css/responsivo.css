@@ -118,7 +118,7 @@ main article > div:nth-child(2) {
 
 .boxes-materiais {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
 }
 
 .material-box {
@@ -387,7 +387,7 @@ main.container > form {
         font-size: 0.7rem;
     }
 
-    .publicar-pesquisa > img,
+    .publicar-pesquisa > .icone-barra-pesquisa,
     .publicar-busca img {
         flex: 0 0 1.5rem;
         width: 1.5rem;
@@ -600,26 +600,24 @@ main.container > form {
     .material .titulo-material,
     .material .descricao-material,
     .material .autor-material,
-    .material .prof-curso-instituicao-data,
-    .material .prof-curso-instituicao-data-DADOS,
     .material .avaliacao,
-    .material .abrir-baixar-salvar-compartilhar,
-    .material .reportar {
+    .material .abrir-baixar-salvar,
+    .material .compartilhar-reportar {
         max-width: 100%;
         margin: 0.75rem 0;
     }
 
-    .prof-curso-instituicao-data,
-    .prof-curso-instituicao-data-DADOS {
-        flex-wrap: wrap;
-        gap: 0.5rem 1rem;
+    .material .prof-curso-instituicao-data {
+        margin: 12px 0;
     }
 
-    .abrir-baixar-salvar-compartilhar {
+    .abrir-baixar-salvar,
+    .compartilhar-reportar {
         flex-wrap: wrap;
     }
 
-    .abrir-baixar-salvar-compartilhar button {
+    .abrir-baixar-salvar button,
+    .compartilhar-reportar > button {
         flex: 1 1 8rem;
         width: auto !important;
     }

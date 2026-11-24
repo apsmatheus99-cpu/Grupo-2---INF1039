@@ -3,9 +3,10 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as fazer_login, logout as fazer_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.db.models import Avg, Count
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, Professor, Visualizacao
+from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, Professor, Visualizacao, Avaliacao, Materiais_salvos
 from django.urls import reverse
 from django.http import FileResponse, Http404
 from django.utils import timezone
@@ -35,20 +36,36 @@ def material(request, material_id):
         id=material_id
     )
 
-    return render(request, 'material.html', {
-    'material': material,
-    'opcoes_de_nota': range(1, 6),
-    'minha_nota': 0,
-})
+    if request.method == 'POST' and 'nota' in request.POST:
+        nota = request.POST['nota']
+        if nota in ('1', '2', '3', '4', '5'):
+            Avaliacao.objects.update_or_create(
+                material=material,
+                usuario=request.user,
+                defaults={'avaliacao': int(nota)},
+            )
+        return redirect('material', material_id=material.id)
+
     Visualizacao.objects.update_or_create(
         usuario=request.user,
         material=material,
-        defaults={
-            'visualizado_em': timezone.now()
-        }
+        defaults={'visualizado_em': timezone.now()},
     )
 
-    return render(request, 'material.html', {'material': material})
+    avaliacoes = material.avaliacoes.filter(usuario__isnull=False, avaliacao__range=(1, 5))
+    resumo = avaliacoes.aggregate(media=Avg('avaliacao'), quantidade=Count('id'))
+    minha_nota = avaliacoes.filter(usuario=request.user).values_list('avaliacao', flat=True).first()
+    esta_salvo = Materiais_salvos.objects.filter(material=material, usuario=request.user).exists()
+
+    return render(request, 'material.html', {
+        'material': material,
+        'opcoes_de_nota': range(1, 6),
+        'minha_nota': minha_nota or 0,
+        'media_avaliacoes': resumo['media'],
+        'quantidade_avaliacoes': resumo['quantidade'],
+        'preenchimento_estrelas': round((resumo['media'] or 0) * 20),
+        'esta_salvo': esta_salvo
+    })
 
 
 @login_required(login_url='login')
@@ -85,7 +102,7 @@ def inicio(request):
     if request.user.is_authenticated:
         recentes = Visualizacao.objects.filter(usuario=request.user).select_related('material').order_by('-visualizado_em')[:3]
 
-    return render(request, 'telainicio.html', {'materiais': materiais, 'recentes': recentes})
+    return render(request, 'telaInicio.html', {'materiais': materiais, 'recentes': recentes})
 
 @login_required(login_url='login')
 def configuracoes(request):
@@ -105,7 +122,11 @@ def meus_materiais(request):
 
 @login_required(login_url='login')
 def salvos(request):
-    return render(request, 'salvos.html')
+    usuario = request.user
+    materiais_salvos = Materiais_salvos.objects.filter(usuario=usuario)
+    return render(request, 'salvos.html',{
+        'materiais_salvos': materiais_salvos
+    })
 
 @login_required(login_url='login')
 def publicar(request):
@@ -265,3 +286,27 @@ def baixar_material(request, material_id):
         raise Http404("O arquivo deste material não foi encontrado.")
 
     return FileResponse(arquivo, as_attachment=True,filename=nome_arquivo)
+
+@login_required(login_url='login')
+@require_POST
+def salvar_material(request, material_id):
+    material = get_object_or_404(Material,id=material_id)
+    usuario = request.user
+    Materiais_salvos.objects.get_or_create(material=material, usuario=usuario)
+    return redirect('material', material_id=material_id)
+
+@login_required(login_url='login')
+@require_POST
+def dessalvar_material(request, material_id):
+    material = get_object_or_404(Material, id=material_id)
+    usuario = request.user
+
+    Materiais_salvos.objects.filter(
+        material=material,
+        usuario=usuario
+    ).delete()
+
+    if request.POST.get('origem') == 'salvos':
+        return redirect('salvos')
+
+    return redirect('material', material_id=material_id)
