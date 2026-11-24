@@ -9,7 +9,10 @@ from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, 
 from django.urls import reverse
 from django.http import FileResponse, Http404
 from django.utils import timezone
-
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError
 
 def login(request):
     return render(request, 'tela_login.html')
@@ -265,3 +268,49 @@ def baixar_material(request, material_id):
         raise Http404("O arquivo deste material não foi encontrado.")
 
     return FileResponse(arquivo, as_attachment=True,filename=nome_arquivo)
+
+
+@login_required
+def editar_dados(request):
+    cursos= Curso.objects.all()
+    instituicoes= Faculdade.objects.all()
+
+    contexto={
+        'cursos': cursos,
+        'instituicoes': instituicoes
+    }
+    return render(request, 'editar_dados_pessoais.html', contexto)
+
+
+@login_required
+def alterar_senha(request):
+    if request.method == "POST":
+        senha_atual = request.POST.get("senha_atual")
+        nova_senha = request.POST.get("nova_senha")
+        confirmar_senha = request.POST.get("confirmar_senha")
+
+        if not request.user.check_password(senha_atual):
+            messages.error(request, "Senha atual incorreta.")
+            return redirect("alterar_senha")
+
+        if nova_senha != confirmar_senha:
+            messages.error(request, "As novas senhas não coincidem.")
+            return redirect("alterar_senha")
+
+        try:
+            validate_password(nova_senha, request.user)
+        except ValidationError as erro:
+            for mensagem in erro.messages:
+                messages.error(request, mensagem)
+            return redirect("alterar_senha")
+
+        request.user.set_password(nova_senha)
+        request.user.save()
+
+        update_session_auth_hash(request, request.user)
+
+        messages.success(request, "Senha alterada com sucesso.")
+        return redirect("configuracoes")
+
+    return render(request, "alterar_senha.html")
+
