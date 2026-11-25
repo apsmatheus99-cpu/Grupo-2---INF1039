@@ -132,7 +132,7 @@ header button:hover {
 /* CONTEÚDO PRINCIPAL */
 
 main {
-    margin-left: 80px;
+    margin-left: var(--largura-menu);
     padding-top: 110px;
     padding-bottom: 50px;
 }
@@ -253,4 +253,8 @@ main article button:first-child:hover {
 main article button:last-child:hover {
     background-color: #B65C4B;
     color: white;
+}
+
+i{
+    font-size: 30px;
 }

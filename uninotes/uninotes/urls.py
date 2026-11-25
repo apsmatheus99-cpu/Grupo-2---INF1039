@@ -22,6 +22,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', cadastro_usuario, name='cadastro_usuario'),
@@ -50,6 +51,13 @@ urlpatterns = [
     ),
     path("editar-dados/", editar_dados, name="editar_dados"),
     path("alterar-senha/", alterar_senha, name="alterar_senha"),
+    path("material/<int:material_id>/comentarios/", criar_comentario, name="criar_comentario"),
+    path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
+    path('material/<int:material_id>/denuncia/', modal_denuncia, name='modal_denuncia'),
+    path('material/<int:material_id>/baixar/', baixar_material, name='baixar_material'),
+    path('material/<int:material_id>/salvar/', salvar_material, name='salvar_material'),
+    path('material/<int:material_id>/dessalvar/', dessalvar_material, name='dessalvar_material'),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

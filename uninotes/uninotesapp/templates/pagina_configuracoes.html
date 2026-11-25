@@ -10,28 +10,31 @@
 {% block content %}
 
 
-    <div class="configuracoes">
+      <div class="configuracoes">
         <h4>SUA CONTA</h4>
         <h1><b>CONFIGURAÇÕES</b></h1>
 
-        <div class="opcoes-box">
-            <img src="{% static 'imagens/perfil.png' %}">
-            <div class="textos">
-                <p><b>Editar dados pessoais</b></p>
-                <h5>Nome, curso, instituição e período</h5>
-            </div>
-            <button>⋮</button>
+        
+       <a href="{% url 'editar_dados' %}" class="opcoes-box">
+        <img src="{% static 'imagens/perfil.png' %}">
+        <div class="textos">
+            <p><b>Editar dados pessoais</b></p>
+            <h5>Nome, curso, instituição e período</h5>
         </div>
-        <div class="opcoes-box">
+        <button type="button">⋮</button>
+        </a>
+
+        <a href="{% url 'alterar_senha' %}" class="opcoes-box">
             <img src="{% static 'imagens/cadeado.png' %}">
             <div class="textos">
                 <p><b>Alterar senha</b></p>
                 <h5>Mantenha sua conta protegida</h5>
             </div>
             <button>⋮</button>
-        </div>
+        </a>
+
         <div class="opcoes-box">
-            <img src="{% static 'imagens/foto.png' %}">
+            <img src="{% static 'imagens/foto.PNG' %}">
             <div class="textos">
                 <p><b>Alterar foto</b></p>
                 <h5>Escolha uma imagem para o seu perfil</h5>
@@ -39,7 +42,7 @@
             <button>⋮</button>
         </div>
         <div class="opcoes-box">
-            <img src="{% static 'imagens/privacidade.png' %}">
+            <img src="{% static 'imagens/privacidade.PNG' %}">
             <div class="textos">
                 <p><b>Privacidade</b></p>
                 <h5>Gerencie suas preferências de privacidade</h5>
