@@ -225,28 +225,29 @@ button{
     cursor: pointer;
 }
 
-.prof-curso-instituicao-data{
-    margin-left: 40px;
-    margin-top: 10px;
-    display: flex;
-    color:#636363;   
-    font-size: 12px;
-    gap: 120px;
+.prof-curso-instituicao-data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 128px), 1fr));
+    gap: 12px;
+    margin: 12px 0 12px 40px;
 }
 
-.prof-curso-instituicao-data-DADOS{
-    display: flex;
-    gap: 67px;
+.prof-curso-instituicao-data > div {
+    min-width: 0;
+    padding: 12px;
+    overflow-wrap: anywhere;
+}
+
+.prof-curso-instituicao-data dt {
+    color: #636363;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.prof-curso-instituicao-data dd {
+    margin: 6px 0 0;
     font-size: 14px;
-    margin-left: 40px;
-    margin-top: -10px;
     font-weight: 500;
-}
-.prof-curso-instituicao-data-DADOS p:nth-of-type(3){
-    margin-left: 30px;
-}
-.prof-curso-instituicao-data-DADOS p:nth-of-type(4){
-    margin-left: 80px;
 }
 
 .avaliacao{
@@ -270,76 +271,75 @@ button{
     width: 100px;
     height: 100px;
 }
-.abrir-baixar-salvar-compartilhar{
+.abrir-baixar-salvar,
+.compartilhar-reportar {
     display: flex;
     gap: 10px;
     margin-left: 40px;
     margin-top: 12px;
 }
 
-.abrir-baixar-salvar-compartilhar button{
+.abrir-baixar-salvar button,
+.compartilhar-reportar > button {
+    font-weight: 700;
     font-family:"Montserrat", sans-serif;
     border-radius: 7px;
     height: 40px;
 }
-.abrir-baixar-salvar-compartilhar button:nth-of-type(1){
+.abrir-baixar-salvar .botao-abrir{
     background-color: #4F762F;
     color: white;
     width: 170px;
     border: none;
 }
-.abrir-baixar-salvar-compartilhar button:nth-of-type(1):hover{
+.abrir-baixar-salvar .botao-abrir:hover{
     background-color: #6c9649;
     cursor: pointer;
 }
-.abrir-baixar-salvar-compartilhar button:nth-of-type(2){
+.abrir-baixar-salvar .botao-baixar,
+.compartilhar-reportar .botao-compartilhar {
     background-color: #E5E0BA;
     color: #23370E;
     width: 130px;
     border: none;
 }
-.abrir-baixar-salvar-compartilhar button:nth-of-type(2):hover{
+.abrir-baixar-salvar .botao-baixar:hover,
+.compartilhar-reportar .botao-compartilhar:hover {
     background-color: #eae5c3;
     cursor: pointer;
 }
-.abrir-baixar-salvar-compartilhar button:nth-of-type(3){
+.abrir-baixar-salvar .botao-salvar,
+.compartilhar-reportar #abrir-modal-denuncia {
     background-color: white;
     color: #23370E;
     width: 130px;
     border: 1px solid #656565;
 }
-.abrir-baixar-salvar-compartilhar button:nth-of-type(3):hover{
-    background-color:#FFEBA6;
-    cursor: pointer;
+.compartilhar-reportar #abrir-modal-denuncia {
+    width: 170px;
+    min-width: 170px;
+    white-space: nowrap;
 }
-.abrir-baixar-salvar-compartilhar button:nth-of-type(4){
-    background-color: white;
-    color: #23370E;
-    width: 150px;
-    border: none;
-}
-.abrir-baixar-salvar-compartilhar button:nth-of-type(4):hover{
-    background-color:#FFEBA6;
-    cursor: pointer;
-}
-.reportar button{
-    margin-left: 40px;
-    margin-top: 10px;
-    background-color: white;
-    color: #23370E;
-    width: 200px;
-    height: 40px;
-    border-radius: 7px;
-    border: none;
 
+.abrir-baixar-salvar .botao-salvar {
+    background-color: #4F762F;
+    color: white;
+    cursor: pointer;
 }
-.reportar button:hover{
+
+.abrir-baixar-salvar .botao-salvar.botao-salvo {
+    background-color: #FCE9A4;
+    color: #23370E;
+}
+
+.compartilhar-reportar #abrir-modal-denuncia:hover {
     background-color:#FFEBA6;
     cursor: pointer;
 }
 
 .avaliacao-comentario{
     display: flex;
+    align-items: flex-start;
     margin-left: 300px;
     margin-top: 20px;
     gap: 20px;
@@ -349,7 +349,7 @@ button{
     background-color: white;
     width: 390px;
     border-radius: 10px;
-    height: 150px;
+    min-height: 150px;
     padding-left: 20px;
     box-shadow: 3px 3px 50px #dfd4a6;
 }
@@ -365,6 +365,7 @@ button{
     font-size: 12px;
 }
 #campo-comentario{
+    resize: vertical;
     padding-top: 8px;
     width: 300px;
     height: 35px;
@@ -413,6 +414,7 @@ button{
 
 
 #form-comentario button {
+    font-weight: 700;
     margin-top: 10px;
     background-color: #4F762F;
     color: white;
@@ -471,3 +473,4 @@ button{
 .excluir-comentario:hover {
     color: #B33A3A;
 }
+
