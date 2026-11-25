@@ -35,11 +35,6 @@ def material(request, material_id):
         id=material_id
     )
 
-    return render(request, 'material.html', {
-    'material': material,
-    'opcoes_de_nota': range(1, 6),
-    'minha_nota': 0,
-})
     Visualizacao.objects.update_or_create(
         usuario=request.user,
         material=material,
@@ -48,9 +43,12 @@ def material(request, material_id):
         }
     )
 
-    return render(request, 'material.html', {'material': material})
-
-
+    return render(request, 'material.html', {
+    'material': material,
+    'opcoes_de_nota': range(1, 6),
+    'minha_nota': 0,
+})
+    
 @login_required(login_url='login')
 def mensagens(request):
     if request.method== 'POST':
