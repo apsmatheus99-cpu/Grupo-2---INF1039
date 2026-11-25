@@ -49,7 +49,10 @@ body > div.publicar-pesquisa{
     font-weight: 500;
 }
 
-.publicar-pesquisa > img{
+.publicar-pesquisa > .icone-barra-pesquisa {
+    display: grid;
+    place-items: center;
+    font-size: 22px;
     flex: 0 0 30px;
     width: 30px;
     height: 30px;
