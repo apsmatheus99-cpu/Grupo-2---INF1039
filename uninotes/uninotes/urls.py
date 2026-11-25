@@ -20,7 +20,6 @@ from django.urls import path, include
 from uninotesapp.views import *
 from django.conf import settings
 from django.conf.urls.static import static
-from uninotesapp import views as app_views
 
 
 
@@ -45,6 +44,13 @@ urlpatterns = [
     path('', login),
     path('inicio/', inicio, name='inicio'),
     path('publicar/', publicar, name='publicar'),
+    path(
+        "material/<int:material_id>/comentarios/",
+        criar_comentario,
+        name="criar_comentario"
+    ),
+    path("editar-dados/", editar_dados, name="editar_dados"),
+    path("alterar-senha/", alterar_senha, name="alterar_senha"),
     path("material/<int:material_id>/comentarios/", criar_comentario, name="criar_comentario"),
     path("salvar-denuncia/", salvar_denuncia, name="salvar_denuncia"),
     path('material/<int:material_id>/denuncia/', modal_denuncia, name='modal_denuncia'),
