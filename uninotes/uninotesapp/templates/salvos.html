@@ -19,27 +19,37 @@
 
             <!--lista-->
             <section>
+                {% for salvo in materiais_salvos %}
+
                 <article>
                     <div>
                         <!-- Ícone Prova/Documento -->
-                        <img src="icone-prova.png" alt="Ícone de Prova" width="30">
+                        <i class="fa-regular fa-file-powerpoint" style="color: rgb(64, 94, 68); font-size: 28px;"></i>
                     </div>
 
                     <div>
-                        <p><small>CÁLCULO · PROVA</small></p>
-                        <h2>DERIVADAS</h2>
-                        
+                        <p><small>{{ salvo.material.disciplina }} · {{ salvo.material.get_tipo_display }}</small></p>
+                        <h2>{{ salvo.material.titulo }}</h2>
+
                         <p>
-                            Por <strong>Ana Beatriz Ferreira</strong> · 
-                            <time datetime="2026-09-27">27 de set. de 2026</time>
+                            Por <strong>{{ salvo.material.usuario}}</strong> ·
+                            <time>{{ salvo.material.data_publicacao|date:"d/m/Y" }}</time>
                         </p>
                     </div>
 
                     <div class="botao_abrir">
                         <button><a href="/material/">ABRIR</a></button>
-                        <button><i class="fa-solid fa-trash" style="color: rgb(142, 142, 142);"></i></button>
+                        <form method="POST" action="{% url 'dessalvar_material' salvo.material.id %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="origem" value="salvos">
+
+                            <button type="submit" aria-label="Remover dos salvos">
+                                <i class="fa-solid fa-trash" style="color: rgb(142, 142, 142);"></i>
+                            </button>
+                        </form>
                     </div>
                 </article>
+                {%endfor%}
             </section>
         </main>
 

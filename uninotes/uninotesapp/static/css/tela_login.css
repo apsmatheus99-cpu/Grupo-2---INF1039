@@ -19,8 +19,8 @@ body{
 
 .container {
     margin-left: 0px;
-    width: 550px;
-    height: 570px;
+    width: 80%;
+    height: 70%;
     background: #fff;
     border: 10px solid #fff;
     border-radius: 15px;
@@ -78,7 +78,7 @@ body{
 .input-box i{
     right: 30px;
     position: absolute;   
-    top: 78%;
+    top: 60%;
     color: #adadad;
     font-size: 20px;
 }
@@ -92,7 +92,7 @@ body{
 
 .remember-forgot a{
     text-decoration: none;
-    color: #008000;
+    color: #3F6126;
     font-size: 12px;
     margin-top: 12px;
     font-weight: 600;
@@ -117,7 +117,8 @@ body{
     text-align: center;
     text-decoration: none;
     margin-left: 25px;
-    padding-top: 10px;
+    padding-top: 12px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.142);
 
 }
 
