@@ -3,16 +3,8 @@
 
 {% block content %}
 
-<body>
-    <div class="publicar-pesquisa">
-        <a href="pagina de publica.html">PUBLICAR</a>
-        <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img class="icone-notificacao" src="/static/imagens/notificacao.png">
-        <img class="icone-perfil" src="/static/imagens/perfil-de-usuario.png">
-    </div>
-
-    <div class="volte-aos-materiais">
-        <button><p>Voltar aos materiais</p></div>
+<div class="volte-aos-materiais">
+        <button><p>Voltar aos materiais</p></button></div>
     <div class="material">
 
         <div class="categorias">
@@ -25,31 +17,30 @@
             <h1>{{ material.titulo }}</h1>
         </div>
 
-        <div class="prof-curso-instituicao-data">
-
-            <p><b>PROFESSOR</b></p>
-            <p><b>CURSO</b></p>
-            <p><b>INSTITUIÇÃO</b></p>
-            <p><b>PUBLICADO</b></p>
-
-        </div>
-
-        <div class="prof-curso-instituicao-data-DADOS">
-            <p>
-                {% if material.professor %}
-                    {{ material.professor }}
-                {% else %}
-                    Não informado
-                {% endif %}
-            </p>
-
-            <p>{{ material.curso }}</p>
-
-            <p>{{ material.faculdade }}</p>
-
-            <p>{{ material.data_publicacao|date:"d/m/Y" }}</p>
-
-        </div>
+        <dl class="prof-curso-instituicao-data">
+            <div>
+                <dt>PROFESSOR</dt>
+                <dd>
+                    {% if material.professor %}
+                        {{ material.professor }}
+                    {% else %}
+                        Não informado
+                    {% endif %}
+                </dd>
+            </div>
+            <div>
+                <dt>CURSO</dt>
+                <dd>{{ material.curso }}</dd>
+            </div>
+            <div>
+                <dt>INSTITUIÇÃO</dt>
+                <dd>{{ material.faculdade }}</dd>
+            </div>
+            <div>
+                <dt>PUBLICADO</dt>
+                <dd>{{ material.data_publicacao|date:"d/m/Y" }}</dd>
+            </div>
+        </dl>
         <div class="avaliacao">
             <p><b>AVALIACAO</b></p>
             <div class="estrelas">
@@ -71,22 +62,40 @@
             </div>
         </div>
 
-        <div class="abrir-baixar-salvar-compartilhar">
+        <div class="abrir-baixar-salvar">
 
             {% if material.arquivo %}
                 <a href="{{ material.arquivo.url }}" target="_blank" rel="noopener">
-                    <button type="button"><b>ABRIR MATERIAL</b></button>
+                    <button type="button" class="botao-abrir"><b>ABRIR MATERIAL</b></button>
                 </a>
             {% endif %}
 
             <a href="{% url 'baixar_material' material.id %}">
-                <button type="button"><b>BAIXAR</b></button>
+                <button type="button" class="botao-baixar"><b>BAIXAR</b></button>
             </a>
 
-            <button type="button"><b>SALVAR</b></button>
+            <form method="POST"
+                {% if esta_salvo %}
+                    action="{% url 'dessalvar_material' material.id %}"
+                {% else %}
+                    action="{% url 'salvar_material' material.id %}"
+                {% endif %}>
+                {% csrf_token %}
+                <button type="submit" class="botao-salvar {% if esta_salvo%} botao-salvo {%endif%}">
+                    <b>{% if esta_salvo %}
+                        SALVO
+                        {% else %}
+                        SALVAR
+                        {% endif%}
+                    </b>
+                </button>
+            </form>
 
-            <button type="button">COMPARTILHAR</button>
-
+            
+            
+        </div>
+        <div class="compartilhar-reportar">
+            <button type="button" class="botao-compartilhar">COMPARTILHAR</button>
             <button type="button" id="abrir-modal-denuncia">Reportar material</button>
             {% include 'modal_denuncia.html' %}
         </div>
@@ -165,7 +174,6 @@
     </div>
 
 <script src="{% static 'javascript/comentarios.js' %}"></script>
-</body>
-</html>
+
 
 {% endblock %}

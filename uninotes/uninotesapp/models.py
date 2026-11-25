@@ -39,8 +39,16 @@ class Avaliacao(models.Model):
     avaliacao = models.IntegerField( default=0, choices= ESTRELAS)
     material = models.ForeignKey('Material',on_delete=models.CASCADE,related_name='avaliacoes')
     aluno = models.ForeignKey(Aluno,on_delete=models.PROTECT,null=True,blank=True)
-    
-    
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=('material', 'usuario'),
+                name='uma_avaliacao_por_usuario_e_material',
+            ),
+        ]
+
     def __str__(self):
         return str(self.avaliacao)    
 
@@ -74,10 +82,19 @@ class Material(models.Model):
         return self.titulo
 
 class Materiais_salvos(models.Model):
-    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE, related_name = 'Meus_materiais')
+    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE, related_name = 'Meus_materiais',null=True,blank=True)
     material = models.ForeignKey(Material, on_delete= models.CASCADE, related_name = 'publicacoes')
     visualizacoes = models.PositiveIntegerField(default=0)
     downloads = models.PositiveIntegerField(default=0)
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=('material', 'usuario'),
+                name='material_salvo_uma_vez_por_usuario',
+            ),
+        ]
 
     def __str__(self):
         return self.material.titulo

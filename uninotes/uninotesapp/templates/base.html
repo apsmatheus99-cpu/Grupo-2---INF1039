@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styleMaterial.css' %}">
     <link rel="stylesheet" href="{% static 'css/barraLateral.css' %}">
-    <link rel="stylesheet" href="{% static 'css/publicarPesquisa.css' %}">
-    <link rel="stylesheet" href="{% static 'css/responsivo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/publicarPesquisa.css' %}?v=icons-22">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
     {% block extra_css %}
     {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/responsivo.css' %}">
 </head>
 
 
@@ -40,10 +40,10 @@
     </section>
 
     <div class="publicar-pesquisa">
-        <a href="pagina de publica.html">PUBLICAR</a>
+        {% block botao_publicar %}<a href="{% url 'publicar' %}">PUBLICAR</a>{% endblock %}
         <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img src="{% static 'imagens/notificacao.png' %}">
-        <img src="{% static 'imagens/perfil-de-usuario.png' %}">
+        <i class="fa-solid fa-bell icone-barra-pesquisa" style="color: rgb(64, 94, 68);" aria-hidden="true"></i>
+        <i class="fa-solid fa-circle-user icone-barra-pesquisa" style="color: rgb(64, 94, 68);" aria-hidden="true"></i>
     </div>
     
 

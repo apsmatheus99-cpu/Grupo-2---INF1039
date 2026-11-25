@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/tela_cadastro.css">
-    <link rel="stylesheet" href="../static/css/responsivo.css">
+    <link rel="stylesheet" href="{% static 'css/tela_cadastro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsivo.css' %}">
     <title> Uninotes - Cadastro </title>
 </head>
 <body>
@@ -17,7 +18,7 @@
             {% endif %}
         <form method="post" action="{% url 'cadastro_usuario' %}">
         {% csrf_token %}
-            <div class=" form- header"> 
+            <div class="cabecalho"> 
                 <div class = "title"> </div>
                 <h1> CRIAR CONTA </h1>
                 <h4> Monte seu perfil acadêmico em poucos passos. </h4>
