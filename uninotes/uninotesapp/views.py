@@ -244,10 +244,16 @@ def criar_comentario(request, material_id):
         or request.user.username
     )
 
+    data_formatada = timezone.localtime(
+        comentario.criado_em
+    ).strftime("%d/%m/%Y %H:%M")
+
+
     return JsonResponse({
         "id": comentario.id,
         "usuario": nome_usuario,
-        "texto": comentario.texto
+        "texto": comentario.texto,
+        "data": data_formatada
     }, status=201)
 
 
