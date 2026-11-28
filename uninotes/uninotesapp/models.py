@@ -22,7 +22,13 @@ class Professor(models.Model):
         return self.name
 
 class Aluno(models.Model):
+    usuario= models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=50)
+    curso= models.ForeignKey(Curso, on_delete=models.PROTECT, null=True, blank=True)
+    instituicao= models.ForeignKey(Faculdade, on_delete=models.PROTECT, null=True, blank=True)
+    periodo= models.IntegerField(null=True, blank=True)
+    sobre_voce= models.TextField(max_length=1000, blank=True, default="")
+
 
     def __str__(self):
         return self.name
