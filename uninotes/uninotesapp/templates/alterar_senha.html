@@ -18,7 +18,8 @@
             {% endfor %}
         {% endif %}
 
-        <form method="POST">
+          <form action="{% url 'alterar_senha' %}" method="POST">
+            {% csrf_token %}
 
             <div class="campo">
                 <label for="senha_atual">Senha atual:</label>
@@ -40,7 +41,7 @@
 
             <div class="botoes">
                 <button type="submit">Salvar alterações</button>
-                <button type="button">Cancelar</button>
+                <a href="{% url 'configuracoes' %}" class="cancelar">Cancelar</a>
             </div>
 
         </form>
