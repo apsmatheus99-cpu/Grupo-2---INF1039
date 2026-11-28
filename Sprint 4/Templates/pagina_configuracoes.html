@@ -10,54 +10,50 @@
     <link rel="stylesheet" href="../static/css/responsivo.css">
 </head>
 
-<body>
-    <div class="publicar-pesquisa">
-        <a href="pagina de publica.html">PUBLICAR</a>
-        <input type="text" placeholder="Buscar por disciplina, matéria, assunto ou professor...">
-        <img src="imagens/notificacao.png">
-        <img src="imagens/perfil-de-usuario.png">
-    </div>
+{% extends 'base.html' %}
+{% load static %}
 
-    <section class="barraLateral">
-        <div class="logo-titulo">
-            <img src="imagens/Logo Uninotes.png">
-            <h2><b>UNINOTES</b></h2>
-        </div>
-        <div class="botao-inicio">
-            <a href="telaInicio.html"><img src="imagens/icone casa.png"><b>INÍCIO</b></a>
-        </div>
-        <div class="botao-meusMateriais">
-            <button><img src="imagens/documentos-google.png"><b>MEUS MATERIAIS</b></button>
-        </div>
-        <button><img src="imagens/salvar.png"><b>SALVOS</b></button>
-        <button><img src="imagens/balao-de-bate-papo.png"><b>MENSAGENS</b></button>
-        <button><img src="imagens/estatistica.png"><b>ESTATÍSTICAS</b></button>
-        <a href="tela de perfil.html"><img src="imagens/usuario.png"><b>PERFIL</b></a>
-        <a href="pagina_configuracoes.html"><img src="imagens/configuracao.png"><b>CONFIGURAÇÕES</b></a>
-    </section>
+{% block title %}Configurações - UNINOTES{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/style_configuracoes.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
 
     <div class="configuracoes">
         <h4>SUA CONTA</h4>
         <h1><b>CONFIGURAÇÕES</b></h1>
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
 
-        <div class="opcoes-box">
-            <img src="imagens/perfil.png">
-            <div class="textos">
-                <p><b>Editar dados pessoais</b></p>
-                <h5>Nome, curso, instituição e período</h5>
-            </div>
-            <button>⋮</button>
+
+        
+       <a href="{% url 'editar_dados' %}" class="opcoes-box">
+        <img src="{% static 'imagens/perfil.png' %}">
+        <div class="textos">
+            <p><b>Editar dados pessoais</b></p>
+            <h5>Nome, curso, instituição e período</h5>
         </div>
-        <div class="opcoes-box">
-            <img src="imagens/cadeado.png">
+        <button type="button">⋮</button>
+        </a>
+
+        <a href="{% url 'alterar_senha' %}" class="opcoes-box">
+            <img src="{% static 'imagens/cadeado.png' %}">
             <div class="textos">
                 <p><b>Alterar senha</b></p>
                 <h5>Mantenha sua conta protegida</h5>
             </div>
             <button>⋮</button>
-        </div>
+        </a>
+
         <div class="opcoes-box">
-            <img src="imagens/foto.png">
+            <img src="{% static 'imagens/foto.png' %}">
             <div class="textos">
                 <p><b>Alterar foto</b></p>
                 <h5>Escolha uma imagem para o seu perfil</h5>
@@ -65,7 +61,7 @@
             <button>⋮</button>
         </div>
         <div class="opcoes-box">
-            <img src="imagens/privacidade.png">
+            <img src="{% static 'imagens/privacidade.png' %}">
             <div class="textos">
                 <p><b>Privacidade</b></p>
                 <h5>Gerencie suas preferências de privacidade</h5>
@@ -89,11 +85,12 @@
         </div>
 
         <div class="sair">
-            <a href="tela_login.html" class="sair-link"><b>Sair da conta</b></a>
+            <form method="POST" action="{% url 'logout_usuario' %}">
+                {% csrf_token %}
+                <button type="submit" class="sair-link"><b>Sair da conta</b></button>
+            </form>
         </div>
     </div>
 
 
-</body>
-
-</html>
+{% endblock %}
