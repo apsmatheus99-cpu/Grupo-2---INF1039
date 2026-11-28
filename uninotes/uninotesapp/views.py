@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.db.models import Avg, Count
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, Professor, Visualizacao, Avaliacao, Materiais_salvos
+from .models import Curso, Denuncia, Faculdade, Material, Comentario, Mensagem, Professor, Visualizacao, Avaliacao, Materiais_salvos, Aluno
 from django.urls import reverse
 from django.http import FileResponse, Http404
 from django.utils import timezone
@@ -301,12 +301,36 @@ def baixar_material(request, material_id):
 def editar_dados(request):
     cursos= Curso.objects.all()
     instituicoes= Faculdade.objects.all()
-
+    aluno, criado=Aluno.objects.get_or_create(usuario=request.user, defaults={'name': request.user.username})
+    if request.method=='POST':
+        nome_completo= request.POST.get('nome_completo')
+        curso_id= request.POST.get('curso')
+        instituicao= request.POST.get('instituicao')
+        periodo= request.POST.get('periodo')
+        sobre_voce=request.POST.get('sobre_voce')
+        if not periodo or not periodo.isdecimal() or int(periodo)<=0:
+            messages.error(request, "Informe um periodo valido")
+        elif nome_completo and curso_id and instituicao and periodo: 
+            aluno.name= nome_completo
+            curso_busca= get_object_or_404(Curso, id=curso_id)
+            aluno.curso= curso_busca
+            instituicao_busca= get_object_or_404(Faculdade, id=instituicao)
+            aluno.instituicao= instituicao_busca
+            aluno.periodo= int(periodo)
+            aluno.sobre_voce= sobre_voce
+            aluno.save()
+            messages.success(request, "Dados alterados com sucesso.")
+            return redirect('configuracoes')
+        else: 
+            messages.error(request, "Faltou preencher um campo")
+                
     contexto={
         'cursos': cursos,
-        'instituicoes': instituicoes
+        'instituicoes': instituicoes,
+        'aluno': aluno 
     }
     return render(request, 'editar_dados_pessoais.html', contexto)
+
 
 
 @login_required
